@@ -1,0 +1,14 @@
+{
+  "name": "dtech-web",
+  "version": "1.0.0",
+  "description": "Sitio Web de la empresa Dtech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "grupo_1",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
