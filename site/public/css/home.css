@@ -10,6 +10,7 @@
 .contenedor-titulo-servicios {
     background-color: #2c2c2c;
     height: 60px;
+    margin-bottom: 30px;
 }
 
 .titulo-servicios {
@@ -19,17 +20,53 @@
     padding: 15px;
 }
 
+.titulo-del-servicio {
+    color: #363636;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+}
+
 .contenedor-servicios {
     display: flex;
     justify-content: center;
+    height: auto;
+}
+
+.icono-servicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #585858;
+    border-radius: 50px;
+    border: solid 1px #585858;
+    height: 70px;
+    width: 70px;
+    margin-left: 70px;
+    margin-top: -30px;
+}
+
+
+/*estilos iconos awesomefont*/
+
+.fa-cogs {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
 }
 
 .servicios {
-    background-color: #e7e7e7a4;
+    background-color: #eeeeeea4;
     width: 100%;
     height: 300px;
     margin: 20px 30px;
     border-radius: 20px;
+}
+
+.servicios:hover {
+    background-color: #6868683d;
+    border: solid 1px #585858
 }
 
 .texto-servicios {

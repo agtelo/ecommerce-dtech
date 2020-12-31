@@ -14,12 +14,29 @@ body {
 .header-top {
     background-color: #c73333;
     height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .texto-header-top {
     padding: 12px 30px;
     color: white;
     font-size: 12px;
+}
+
+.icono-carrito {
+    width: 7%;
+}
+
+.fa-shopping-bag {
+    color: white;
+    font-size: 20px;
+}
+
+.fa-shopping-bag:hover {
+    color: #490101;
+    font-size: 20px;
 }
 
 .contenedor-header {
