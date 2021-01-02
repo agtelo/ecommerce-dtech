@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <title>Registro</title>
 </head>
 
 <body>
@@ -41,37 +41,29 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="imagen-fondo-login">
-            <div class="contenedor-login">
-                <div class="contenido-login">
-                    <div class="titulo-login">
-                        <h2>Ingresa</h2>
-                        <br>
 
-                    </div>
-                    <form class="form-login" action="">
-                        <label>Usuario</label>
-                        <input type="text" class="campos-form" name="nombre" placeholder="Escriba su nombre" required/>
-                        <br>
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="campos-form" id="pwd" name="pwd" placeholder="Escriba su contraseña" required/>
-                        <br>
-                        <br>
-                        <input type="submit" class="boton-estilo" value="Acceder">
-                        <br>
-                        <br>
-                        <br>
-                        <a href="recupero-pass.html">Olvide mi contraseña</a>
-                        <br>
-                        <a href="registro.html">Resgistrame</a>
-
-                    </form>
+    <div class="imagen-fondo-login">
+        <div class="contenedor-login">
+            <div class="contenido-login">
+                <div class="titulo-login">
+                    <h2>Olvide mi contraseña</h2>
+                    <p>Si olvidaste tu contraseña, por favor completa los siguientes campos.</p>
                 </div>
+
+                <form action="" class="form-login">
+                    <label>Usuario</label>
+                    <input type="text" name="nombre" class="campos-form" placeholder="Ingresá su nombre" required/>
+                    <br>
+                    <label>Mail</label>
+                    <input type="email" id="user-email" class="campos-form" placeholder=" Ingresá tu mail" required/>
+                    <br>
+                    <br>
+                    <input type="submit" class="boton-estilo" value="Acceder">
+                </form>
             </div>
         </div>
+    </div>
     </main>
-
     <footer>
         <div class="contenedor-footer">
             <div class="footer-logo">
@@ -100,20 +92,6 @@
             </nav>
         </div>
     </footer>
-
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

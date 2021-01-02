@@ -37,3 +37,7 @@ app.get("/producto.html", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/producto.html"))
 
 });
+app.get("/recupero-pass.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/recupero-pass.html"))
+
+});
