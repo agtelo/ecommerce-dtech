@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
@@ -41,26 +42,33 @@
         </div>
     </header>
     <main>
-        <div class="imagen-fondo-login"><img src="" alt="">
+        <div class="imagen-fondo-login">
             <div class="contenedor-login">
-                <div class="titulo-login">
-                    <h2>Ingresa</h2>
-                    <br>
+                <div class="contenido-login">
+                    <div class="titulo-login">
+                        <h2>Ingresa</h2>
+                        <br>
+
+                    </div>
+                    <form class="form-login" action="">
+                        <label>Usuario</label>
+                        <input type="text" class="campos-form" name="nombre" placeholder="Escriba su nombre" required/>
+                        <br>
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="campos-form" id="pwd" name="pwd" placeholder="Escriba su contraseña" required/>
+                        <br>
+                        <br>
+                        <input type="submit" class="boton-estilo" value="Acceder">
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#">Olvide mi contraseña</a>
+                        <br>
+                        <a href="registro.html">Resgistrame</a>
+
+                    </form>
                 </div>
             </div>
-            <form action="">
-                <label>Usuario</label>
-                <input type="text" name="nombre" placeholder="e.g. Juan Perez" required/>
-                <br>
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="pwd" required/>
-                <br>
-                <br>
-                <input type="submit" value="Acceder">
-            </form>
-            <a href="#">Olvide mi contraseña</a>
-            <br>
-            <a href="registro.html">Resgistrame</a>
         </div>
     </main>
 
