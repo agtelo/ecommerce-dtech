@@ -7,11 +7,10 @@
 a {
     color: #fff;
     text-decoration: none;
-    font-size: 12px;
 }
 
-.contenedor-login {
-    background-image: url(/images/fondo-login.jpg);
+.contenedor-contacto {
+    background-image: url(/images/fondo-contacto.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -22,23 +21,23 @@ a {
     width: 100%;
 }
 
-.contenido-login {
+.contenido-contacto {
     background-color: #c73333de;
-    width: 500px;
-    height: 350px;
+    width: 550px;
+    height: 450px;
     border: solid 1px #c7333354;
     border-radius: 25px;
     margin-bottom: 50px;
     z-index: 1;
 }
 
-.titulo-login {
+.titulo-contacto {
     color: #ffffff;
     text-align: center;
     margin-top: 10px;
 }
 
-.titulo-login p {
+.titulo-contacto p {
     color: #ffffff;
     text-align: left;
     margin-left: 10px;
@@ -47,7 +46,7 @@ a {
     margin-bottom: 20px;
 }
 
-.form-login {
+.form-contacto {
     margin-left: 15px;
 }
 
@@ -77,11 +76,11 @@ a {
 .boton-estilo {
     background-color: #929292;
     color: #fff;
+    text-align: center;
     border: 0;
     height: 35px;
     border-radius: 20px;
     width: 25%;
-    ;
 }
 
 .boton-estilo:hover {

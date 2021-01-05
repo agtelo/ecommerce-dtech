@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
@@ -41,28 +42,44 @@
         </div>
     </header>
     <main>
-        <div class="contenedor-contacto ">
-            <div class="titulo-contacto ">
-                <h2>Contactanos</h2>
-                <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</p>
+        <div class="contenedor-contacto">
+            <div class="contenido-contacto">
+                <div class="titulo-contacto">
+                    <h2>Contactanos</h2>
+                    <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</p>
+                </div>
+
+                <form class="form-contacto" action="">
+                    <div class="etiquetas-form">
+                        <label>Nombre</label>
+                        <input type="text " name="nombre " class="campos-form" placeholder="Ingresá tu Nombre " required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Telefono</label>
+                        <input type="number " name="telefono " class="campos-form" placeholder="Ingresá tu telefono " required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Mail</label>
+                        <input type="email " id="user-email " class="campos-form" placeholder=" Ingresa tu mail " required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Describa brevemente el motivo de su consulta</label>
+                        <br>
+                        <input type="text " class="campos-form" name="nombre " required/>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="contenedor-btn">
+                        <input type="submit " class="boton-estilo" value="Enviar">
+
+                    </div>
+                </form>
             </div>
-        </div>
-        <form action=" ">
-            <label>Nombre</label>
-            <input type="text " name="nombre " placeholder="e.g. Juan Perez " required/>
-            <br>
-            <label>Telefono</label>
-            <input type="number " name="telefono " placeholder="e.g. Juan Perez " required/>
-            <br>
-            <label>Mail</label>
-            <input type="email " id="user-email " placeholder=" juan@gmail.com " required/>
-            <br>
-            <label>Describa brevemente el motivo de su consulta</label>
-            <input type="text " name="nombre " placeholder="e.g. Juan Perez " required/>
-            <br>
-            <br>
-            <input type="submit " value="Enviar ">
-        </form>
+
+
     </main>
     <footer>
         <div class="contenedor-footer ">

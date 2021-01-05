@@ -42,32 +42,36 @@
         </div>
     </header>
     <main>
-        <div class="imagen-fondo-login">
-            <div class="contenedor-login">
-                <div class="contenido-login">
-                    <div class="titulo-login">
-                        <h2>Ingresa</h2>
-                        <br>
-
+        <div class="contenedor-login">
+            <div class="contenido-login">
+                <div class="titulo-login">
+                    <h2>Ingresa</h2>
+                    <br>
+                </div>
+                <form class="form-login" action="">
+                    <div class="etiquetas-form">
+                        <label>Usuario:</label>
+                        <input type="text" class="campos-form" name="nombre" placeholder="Escriba su usuario" required/>
                     </div>
-                    <form class="form-login" action="">
-                        <label>Usuario</label>
-                        <input type="text" class="campos-form" name="nombre" placeholder="Escriba su nombre" required/>
-                        <br>
+                    <br>
+                    <div class="etiquetas-form">
                         <label for="pwd">Password:</label>
                         <input type="password" class="campos-form" id="pwd" name="pwd" placeholder="Escriba su contraseña" required/>
-                        <br>
-                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="contenedor-btn">
                         <input type="submit" class="boton-estilo" value="Acceder">
-                        <br>
-                        <br>
-                        <br>
-                        <a href="recupero-pass.html">Olvide mi contraseña</a>
-                        <br>
-                        <a href="registro.html">Resgistrame</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="recupero-pass.html">Olvide mi contraseña</a>
+                    <br>
+                    <br>
+                    <a href="registro.html">Resgistrame</a>
 
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </main>

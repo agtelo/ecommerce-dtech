@@ -8,6 +8,10 @@ body {
     font-family: 'Comfortaa', cursive;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /*Seccion pre header & header*/
 
@@ -104,8 +108,6 @@ nav>:hover {
 .fa-facebook:hover,
 .fa-instagram:hover,
 .fa-twitter:hover {
-    display: flex;
-    justify-content: right;
     color: #b93232;
     font-size: 30px;
     text-decoration: none;
