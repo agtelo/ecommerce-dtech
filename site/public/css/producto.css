@@ -12,10 +12,10 @@ a {
 
 .contenedor-producto {
     background-image: url(\images\banner-productos.jpg);
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
-    justify-items: center;
+    justify-items: auto;
     justify-content: center;
     padding-top: 20px;
     height: 100%;
@@ -36,4 +36,39 @@ a {
     color: #2C2C2C;
     text-align: center;
     margin-top: 12px;
+}
+
+
+.contenedor-producto1 {
+    background-image: url();
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+}
+.contenedor-producto2 {
+    background-image: url();
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    height: 33%;
+    width: 35%;
+}
+.contenedor-producto3 {
+    background-image: url();
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    height: 33%;
+    width: 35%;
 }
