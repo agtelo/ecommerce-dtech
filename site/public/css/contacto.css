@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-.contenedor-contacto {
+.banner-contacto {
     background-image: url(/images/fondo-contacto.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -17,8 +17,31 @@ a {
     justify-items: center;
     justify-content: center;
     padding-top: 20px;
-    height: 100%;
     width: 100%;
+    height: 100%;
+}
+
+.contenedor-banner-contacto {
+    width: 100%;
+    height: 300px;
+}
+
+.titulo-contacto h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+}
+
+.titulo-contacto p {
+    color: #000000;
+    text-align: left;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+    color: black;
 }
 
 .contenido-contacto {
@@ -29,21 +52,6 @@ a {
     border-radius: 25px;
     margin-bottom: 50px;
     z-index: 1;
-}
-
-.titulo-contacto {
-    color: #ffffff;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.titulo-contacto p {
-    color: #ffffff;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .form-contacto {
