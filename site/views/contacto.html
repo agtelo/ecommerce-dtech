@@ -4,71 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
     <title>Contacto</title>
 </head>
 
 <body>
     <header>
-
-        <nav>
-            <div class="logo">
-                <img width="320" src="images/dtech4.png" href="./home.html">
+        <div class="header-top">
+            <div class="texto-header-top">
+                <p>Atención Comercial: 011-5352 5500 (Buenos Aires) | 0351-568 5000 (Córdoba) | 0261-476 0400 (Mendoza)
+                </p>
             </div>
-            <a href="#">Quienes Somos</a>
-            <a href="#">Planes</a>
-            <a href="#">Desarrollos</a>
-            <a href="contacto.html">Contacto</a>
-            <br>
-            <br>
-            <a href="login.html">Login</a>
-            <i class="fas fa-search"></i>
+            <div class="icono-carrito">
+                <a href="/carrito.html"> <i class="fas fa-shopping-bag" alt="Mis Compras"></i></a>
+            </div>
+        </div>
+        <div class="contenedor-header">
+            <div class="menu-principal">
+                <div class="logo">
+                    <a href="/"> <img wvidth="320" src="images/DTECH-transp.png">
+                </div>
+                <nav>
+                    <a href="# ">Quienes Somos</a>
+                    <a href="producto.html ">Planes</a>
+                    <a href="# ">Desarrollos</a>
+                    <a href="contacto.html ">Contacto</a>
+                    <a href="login.html ">Login</a>
+                    <a href="# ">
+                        <i class="fas fa-search "></i></a>
 
-        </nav>
-        <div class="imagen-contacto">
-            Aca va la imagen de la seccion contacto
+                </nav>
+            </div>
         </div>
     </header>
     <main>
         <div class="contenedor-contacto">
-            <div class="titulo-contacto">
-                <h2>Contactanos</h2>
-                <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</p>
+            <div class="contenido-contacto">
+                <div class="titulo-contacto">
+                    <h2>Contactanos</h2>
+                    <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</p>
+                </div>
+
+                <form class="form-contacto" action="">
+                    <div class="etiquetas-form">
+                        <label>Nombre</label>
+                        <input type="text " name="nombre " class="campos-form" placeholder="Ingresá tu Nombre " required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Telefono</label>
+                        <input type="number " name="telefono " class="campos-form" placeholder="Ingresá tu telefono " required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Mail</label>
+                        <input type="email " id="user-email " class="campos-form" placeholder=" Ingresa tu mail " required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Describa brevemente el motivo de su consulta</label>
+                        <br>
+                        <input type="text " class="campos-form" name="nombre " required/>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="contenedor-btn">
+                        <input type="submit " class="boton-estilo" value="Enviar">
+
+                    </div>
+                </form>
             </div>
-        </div>
-        <form action="">
-            <label>Nombre</label>
-            <input type="text" name="nombre" placeholder="e.g. Juan Perez" required/>
-            <br>
-            <label>Telefono</label>
-            <input type="number" name="telefono" placeholder="e.g. Juan Perez" required/>
-            <br>
-            <label>Mail</label>
-            <input type="email" id="user-email" placeholder=" juan@gmail.com" required/>
-            <br>
-            <label>Describa brevemente el motivo de su consulta</label>
-            <input type="text" name="nombre" placeholder="e.g. Juan Perez" required/>
-            <br>
-            <br>
-            <input type="submit" value="Enviar">
-        </form>
+
+
     </main>
     <footer>
-        <div> <img width="320" src="images/dtech4.png"> </div>
-        <nav>
-            <ul>
+        <div class="contenedor-footer ">
+            <div class="footer-logo ">
+                <img src="images/DTECH-transp.png " alt=" " height="100px ">
+            </div>
+            <nav class="iconos-footer ">
+                <ul>
+                    <div class="fb ">
+                        <a href="# ">
+                            <i class="fab fa-facebook "></i>
+                        </a>
+                    </div>
+                    <div class="insta ">
+                        <a href="# ">
 
-                <a href="#">
-                    <li>Facebook</li>
-                </a>
-                <a href="#">
-                    <li>Instagram</li>
-                </a>
-                <a href="#">
-                    <li>Twetter</li>
-                </a>
-            </ul>
-        </nav>
-        </nav>
+                            <i class="fab fa-instagram "></i>
+                        </a>
+                    </div>
+                    <div class="tweeter ">
+                        <a href="# ">
+                            <i class="fab fa-twitter "></i>
+
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 

@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
     <title>Dtech Solutions</title>
 </head>
 
 <body>
     <header>
-
-        <nav>
-            <div class="logo">
-                <img width="320" src="images/dtech4.png">
+        <div class="header-top">
+            <div class="texto-header-top">
+                <p>Atención Comercial: 0800-999-9999 (Buenos Aires) | 0351-568 5000 (Córdoba) | 0261-476 0400 (Mendoza)
+                </p>
             </div>
+
             <a href="#">Quienes Somos</a>
             <a href="#">Planes</a>
             <a href="">Desarrollos</a>
@@ -27,6 +30,29 @@
             <i class="fas fa-search"></i>
             </div>   
         </nav>
+
+            <div class="icono-carrito">
+                <a href="/carrito.html"> <i class="fas fa-shopping-bag" alt="Mis Compras"></i></a>
+            </div>
+        </div>
+        <div class="contenedor-header">
+            <div class="menu-principal">
+                <div class="logo">
+                    <a href="/"> <img wvidth="320" src="images/DTECH-transp.png">
+                </div>
+                <nav>
+                    <a href="#quienes-somos">Quienes Somos</a>
+                    <a href="producto.html">Planes</a>
+                    <a href="#">Desarrollos</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="login.html">Login</a>
+                    <a href="#">
+                        <i class="fas fa-search"></i></a>
+
+                </nav>
+            </div>
+        </div>
+
     </header>
     <main>
         <section>
@@ -34,54 +60,106 @@
         </section>
         <br>
         <section>
-            <div>
-                img 1
+            <div class="contenedor-titulo-servicios">
+                <div class="titulo-servicios">
+                    <h2>Nuestros Servicios</h2>
+                </div>
             </div>
-            <div>
-                img 2
-            </div>
-            <div>
-                img 3
-            </div>
-            <div>
-                img 4
-            </div>
-            <div>
-                img 5
+            <div class="contenedor-servicios">
+                <div class="servicios">
+                    <div class="icono-servicio">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="titulo-del-servicio">
+                        <h3>Desarrollo Web</h3>
+                    </div>
+                    <p class="texto-servicios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, molestias.</p>
+                </div>
+                <div class="servicios">
+                    <div class="icono-servicio">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="titulo-del-servicio">
+                        <h3>Desarrollo de Apps</h3>
+                    </div>
+                    <p class="texto-servicios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, molestias.</p>
+                </div>
+                <div class="servicios">
+                    <div class="icono-servicio">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="titulo-del-servicio">
+                        <h3>Programacion a Medida</h3>
+                    </div>
+                    <p class="texto-servicios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, molestias.</p>
+                </div>
+                <div class="servicios">
+                    <div class="icono-servicio">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="titulo-del-servicio">
+                        <h3>Servicio 4</h3>
+                    </div>
+                    <p class="texto-servicios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, molestias.</p>
+                </div>
+                <div class="servicios">
+                    <div class="icono-servicio">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="titulo-del-servicio">
+                        <h3>Servicio 5</h3>
+                    </div>
+                    <p class="texto-servicios">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, molestias.</p>
+                </div>
             </div>
         </section>
         <br>
-        <section>
-            <div>
-                <div>mision empresa</div>
-                <div>Imagen</div>
+        <section class="mision-empresa" id="quienes-somos">
+            <div class="texto-mision-empresa">
+                <h3>Somos DTECH una empresa pionera en el diseño y creación de ecommerce y  aplicaciones móviles. Nos basamos en brindar ayuda tecnológica para que las distintas empresas puedan ofrecer mejores servicios, aumentar sus ventas, diferenciarse de la competencia, fidelizar y crecer, brindando a los clientes una experiencia más innovadora y respondiendo a necesidades actuales y futuras del mercado.
+                </h3>
+            </div>
+            <div class="imagen-mision-empresa">
+                <img src="images/institucional250px.jpg" alt="" height="150px" width="250px">
             </div>
         </section>
         <br>
-        <section>
-            <div>
-                <div>Imagen</div>
-                <div>descripcion producto</div>
+        <section class="descripcion-servicios">
+            <div class="imagen-descripcion-servicios">
+                <img src="images/descripcion-servicios250px.jpg" alt="" height="150px" width="250px">
+            </div>
+            <div class="texto-descripcion-servicios">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nam impedit natus laborum, maxime aliquam mollitia aperiam ducimus enim minima accusantium magni repellat est quia tenetur ipsa voluptatibus eos provident.</p>
             </div>
         </section>
     </main>
     <footer>
-        <div>logo</div>
-        <nav>
-            <ul>
+        <div class="contenedor-footer">
+            <div class="footer-logo">
+                <img src="images/DTECH-transp.png" alt="" height="100px">
+            </div>
+            <nav class="iconos-footer">
+                <ul>
+                    <div class="fb">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <div class="insta">
+                        <a href="#">
 
-                <a href="#">
-                    <li>Facebook</li>
-                </a>
-                <a href="#">
-                    <li>Instagram</li>
-                </a>
-                <a href="#">
-                    <li>Twetter</li>
-                </a>
-            </ul>
-        </nav>
-        </nav>
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="tweeter">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 
