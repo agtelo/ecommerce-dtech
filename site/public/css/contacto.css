@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-.contenedor-contacto {
+.banner-contacto {
     background-image: url(/images/fondo-contacto.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -17,8 +17,32 @@ a {
     justify-items: center;
     justify-content: center;
     padding-top: 20px;
-    height: 100%;
     width: 100%;
+    height: 100%;
+}
+
+.contenedor-banner-contacto {
+    width: 100%;
+    height: 300px;
+}
+
+.titulo-contacto h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+}
+
+.titulo-contacto p {
+    color: #000000;
+    text-align: left;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+    color: black;
+    padding-bottom: 40px;
 }
 
 .contenido-contacto {
@@ -31,35 +55,36 @@ a {
     z-index: 1;
 }
 
-.titulo-contacto {
-    color: #ffffff;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.titulo-contacto p {
-    color: #ffffff;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .form-contacto {
-    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #c73333;
+    height: 280px;
+    width: 100%;
+}
+
+.contenedor-form1 {
+    margin-top: 30px;
+    margin-left: 300px;
+    height: 100%;
+}
+
+.contenedor-form2 {
+    height: 100%;
+    margin-top: 30px;
 }
 
 .etiquetas-form {
-    color: #fff;
+    color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .campos-form {
     border: solid 1px #ffffff54;
-    color: #FFF;
+    background-color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
     border-radius: 20px;
     width: 200px;
     height: 30px;
@@ -68,9 +93,30 @@ a {
     text-align: center;
 }
 
+.etiquetas-form-textarea {
+    color: white;
+    position: relative;
+    width: 400px;
+    top: 2px;
+}
+
+.campos-form-textarea {
+    border: solid 1px #ffffff54;
+    background-color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 370px;
+    height: 113px;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+
 .contenedor-btn {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    width: 100px;
+    top: 199px;
+    right: 400px;
 }
 
 .boton-estilo {
@@ -80,7 +126,7 @@ a {
     border: 0;
     height: 35px;
     border-radius: 20px;
-    width: 25%;
+    width: 200px;
 }
 
 .boton-estilo:hover {
