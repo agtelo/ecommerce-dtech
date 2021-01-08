@@ -42,6 +42,7 @@ a {
 p {
     text-align: center;
     color: black;
+    padding-bottom: 40px;
 }
 
 .contenido-contacto {
@@ -55,19 +56,35 @@ p {
 }
 
 .form-contacto {
-    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #c73333;
+    height: 280px;
+    width: 100%;
+}
+
+.contenedor-form1 {
+    margin-top: 30px;
+    margin-left: 300px;
+    height: 100%;
+}
+
+.contenedor-form2 {
+    height: 100%;
+    margin-top: 30px;
 }
 
 .etiquetas-form {
-    color: #fff;
+    color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .campos-form {
     border: solid 1px #ffffff54;
-    color: #FFF;
+    background-color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
     border-radius: 20px;
     width: 200px;
     height: 30px;
@@ -76,9 +93,30 @@ p {
     text-align: center;
 }
 
+.etiquetas-form-textarea {
+    color: white;
+    position: relative;
+    width: 400px;
+    top: 2px;
+}
+
+.campos-form-textarea {
+    border: solid 1px #ffffff54;
+    background-color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 370px;
+    height: 113px;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+
 .contenedor-btn {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    width: 100px;
+    top: 199px;
+    right: 400px;
 }
 
 .boton-estilo {
@@ -88,7 +126,7 @@ p {
     border: 0;
     height: 35px;
     border-radius: 20px;
-    width: 25%;
+    width: 200px;
 }
 
 .boton-estilo:hover {
