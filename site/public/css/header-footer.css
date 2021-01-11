@@ -6,6 +6,8 @@
 
 body {
     font-family: 'Comfortaa', cursive;
+    background-color: white;
+    width: 100%;
 }
 
 html {
@@ -70,6 +72,10 @@ nav>a {
 nav>:hover {
     text-decoration: underline;
     color: #c73333;
+}
+
+.logo {
+    width: 60%;
 }
 
 

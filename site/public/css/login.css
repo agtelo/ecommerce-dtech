@@ -25,6 +25,7 @@ a {
     background-color: #c73333de;
     width: 500px;
     height: 350px;
+    margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
     margin-bottom: 50px;
@@ -55,14 +56,16 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
     width: 80%;
 }
 
 .campos-form {
     border: solid 1px #ffffff54;
     color: #FFF;
+    font-size: 10px;
     border-radius: 20px;
-    width: 200px;
+    width: 150px;
     height: 30px;
     margin-left: 10px;
     margin-top: 5px;
@@ -87,4 +90,14 @@ a {
 .boton-estilo:hover {
     background-color: #202020;
     color: #fff;
+}
+
+@media(min-width:430px) {
+    .campos-form {
+        width: 220px;
+        font-size: 14px;
+    }
+    .etiquetas-form {
+        font-size: 16px;
+    }
 }
