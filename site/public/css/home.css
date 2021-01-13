@@ -122,7 +122,7 @@
     }
 
 html, body{
-  width:100vw;
+  width:100%;
   height:100vh;
   padding:0;
   margin:0px;
@@ -130,16 +130,16 @@ html, body{
 
 slider{
   display:block;
-  width:100vw;
-  height:60vh;
+  width:100%;
+  height:55vh;
   overflow:hidden;
   position: relative;
 }
 slider > * {
   position:absolute;
   display:block;
-  width:100vw;
-  height:60vh;
+  width:100%;
+  height:55vh;
   background:grey;
   animation:slide 12s infinite;
   overflow:hidden;
@@ -177,7 +177,7 @@ font-size:70px;
 text-align:center;
 display:inline-block;
 width:100%;
-margin-top:340px;
+margin-top: 200px;
 color:white;
 }
 
@@ -200,4 +200,4 @@ color:white;
         }
         .texto-mision-empresa {
             font-size: 14px;
-        }
+}
