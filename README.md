@@ -1,18 +1,10 @@
-# grupo_1_Dtech 
+# Nombre del proyecto 
 
-  
+## DTECH be-commerce
 
-<h2>Nombre del proyecto </h2>
-
- <h1><u><b>DTECH </b></u></h1>
-
+___
  
-
- 
-
-  
-
-<h3><sub>Descripcion:</sub></h3>
+### Descripcion:
 
   
 
@@ -21,7 +13,7 @@ El objetivo de la misma es poder ayudar a toda  empresa o comercio a incorporars
 El target al que se apunta es a comercios o empresas que aun no tengan presencia en internet o que si la tienen, aun no la esten explotando o que necesiten potenciar sus sitios o negocios con mejores funcionalidades o con aplicaciones.
 En el area de desarrollo web, a los clientes se les ofrecera "paquetes" ya prearmados para desarrollar sus sitios y tambien se le dara la posibilidad de que puedan elegir distintas opciones de desarrollo para poder armarlo a medida de sus necesidades. </h4>
 
-<h3><u> Integrantes: </u></h3>
+### Integrantes del equipo:
 
 <h3>Alan Telo:</h3> <h4> Tengo 33 años, me dedico a desarrollar comercialmente productos en distintas industrias desde hace 10 años, hoy en día estoy comenzando a dar mis primeos pasos en el mundo IT y mi deseo es el dia de mañana poder dedicarme a la programacion e implmentaciones de sistemas ya que es algo que me apasiona y disfruto mucho. </h4>  
 
@@ -31,7 +23,7 @@ En el area de desarrollo web, a los clientes se les ofrecera "paquetes" ya prear
 desarrollos o funcionalidades que permitan solucionar distintos tipos de problemas. Actualmente trabajo en una pyme desarrollando sus sitios y teniendo a cargo
 la operacion del ecommerce.</h4>
 
-<u> Referencias </u>
+### Referencias:
 
 <up>
   <li>https://www.summasolutions.net/</li>
@@ -40,3 +32,9 @@ la operacion del ecommerce.</h4>
   <li>https://www.combinatoria.com.ar/</li>
   <li>https://www.producteca.com/</li>
 <up>
+
+### Paleta de colores:
+<h4>Basado en el siguiente link: https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff </h4>
+
+### Fuentes:
+
