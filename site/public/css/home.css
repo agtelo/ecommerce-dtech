@@ -124,9 +124,11 @@
     @media(min-width:700px) {
         .imagen-mision-empresa {
             display: block;
-            font-size: 14px
         }
         .imagen-descripcion-servicios {
             display: block;
+        }
+        .texto-mision-empresa {
+            font-size: 14px;
         }
     }
