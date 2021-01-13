@@ -15,7 +15,7 @@ En el area de desarrollo web, a los clientes se les ofrecera "paquetes" ya prear
 
 ### Integrantes del equipo:
 
-<h3>Alan Telo:</h3> <h4> Tengo 33 años, me dedico a desarrollar comercialmente productos en distintas industrias desde hace 10 años, hoy en día estoy comenzando a dar mis primeos pasos en el mundo IT y mi deseo es el dia de mañana poder dedicarme a la programacion e implmentaciones de sistemas ya que es algo que me apasiona y disfruto mucho. </h4>  
+<h3>Alan Telo:</h3> <h4> Tengo 33 años, me dedico a desarrollar comercialmente productos en distintas industrias desde hace 10 años, hoy en día estoy comenzando a dar mis primeros pasos en el mundo IT y mi deseo es el dia de mañana poder dedicarme a la programacion e implmentaciones de sistemas ya que es algo que me apasiona y disfruto mucho. </h4>  
 
 <h3> Alejo Del Fabro:</h3> <h4>Tengo 27 años, desde hace tiempo me viene interesando la idea de la programacion, nunca podia hacerme tiempo o encontrar el lugar adecuado para aprender sobre el tema, actualmente me dedico al rubro de la venta de productos varios, no se parece en nada a la programacion. Nunca me habia interiorizado en el tema pero ahora veo que mientras mas te adentrás en esto, mas te entusiasmas. La idea es sacar lo mejor de este curso y el dia de mañana poder aplicarlo al trabajo.</h4>
 
@@ -36,5 +36,7 @@ la operacion del ecommerce.</h4>
 ### Paleta de colores:
 <h4>Basado en el siguiente link: https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff </h4>
 
-### Fuentes:
+### Tipografia:
+<h4>Basado en el siguiente link: https://fonts.google.com/specimen/Varela+Round </h4>
+
 
