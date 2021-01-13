@@ -49,18 +49,16 @@ html {
     background-color: #ffffff;
 }
 
-.menu-principal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.menu-principal {}
 
 nav {
     text-decoration: none;
     color: #3f3e3e;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Varela Round', sans-serif;
-    width: 50%;
+    width: 70%;
+    text-align: right;
+    margin-right: 30px;
 }
 
 nav>a {
@@ -75,7 +73,34 @@ nav>:hover {
 }
 
 .logo {
-    width: 60%;
+    width: 80%;
+}
+
+.logo img {
+    width: 250px;
+}
+
+@media(min-width:900px) {
+    nav {
+        font-size: 18px;
+        font-family: 'Varela Round', sans-serif;
+        width: 70%;
+        text-align: right;
+    }
+    .menu-principal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media(min-width:380px) {
+    .logo {
+        width: 30%;
+    }
+    .logo img {
+        width: 320px;
+    }
 }
 
 
