@@ -52,6 +52,10 @@ html {
 
 /**/
 
+header img {
+    width: 250px;
+}
+
 menu {
     display: flex;
     justify-content: space-between;
