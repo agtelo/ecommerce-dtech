@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -9,6 +9,7 @@
     height: 60px;
     margin-bottom: 30px;
 }
+
 .titulo-desarrollo {
     color: white;
     font-size: 20px;
