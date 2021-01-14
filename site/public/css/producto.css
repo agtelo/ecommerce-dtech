@@ -12,6 +12,7 @@ a {
 
 
 .contenedor-producto1 {
+    background-image: url(/images/productop.jpg);
     background-color:grey;
     background-size: cover;
     width: 100%;
