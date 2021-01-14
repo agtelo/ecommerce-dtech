@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: auto;
+    height: 200px;
     margin: auto;
 }
 .desarrollos {
@@ -32,13 +32,22 @@
 }
 .icono-desarrollo {
     background-color:grey;
-        border-radius: 50px;
-        border: solid 1px grey;
-        height: 70px;
-        width: 70px;
+    border-radius: 50px;
+    border: solid 1px grey;
+    height: 70px;
+    width: 70px;
 }
 .fa-cogs {
     color: #fff;
     font-size: 50px;
     text-align: center;
+}
+.contenedor-ejemplos {
+    width: 50%;
+    height: 250px;
+}
+
+.conteiner {
+    height: 700px;
+    width: 100%;
 }

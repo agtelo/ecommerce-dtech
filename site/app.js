@@ -41,3 +41,7 @@ app.get("/recupero-pass.html", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/recupero-pass.html"))
 
 });
+app.get("/desarrollo.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "./views/desarrollo.html"))
+
+});
