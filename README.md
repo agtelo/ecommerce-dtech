@@ -33,6 +33,9 @@ la operacion del ecommerce.</h4>
   <li>https://www.producteca.com/</li>
 <up>
 
+### Wireframes:
+<h4>Link a vistas del proyecto: https://www.figma.com/file/uA9Jp5ethSpOKj3n2zW0zI/Desarrollo-Dtech?node-id=0%3A1 </h4>
+
 ### Paleta de colores:
 <h4>Basado en el siguiente link: https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff </h4>
 
