@@ -42,4 +42,7 @@ la operacion del ecommerce.</h4>
 ### Tipografia:
 <h4>Basado en el siguiente link: https://fonts.google.com/specimen/Varela+Round </h4>
 
+### Tablero de trabajo:
+<h4> Link a tablero de proyecto: https://trello.com/alantelo/boards </h4>
+
 
