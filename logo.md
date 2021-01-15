@@ -1,1 +1,0 @@
-![logo](DTECH4.png)
