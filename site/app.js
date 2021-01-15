@@ -5,9 +5,9 @@ const path = require('path');
 const publicFolderPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicFolderPath));
 
-app.listen(3030, () => {
-    console.log("servidor dtech funcionando ok")
-});
+app.listen(process.env.PORT || 3000, function() {
+    console.log("El servidor esta corriendo ");
+})
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./views/home.html"))
