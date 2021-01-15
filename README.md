@@ -36,6 +36,9 @@ la operacion del ecommerce.</h4>
 ### Wireframes:
 <h4>Link a vistas del proyecto: https://www.figma.com/file/uA9Jp5ethSpOKj3n2zW0zI/Desarrollo-Dtech?node-id=0%3A1 </h4>
 
+### Logo:
+![DTECH4](https://user-images.githubusercontent.com/68731390/104774692-e58d2000-5755-11eb-9206-33c9d07d20eb.png)
+
 ### Paleta de colores:
 <h4>Basado en el siguiente link: https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff </h4>
 
