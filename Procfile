@@ -1,1 +1,1 @@
-web: node app.js
+web: cd <site> && npm start
