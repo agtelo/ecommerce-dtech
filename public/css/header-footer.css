@@ -222,12 +222,15 @@ nav>:hover {
 }
 
 .iconos-footer {
+    width: 20%;
+}
+
+.iconos-footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    padding: 5px;
-    margin-top: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .fa-facebook,
