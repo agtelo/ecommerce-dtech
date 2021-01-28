@@ -16,7 +16,8 @@ a {
     display: flex;
     justify-items: center;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 123px;
+    padding-bottom: 120px;
     height: 100%;
     width: 100%;
 }
