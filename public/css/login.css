@@ -10,7 +10,7 @@ a {
 }
 
 .contenedor-login {
-    background-image: url(/images/fondo-login.jpg);
+    background-image: url(/images/backgorund-login.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -61,7 +61,7 @@ a {
 }
 
 .campos-form {
-    border: solid 1px #ffffff54;
+    
     color: #FFF;
     font-size: 10px;
     border-radius: 20px;

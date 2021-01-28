@@ -216,9 +216,46 @@ nav>:hover {
     height: 150px;
 }
 
+/*.footer-logo {
+    display: flex;
+    align-items: center;
+}
+*/
+
 .footer-logo {
     display: flex;
     align-items: center;
+    margin-left: 40px;
+    width: 150px;
+    height: 150px;
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: .8;
+    color: #aaa;
+    text-transform: uppercase;
+    padding: 41px 0;
+    margin: 35px;
+    
+    
+}
+
+.extra ul {
+    list-style: none;
+    color: #aaa;
+    padding: 30px;
+    display: flex;
+    margin: 40px;
+}
+
+.extra li a {
+    justify-content: space-between;
+    text-decoration: none;
+    color: #aaa;
+    padding: 15px 20px;
+    
+    
 }
 
 .iconos-footer {
