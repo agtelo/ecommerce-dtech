@@ -11,7 +11,7 @@ a {
 
 .contenedor-login {
     background-image: url(/images/backgorund-login.jpg);
-    background-size: cover;
+    /*background-size: cover;*/
     background-attachment: fixed;
     display: flex;
     justify-items: center;
