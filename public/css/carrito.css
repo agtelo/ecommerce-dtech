@@ -1,0 +1,23 @@
+.cart {
+    background-color: lightblue;
+    float: right;
+    text-align: right;
+    position: relative;
+    }
+    
+    .list {
+    
+    background-color: lightgreen;
+    height: 250px;
+    width: 300px;
+    border: 2px solid red;
+    right: 0;
+    position: absolute;
+    transition: 1s all;
+    transform: scale(0) ;
+    transform-origin: 100% 0%;
+    }
+    
+    .cart:hover > .list {
+    transform: scale(1);
+    }
