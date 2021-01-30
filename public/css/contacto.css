@@ -10,7 +10,7 @@ a {
 }
 
 .banner-contacto {
-    background-image: url(/images/fondo-contacto.jpg);
+    background-image: url(/images/backgorund-login.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 20px;
@@ -123,6 +123,6 @@ a {
     .form-contacto {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        
     }
 }

@@ -246,7 +246,7 @@ nav>:hover {
     text-transform: uppercase;
     padding: 41px 0;
     margin: 0px;
-    border-top:solid 2px;
+    border-top:solid 1px;
     text-align: center;
     height: 1px;
     
@@ -299,9 +299,7 @@ nav>:hover {
     flex-direction: row;
     padding: 0px 0;
     margin-left: 200px;
-    
-    
-    
+
 }
 
 .extra li a {
@@ -312,7 +310,9 @@ nav>:hover {
 
 }
 
-
+.copyright {
+    padding: 15px 15px ;
+}
 
 }
 
