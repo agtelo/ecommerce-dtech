@@ -211,78 +211,114 @@ nav>:hover {
 
 .contenedor-footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #141010;
     height: 300px;
+    
 }
-
-/*.footer-logo {
-    display: flex;
-    align-items: center;
-}
-*/
 
 .footer-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    
+}
+
+
+.footer-logo  {
+    display: flex;    
+    align-items: center;
+    justify-items: center;
     margin-left: 10px;
     width: 150px;
     height: 150px;
+    
 }
 
 .copyright {
     display: flex;
+    justify-content: center;
     background-color: #141010;
-    font-size: 10px;
+    font-size: 12px;
     line-height: .8;
     color: #aaa;
     text-transform: uppercase;
     padding: 41px 0;
     margin: 0px;
-    align-items: center;
-    
-    
-    
+    border-top:solid 2px;
+    text-align: center;
+    height: 1px;
     
 }
 
+
 .extra ul {
-    list-style: none;
+    list-style:none;
     color: #aaa;
     padding: 30px;
     display: flex;
     flex-direction: row;
-    margin: 40px;
+    justify-content: space-around;
+    text-align: center;
+    margin: 10px;
     width: 50px;
+    
 }
 
 .extra li a {
-    justify-content: space-between;
+    justify-content: space-around;
     text-decoration: none;
     color: #aaa;
     padding: 15px 20px;
+    text-align: center;
+    display: table-cell;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    
     
     
 }
 
 @media(min-width:768px) {
+
 .footer-logo {
-    align-items: center;
-    margin-left: 40px;
-    width: 150px;
+    margin-left: 30px;
+}    
+
+.contenedor-footer {
+    flex-direction: row;
+    justify-content: space-between;
     height: 150px;
+    
+}  
+
+.extra ul {
+    flex-direction: row;
+    padding: 0px 0;
+    margin-left: 200px;
+    
+    
+    
 }
-.copyright {
+
+.extra li a {
+    
+    color: #aaa;
+    padding: 15px 20px;
     font-size: 14px;
-}
 
 }
 
 
+
+}
 
 .iconos-footer {
     width: 20%;
+    margin-bottom: 10px;
 }
 
 .iconos-footer ul {
