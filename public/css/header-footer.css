@@ -214,6 +214,7 @@ nav>:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: space-around;
     background-color: #141010;
     height: 300px;
     
@@ -311,13 +312,16 @@ nav>:hover {
     padding: 15px 20px;
     font-size: 14px;
     text-align: center;
-    display: table;
+    text-align: center;
+    
     
 }
 
 .copyright {
     padding: 15px 15px ;
+    
 }
+
 
 
 }
