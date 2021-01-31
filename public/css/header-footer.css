@@ -266,6 +266,9 @@ nav>:hover {
     
 }
 
+
+
+
 .extra li a {
     justify-content: space-around;
     text-decoration: none;
@@ -307,14 +310,26 @@ nav>:hover {
     color: #aaa;
     padding: 15px 20px;
     font-size: 14px;
-
+    text-align: center;
+    display: table;
+    
 }
 
 .copyright {
     padding: 15px 15px ;
 }
 
+
 }
+
+
+
+
+
+
+
+
+
 
 .iconos-footer {
     width: 20%;
