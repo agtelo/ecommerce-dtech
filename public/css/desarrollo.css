@@ -31,23 +31,27 @@
     margin: auto;
     text-align: center;
 }
+
 .desarrollos {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .icono-desarrollo {
-    background-color:grey;
+    background-color: grey;
     border-radius: 50px;
     border: solid 1px grey;
     height: 70px;
     width: 70px;
 }
+
 .fa-cogs {
     color: #fff;
     font-size: 30px;
     text-align: center;
 }
+
 .contenedor-ejemplos {
     width: 50%;
     height: 700px;
