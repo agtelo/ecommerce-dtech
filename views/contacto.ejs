@@ -13,106 +13,50 @@
 </head>
 
 <body>
-    <div class="header-top">
-        <div class="texto-header-top">
-            <p>Atención Comercial: 0800-999-9999 </p>
-        </div>
-        <div class="icono-carrito">
-            <a href="/carrito.html"> <i class="fas fa-shopping-bag" alt="Mis Compras"></i></a>
-        </div>
-    </div>
-    <header>
+    <%- include('./partialls/header.ejs'); -%>
 
-        <a href="/"> <img width="80px" height="80px" src="images/logo.svg"></a>
-        <input type="checkbox" id="btn-menu" />
-
-        <label for="btn-menu" class="icono-menu"><i class="fas fa-bars"></i></label>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Quienes Somos</a></li>
-                <li><a href="producto.html">Planes</a></li>
-                <li><a href="desarrollo.html">Desarrollos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-
-        </nav>
-    </header>
-    <main>
-        <div class="contenedor-banner-contacto">
-            <div class="banner-contacto">
-            </div>
-        </div>
-        <div class="titulo-contacto">
-            <h2>Contactanos</h2>
-            <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</.>
-        </div>
-
-        <form class="form-contacto" action="">
-            <div class="contenedor-form">
-                <div class="contenedor-form1">
-                    <div class="etiquetas-form">
-                        <label>Nombre</label>
-                        <input type="text " name="nombre " class="campos-form" placeholder="Ingresá tu Nombre " required/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label>Telefono</label>
-                        <input type="number " name="telefono " class="campos-form" placeholder="Ingresá tu telefono " required/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label>Mail</label>
-                        <input type="email " id="user-email " class="campos-form" placeholder=" Ingresa tu mail " required/>
-                    </div>
-                    <div class="etiquetas-form-textarea">
-                        <label class="etiquetas-form">Describa brevemente el motivo de su consulta</label>
-                        <textarea class="campos-form-textarea"></textarea>
-                    </div>
-                    <div class="contenedor-btn">
-                        <input type="submit " class="boton-estilo" value="Enviar">
-                    </div>
+        </header>
+        <main>
+            <div class="contenedor-banner-contacto">
+                <div class="banner-contacto">
                 </div>
             </div>
-        </form>
-    </main>
-    <footer>
-        <div class="contenedor-footer ">
-            <div class="footer-logo ">
-                <a href="/"> <img width="150px" height="150px" src="images/logo.svg"></a>
+            <div class="titulo-contacto">
+                <h2>Contactanos</h2>
+                <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</.>
             </div>
-            <div class="extra">
-                <ul>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                </ul>
-            </div>
-            
-            <nav class="iconos-footer">
-                <ul>
-                    <div class="fb">
-                        <a href="https://www.facebook.com/dtech.becommerce/" target="__blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
+
+            <form class="form-contacto" action="">
+                <div class="contenedor-form">
+                    <div class="contenedor-form1">
+                        <div class="etiquetas-form">
+                            <label>Nombre</label>
+                            <input type="text " name="nombre " class="campos-form" placeholder="Ingresá tu Nombre " required/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label>Telefono</label>
+                            <input type="number " name="telefono " class="campos-form" placeholder="Ingresá tu telefono " required/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label>Mail</label>
+                            <input type="email " id="user-email " class="campos-form" placeholder=" Ingresa tu mail " required/>
+                        </div>
+                        <div class="etiquetas-form-textarea">
+                            <label class="etiquetas-form">Describa brevemente el motivo de su consulta</label>
+                            <textarea class="campos-form-textarea"></textarea>
+                        </div>
+                        <div class="contenedor-btn">
+                            <input type="submit " class="boton-estilo" value="Enviar">
+                        </div>
                     </div>
-                    <div class="insta">
-                        <a href="https://www.instagram.com/becommercedtech/" target="__blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                    <div class="twitter">
-                        <a href="https://twitter.com/DtechBe" target="__blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </ul>
-            </nav>
-        </div>
-        <div class="copyright"> @copyright 2021 - dtech.com.ar
-                
-        </div>
-    </footer>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <%- include('./partialls/footer.ejs'); -%>
+        </footer>
 </body>
 
 </html>

@@ -13,96 +13,39 @@
 </head>
 
 <body>
-    <div class="header-top">
-        <div class="texto-header-top">
-            <p>Atención Comercial: 0800-999-9999 </p>
-        </div>
-        <div class="icono-carrito">
-            <a href="/carrito.html"> <i class="fas fa-shopping-bag" alt="Mis Compras"></i></a>
-        </div>
-    </div>
-    <header>
+    <%- include('./partialls/header.ejs'); -%>
 
-        <a href="/"> <img width="80px" height="80px" src="images/logo.svg"></a>
-        <input type="checkbox" id="btn-menu" />
-
-        <label for="btn-menu" class="icono-menu"><i class="fas fa-bars"></i></label>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Quienes Somos</a></li>
-                <li><a href="producto.html">Planes</a></li>
-                <li><a href="desarrollo.html">Desarrollos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="contenedor-titulo-desarrollo">
-                <h2>Desarrollos</h2>
+        </header>
+        <main>
+            <section>
+                <div class="contenedor-titulo-desarrollo">
+                    <h2>Desarrollos</h2>
+            </section>
+            <div class="contenedor-desarrollo">
+                <section class="desarrollos">
+                    <div class="icono-desarrollo">
+                        <i class="fas fa-cogs"></i>
+                    </div>
                 </section>
-                <div class="contenedor-desarrollo">
-                    <section class="desarrollos">
-                        <div class="icono-desarrollo">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="contenedor-ejemplos">
+                <section>
+                    <div class="contenedor-ejemplos">
                         <div class="titulo-desarrollo">
-                        <h3>Pepsi</h3>
-                    </div>
-                    <div class="titulo-desarrollo">
-                        <h3>Mcdonalds</h3>
-                    </div>
-                    <div class="titulo-desarrollo">
-                        <h3>Loma Negra</h3>
-                    </div>
-                    <div class="titulo-desarrollo">
-                        <h3>Estancia Mendoza</h3>
-                    </div>
-                    </section>
-            </main>
-            <footer>
-                <div class="contenedor-footer">
-                    <div class="footer-logo">
-                        <a href="/"> <img width="150px" height="150px" src="images/logo.svg"></a>
-                    </div>
-                    <div class="extra">
-                        <ul>
-                            <li><a href="#">Términos y Condiciones</a></li>
-                            <li><a href="#">Política de Cookies</a></li>
-                            <li><a href="#">Política de Privacidad</a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright"> @copyright 2021 - dtech.com.ar
-                        
-                    </div>
-                    <nav class="iconos-footer">
-                        <ul>
-                            <div class="fb">
-                                <a href="https://www.facebook.com/dtech.becommerce/" target="__blank">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                            </div>
-                            <div class="insta">
-                                <a href="https://www.instagram.com/becommercedtech/" target="__blank">
-        
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                            <div class="twitter">
-                                <a href="https://twitter.com/DtechBe" target="__blank">
-                                    <i class="fab fa-twitter"></i>
-        
-                                </a>
-                            </div>
-                        </ul>
-                    </nav>
-                </div>
-            </footer>
-        </body>
-        
-        </html>
+                            <h3>Pepsi</h3>
+                        </div>
+                        <div class="titulo-desarrollo">
+                            <h3>Mcdonalds</h3>
+                        </div>
+                        <div class="titulo-desarrollo">
+                            <h3>Loma Negra</h3>
+                        </div>
+                        <div class="titulo-desarrollo">
+                            <h3>Estancia Mendoza</h3>
+                        </div>
+                </section>
+        </main>
+        <footer>
+            <%- include('./partialls/footer.ejs'); -%>
+        </footer>
+</body>
+
+</html>
