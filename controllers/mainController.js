@@ -5,7 +5,7 @@ module.exports = {
     // y la respuesta que enviará el server (res)
 
     index: function(req, res) {
-        return res.render('index')
+        return res.render('home.ejs')
     }
 
 }
