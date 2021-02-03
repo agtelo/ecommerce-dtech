@@ -1,7 +1,6 @@
 {
   "name": "html_css",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app $*"
@@ -11,5 +10,18 @@
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agtelo/equipo1_DTECH.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/agtelo/equipo1_DTECH/issues"
+  },
+  "homepage": "https://github.com/agtelo/equipo1_DTECH#readme",
+  "description": ""
 }

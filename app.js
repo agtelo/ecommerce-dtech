@@ -14,7 +14,7 @@ app.listen(process.env.PORT || 3000, function() {
 })
 
 const mainRouter = require('./routes/mainRouter');
-app.use('/', mainRouter)
+app.use('/', mainRouter);
 
 //app.get("/", (req, res) => {
 ////    res.sendFile(path.join(__dirname, "./views/home.html"))
