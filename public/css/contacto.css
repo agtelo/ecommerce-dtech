@@ -122,7 +122,18 @@ a {
 @media(mix-width:768px) {
     .form-contacto {
         display: flex;
+<<<<<<< HEAD
         justify-content: space-between;
         
     }
+=======
+        
+    
+    }
+
+    
+
+
+
+>>>>>>> 8b4a2790c4b0f3608eb610f41e34492ee1eb18f3
 }

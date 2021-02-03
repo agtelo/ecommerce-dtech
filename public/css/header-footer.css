@@ -199,7 +199,22 @@ nav>:hover {
     }
 }
 */
+<<<<<<< HEAD
     /*footer*/
+=======
+
+
+/*footer*/
+
+.contenedor-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    background-color: #141010;
+    height: 300px;
+>>>>>>> 8b4a2790c4b0f3608eb610f41e34492ee1eb18f3
     
     .contenedor-footer {
         background-color: #141010;
@@ -278,6 +293,7 @@ nav>:hover {
         text-decoration: none;
     }
     
+<<<<<<< HEAD
     .fa-facebook:hover,
     .fa-instagram:hover,
     .fa-twitter:hover {
@@ -356,3 +372,61 @@ nav>:hover {
             margin: 20px;
         }
     }
+=======
+    color: #aaa;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-align: center;
+    text-align: center;
+    
+    
+}
+
+.copyright {
+    padding: 15px 15px ;
+    
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.iconos-footer {
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+.iconos-footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
+    color: white;
+    font-size: 30px;
+    padding: 7px;
+    text-decoration: none;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover {
+    color: #b93232;
+    font-size: 30px;
+    text-decoration: none;
+}
+>>>>>>> 8b4a2790c4b0f3608eb610f41e34492ee1eb18f3
