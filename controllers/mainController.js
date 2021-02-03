@@ -1,11 +1,38 @@
-module.exports = {
+const mainController = {
+    
+    index: function(req,res){
+        return res.render ('index');
+    },
+   
+    login: function(req,res){
+        return res.render ('login');
+    },
 
-    // Definimos un método llamado index,
-    // que recibirá los datos de la petición (req)
-    // y la respuesta que enviará el server (res)
+    registro: function(req,res){
+        return res.render ('registro');
+    },
 
-    index: function(req, res) {
-        return res.render('home.ejs')
-    }
+    recuperoPass: function(req,res){
+        return res.render ('recupero-pass');
+    },
+
+    contacto: function(req,res){
+        return res.render ('contacto');
+    },
+
+    producto: function(req,res){
+        return res.render ('producto');
+    },
+
+    carrito: function(req,res){
+        return res.render ('carrito');
+    },
+
+    desarrollo: function(req,res){
+        return res.render ('desarrollo');
+    },
+
 
 }
+
+module.exports = mainController;

@@ -234,15 +234,19 @@
     @media(min-width:700px) {
         .imagen-mision-empresa {
             display: block;
-            font-size: 14px;
+            
         }
         .imagen-descripcion-servicios {
             display: block;
+            box-shadow: none;
         }
+        .imagen-mision-empresa {
+            box-shadow: none; 
+        }
+
         .texto-mision-empresa {
             font-size: 14px;
         }
     }
 
 
-    
