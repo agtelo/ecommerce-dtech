@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.listen(process.env.PORT || 3000, function() {
-    console.log("El servidor esta corriendo ")
+    console.log("El servidor esta corriendo en puerto 3000 ")
 })
 
 const mainRouter = require('./routes/mainRouter');
