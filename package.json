@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app $*"
+    "start": "node app $*",
+    "test": "nodemon app.js -e .mjs,.js,.ejs,.css,.json"
   },
   "author": "",
   "license": "ISC",
@@ -23,5 +24,8 @@
     "url": "https://github.com/agtelo/equipo1_DTECH/issues"
   },
   "homepage": "https://github.com/agtelo/equipo1_DTECH#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
