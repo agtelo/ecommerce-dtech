@@ -119,21 +119,40 @@ a {
     color: #fff;
 }
 
-@media(mix-width:768px) {
+@media(min-width:768px) {
     .form-contacto {
+        background-color:#cb4b4a;
+        height: 350px;
+        width: 100%;
         display: flex;
-<<<<<<< HEAD
-        justify-content: space-between;
+        justify-content: center;
         
-    }
-=======
         
     
     }
-
     
+    .contenedor-form1 {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin-top: 40px
 
+}
 
+    .campos-form-textarea {
+        width: 95%;
+        height: 200px;
+}
 
->>>>>>> 8b4a2790c4b0f3608eb610f41e34492ee1eb18f3
+    .contenedor-btn {
+    display: flex;
+    justify-content: flex-end;
+
+}
+    .campos-form {
+        width: 250px
+    }
+    .titulo-contacto p {
+        text-align: center;
+    }
 }
