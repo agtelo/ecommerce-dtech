@@ -13,7 +13,7 @@ const mainController = {
     },
 
     recuperoPass: function(req,res){
-        return res.render ('recupero-pass', {title: "Recupero" ,css: "login"} );
+        return res.render ('recupero-pass', {title: "Recupero" ,css: "login,"} );
     },
 
     contacto: function(req,res){
@@ -29,7 +29,7 @@ const mainController = {
     },
 
     desarrollo: function(req,res){
-        return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollo"});
+        return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollos"});
     },
 
 
