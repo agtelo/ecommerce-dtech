@@ -29,7 +29,7 @@ const mainController = {
     },
 
     desarrollo: function(req,res){
-        return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollos"});
+        return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollo"});
     },
 
 
