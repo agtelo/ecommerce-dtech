@@ -23,7 +23,7 @@ a {
 }
 
 .contenido-login {
-    background-color: #c73333de;
+    background-color: #14100f;
     width: 500px;
     height: 350px;
     margin: 20px;
@@ -100,7 +100,7 @@ a {
 }
 
 .boton-estilo:hover {
-    background-color: #202020;
+    background-color:#c73333;
     color: #fff;
 }
 
