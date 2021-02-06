@@ -14,7 +14,7 @@ router.get('/contacto', mainController.contacto);
 router.get('/productos', mainController.producto);
 router.get('/carrito', mainController.carrito);
 router.get('/desarrollos', mainController.desarrollo);
-
+router.get('/admin', mainController.admin);
 
 module.exports = router;
 

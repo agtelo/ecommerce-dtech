@@ -31,8 +31,14 @@ const mainController = {
     desarrollo: function(req,res){
         return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollo"});
     },
-
+    
+    admin: function(req,res) {
+        return res.render ('admin', {title: "Admin", css: "admin"});
+    }
 
 }
 
+
+
 module.exports = mainController;
+
