@@ -11,9 +11,9 @@ router.get('/login', mainController.login);
 router.get('/registro', mainController.registro);
 router.get('/recupero-pass', mainController.recuperoPass);
 router.get('/contacto', mainController.contacto);
-router.get('/producto', mainController.producto);
+router.get('/productos', mainController.producto);
 router.get('/carrito', mainController.carrito);
-router.get('/desarrollo', mainController.desarrollo);
+router.get('/desarrollos', mainController.desarrollo);
 
 
 module.exports = router;
