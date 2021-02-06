@@ -111,7 +111,7 @@
     
     .texto-mision-empresa {
         color: white;
-        font-size: 14px;
+        font-size: 12px;
         margin: 15px 50px;
     }
     
@@ -131,7 +131,7 @@
     
     .texto-descripcion-servicios {
         color: white;
-        font-size: 14px;
+        font-size: 12px;
         margin: 15px 50px;
     }
     
@@ -158,6 +158,20 @@
         .texto-mision-empresa {
             font-size: 14px;
         }
+        .texto-descripcion-servicios {
+            font-size:14px;
+
+        }
+        
+        slide p {
+            font-size: 30px;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            margin-top: 200px;
+            color: white;
+        }
+
     }
 
 

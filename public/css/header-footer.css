@@ -322,11 +322,19 @@ nav>:hover {
     
 }
 
-}
-
 .iconos-footer {
     width: none;
     margin-right: 35px;
+}
+
+}
+
+
+
+
+.iconos-footer {
+    width: none;
+    
 }
 
 .iconos-footer ul {
