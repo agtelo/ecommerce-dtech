@@ -15,6 +15,9 @@ router.get('/productos', mainController.producto);
 router.get('/carrito', mainController.carrito);
 router.get('/desarrollos', mainController.desarrollo);
 router.get('/admin', mainController.admin);
+router.get('/product-panel', mainController.panel);
+
+
 
 module.exports = router;
 

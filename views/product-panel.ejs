@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Panel Producto</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs'); -%>
+    </header>
+    <div class="contenedor-login">
+        <div class="contenido-login">
+            <div class="titulo-login">
+                <h2>Crear Producto</h2>
+                <br>
+            </div>
+            <form action="/" method=""class="form-login">
+                <div class="etiquetas-form">
+                    <label>Nombre Producto:</label>
+                    <input type="text" name="nombre-p" class="campos-form" placeholder="" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label class="campos-form-label">Descripcion:</label>
+                    <input type="text"   name="descripcion-p "class="campos-form" placeholder="" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label>Categoria:</label>
+                    <input type="text"  class="campos-form" name="categoria-p" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label>Precio:</label>
+                    <input type="number"  class="campos-form" name="precio" required/>
+                </div>
+                <br>
+                <div class="contenedor-btn">
+                    <input type="submit" class="boton-estilo" value="Aceptar">
+                </div>
+            </form>
+        </div>
+        <div class="contenido-login">
+            <div class="titulo-login">
+                <h2>Editar Producto</h2>
+                <br>
+            </div>
+            <form action="/" method=""class="form-login">
+                <div class="etiquetas-form">
+                    <label>Usuario:</label>
+                    <input type="text" name="nombre" class="campos-form" placeholder="" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label class="campos-form-label">Mail:</label>
+                    <input type="email" " class="campos-form" placeholder=" " required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label for="pwd">Password:</label>
+                    <input type="password"  class="campos-form" name="pwd" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label for="pwd">Repetir Password:</label>
+                    <input type="password" class="campos-form" name="pwd" required/>
+                </div>
+                <br>
+                <div class="contenedor-btn">
+                    <input type="submit" class="boton-estilo" value="Aceptar">
+                </div>
+            </form>
+        </div>
+        <div class="contenido-login">
+            <div class="titulo-login">
+                <h2>Eliminar Producto</h2>
+                <br>
+            </div>
+            <form action="/" method=""class="form-login">
+                <div class="etiquetas-form">
+                    <label>Buscar Producto:</label>
+                    <input type="text" name="nombre-p" class="campos-form" placeholder="" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label class="campos-form-label">Descripcion:</label>
+                    <input type="text"  class="campos-form" placeholder="" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label>Categoria:</label>
+                    <input type="text" class="campos-form" name="categoria-p" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label for="pwd">Repetir Password:</label>
+                    <input type="password"  class="campos-form" name="pwd" required/>
+                </div>
+                <br>
+                <div class="contenedor-btn">
+                    <input type="submit" class="boton-estilo" value="Aceptar">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <%- include('./partials/footer.ejs'); -%>
+    </footer>
+</body>
+</html>

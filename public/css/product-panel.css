@@ -23,7 +23,7 @@ a {
 }
 
 .contenido-login {
-    background-color: #14100f;
+    background-color: #c73333de;
     width: 500px;
     height: 350px;
     margin: 20px;
@@ -73,7 +73,9 @@ a {
     text-align: center;
 }
 
-
+#radio-permanecer {
+    color: #929292;
+}
 
 .etiqueta-permanecer {
     display: flex;
@@ -98,7 +100,7 @@ a {
 }
 
 .boton-estilo:hover {
-    background-color:#c73333;
+    background-color: #202020;
     color: #fff;
 }
 

@@ -34,7 +34,11 @@ const mainController = {
     
     admin: function(req,res) {
         return res.render ('admin', {title: "Admin", css: "admin"});
+    },
+    panel: function(req,res) {
+        return res.render ('product-panel', {title: "Panel", css: "product-panel"});
     }
+    
 
 }
 
