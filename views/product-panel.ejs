@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/product-panel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
@@ -13,7 +13,19 @@
 <body>
     <%- include('./partials/header.ejs'); -%>
     </header>
+
+        
+        
+
     <div class="contenedor-login">
+        
+        <div class="contenido-login1">
+            <div class="titulo-login">
+                <h2>PANEL GESTION ADMINISTRADOR</h2>
+                
+            </div>
+
+        </div>
         <div class="contenido-login">
             <div class="titulo-login">
                 <h2>Crear Producto</h2>
@@ -22,22 +34,22 @@
             <form action="/" method=""class="form-login">
                 <div class="etiquetas-form">
                     <label>Nombre Producto:</label>
-                    <input type="text" name="nombre-p" class="campos-form" placeholder="" required/>
+                    <input type="text" name="nombre-c" class="campos-form" placeholder="" required/>
                 </div>
                 <br>
                 <div class="etiquetas-form">
                     <label class="campos-form-label">Descripcion:</label>
-                    <input type="text"   name="descripcion-p "class="campos-form" placeholder="" required/>
+                    <input type="text"   name="descripcion-c "class="campos-form" placeholder="" required/>
                 </div>
                 <br>
                 <div class="etiquetas-form">
                     <label>Categoria:</label>
-                    <input type="text"  class="campos-form" name="categoria-p" required/>
+                    <input type="text"  class="campos-form" name="categoria-c" required/>
                 </div>
                 <br>
                 <div class="etiquetas-form">
                     <label>Precio:</label>
-                    <input type="number"  class="campos-form" name="precio" required/>
+                    <input type="number"  class="campos-form" name="precio-c" required/>
                 </div>
                 <br>
                 <div class="contenedor-btn">
@@ -76,7 +88,7 @@
                 </div>
             </form>
         </div>
-        <div class="contenido-login">
+        <div class="contenido-login4">
             <div class="titulo-login">
                 <h2>Eliminar Producto</h2>
                 <br>
@@ -84,7 +96,11 @@
             <form action="/" method=""class="form-login">
                 <div class="etiquetas-form">
                     <label>Buscar Producto:</label>
-                    <input type="text" name="nombre-p" class="campos-form" placeholder="" required/>
+                    <select>
+                        <option>Producto1</option>
+                        <option>Producto2</option>
+                        <option>Producto3</option>
+                    </select>
                 </div>
                 <br>
                 <div class="etiquetas-form">
@@ -92,15 +108,6 @@
                     <input type="text"  class="campos-form" placeholder="" required/>
                 </div>
                 <br>
-                <div class="etiquetas-form">
-                    <label>Categoria:</label>
-                    <input type="text" class="campos-form" name="categoria-p" required/>
-                </div>
-                <br>
-                <div class="etiquetas-form">
-                    <label for="pwd">Repetir Password:</label>
-                    <input type="password"  class="campos-form" name="pwd" required/>
-                </div>
                 <br>
                 <div class="contenedor-btn">
                     <input type="submit" class="boton-estilo" value="Aceptar">

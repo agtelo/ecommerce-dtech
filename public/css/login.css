@@ -13,7 +13,7 @@ a {
     background-image: url(/images/backgorund-login.jpg);
     /*background-size: cover;*/
     background-attachment: fixed;
-    display: flex;
+    display: block;
     justify-items: center;
     justify-content: center;
     padding-top: 123px;
