@@ -1,7 +1,7 @@
 const mainController = {
     
     index: function(req,res){
-        return res.render ('index', {title: "Home", css:"home"});
+                return res.render ('index', {title: "Home", css:"home"});
     },
    
     login: function(req,res){

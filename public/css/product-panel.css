@@ -9,6 +9,11 @@ a {
     text-decoration: none;
 }
 
+
+
+
+
+
 select {
     
     padding: 18px 22px;
@@ -41,7 +46,7 @@ select {
     height: 50px;
     margin: 20px;
     border: solid 1px #c7333354;
-    border-radius: 25px;
+    border-radius: 20px;
     margin-bottom: 50px;
     z-index: 1;
 }
@@ -59,7 +64,7 @@ select {
 
 
 .contenido-login {
-    background-color: #c73333de;
+    background-color:#c73333de;
     width: 500px;
     height: 350px;
     margin: 20px;
@@ -107,6 +112,7 @@ select {
     margin-left: 10px;
     margin-top: 5px;
     text-align: center;
+    
 }
 
 
@@ -128,4 +134,28 @@ select {
 .boton-estilo:hover {
     background-color: #202020;
     color: #fff;
+}
+
+@media(min-width:430px) {
+    .campos-form {
+        width: 220px;
+        font-size: 14px;
+    }
+    .etiquetas-form {
+        font-size: 16px;
+    }
+    .contenedor-login {
+        display: flex;
+        
+    }
+    .contenedor-login1 {
+        display: flex;
+        
+        
+
+    }
+    .titulo-login h4 {
+        text-align: justify;
+        
+    }
 }
