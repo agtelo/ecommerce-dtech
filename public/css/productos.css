@@ -3,106 +3,37 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
 /*Seccion Descripcion de servicios*/
 
-.contenedor-producto-personalizado {
-    background-image: url(/images/img12.jpg);
-    background-size: cover;
-    background-position: center;
-    padding-top: 20px;
-    width: 100%;
-    height: 100%;
-}
-
-.contenedor-producto-personalizado h3 {
-    color: rgb(53, 1, 1);
-    text-align: center;
-}
-
-.contenedor-producto-personalizado p {
-    color: rgb(41, 41, 41);
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-}
-
-.contenido-producto-personalizado {
-    display: flex;
-    justify-content: space-around;
-}
-
-.producto-personalizado {
-    background-color: #272727;
-    border: solid 1px rgb(255, 255, 255);
-    z-index: 10;
-    width: 20%;
-    height: 300px;
-    margin: 20px 30px;
-    border-radius: 10px;
-}
-
-.texto-servicios-premium {
-    margin: 20px 10px;
-    color: #ffffff;
-}
-
-.texto-servicios-premium li {
-    list-style: none;
-}
-
-.texto-servicios-premium .fa-check {
-    color: rgb(255, 255, 255);
-    margin: 10px;
-}
-
-.titulo-del-servicio-premium {
-    background-color: #8f8f8f;
-    width: 100%;
-    height: 50px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    color: #000000;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    padding: 15px;
-    z-index: 5;
-}
-
-.producto-personalizado-items {
-    width: 70%;
-}
-
-.producto-personalizado-items {
-    width: 70%;
-}
-
-.lista-personalizada-items {}
-
-.lista-personalizada-items {
-    padding-top: 35px;
-    color: #2b2b2b;
-}
-
-.lista-personalizada-items li {
-    list-style: none;
-}
-
-.lista-personalizada-items .fa-check {
-    color: red;
-    margin: 5px;
-}
-
 .contenedor-titulo-servicios {
-    background-color: #2c2c2c;
+    background-color: #272727;
     height: 60px;
     margin-bottom: 30px;
 }
 
+.titulo-servicios {
+    color: white;
+    background-color: #272727;
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+
+.precio-servicio {
+    padding-top: 30px;
+    padding-bottom: px;
+}
+
+.precio-servicio h2 {
+    color:#2c2c2c;
+}
+
+
+
 .titulo-del-servicio {
-    background-color: #C73333;
+    background-color: #c73333;
     width: 100%;
     height: 50px;
     border-top-left-radius: 5px;
@@ -121,6 +52,11 @@
     flex-wrap: wrap;
     height: auto;
     margin: auto;
+    background-image: url(../images/backgorund-login.jpg);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    
 }
 
 .servicios {
@@ -137,14 +73,8 @@
     width: 70px;
 }
 
-@media(min-width:970px) {
-    .contenedor-servicios {
-        flex-wrap: nowrap;
-    }
-}
 
 
-/*estilos iconos awesomefont*/
 
 .fa-cogs {
     color: #fff;
@@ -153,10 +83,9 @@
 }
 
 .servicios {
-    background-color: #ffffff;
-    border: solid 1px rgb(0, 0, 0);
+    background-color: #ffffff;  
     width: 100%;
-    height: 300px;
+    height: 715px;
     margin: 20px 30px;
     border-radius: 10px;
 }
@@ -168,6 +97,27 @@
     z-index: 10;
 }
 
+.contenedor-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-estilo {
+    background-color: #929292;
+    color: #fff;
+    border: 0;
+    height: 35px;
+    border-radius: 20px;
+    width: 60%;
+    ;
+}
+
+.boton-estilo:hover {
+    background-color: #202020;
+    color: #fff;
+}
+
+
 .texto-servicios {
     margin: 20px 10px;
     color: #2b2b2b;
@@ -178,6 +128,62 @@
 }
 
 .texto-servicios .fa-check {
-    color: red;
+    color:#c73333;
     margin: 10px;
 }
+    .titulo-servicios1 {
+        display: flex;
+        
+}
+    .subtitulo-productos {
+        width: 30%;
+        height: 50px;
+        background-color: #2c2c2c;
+        color: #fff;
+        display: flex;
+        
+        flex-direction: row;
+        position: absolute;
+
+}
+    .subtitulo-productos h1 {
+        font-size:40px;
+        font-style: italic;
+
+}
+
+@media(min-width:768px) {
+    .contenedor-servicios {
+        flex-wrap: wrap;
+    }
+    .titulo-servicios {
+        font-size: 20px;
+    }
+}
+
+@media(min-width:900px) {
+    .contenedor-servicios {
+        flex-wrap: nowrap;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
