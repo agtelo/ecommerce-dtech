@@ -85,9 +85,10 @@
 .servicios {
     background-color: #ffffff;  
     width: 100%;
-    height: 715px;
+    height: 810px;
     margin: 20px 30px;
     border-radius: 10px;
+    
 }
 
 .servicios:hover {
@@ -95,6 +96,7 @@
     border-bottom: solid 10px rgb(63, 63, 63);
     box-shadow: #2c2c2c;
     z-index: 10;
+    border: solid 1px rgb(63, 63, 63);
 }
 
 .contenedor-btn {
@@ -165,8 +167,10 @@
     .contenedor-servicios {
         flex-wrap: nowrap;
     }
+           
+    }
     
-}
+
 
 
 
