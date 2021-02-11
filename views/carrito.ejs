@@ -1,33 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
-    <title>Carrito</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/header-footer.css">
+        <link rel="stylesheet" href="css/carrito.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Varela+Round&display=swap" rel="stylesheet">
+        <title>Productos</title>
+    </head>
 
 <body>
     <%- include('./partials/header.ejs'); -%>
 
         </header>
         <main>
-            <div>
-                <div class="cart">
-                    This is a cart
-                    <div class="list">
-                        some long list
+            <section>
+                <div class="titulo-encabezado">
+                    <h2>                    </h2>
+                </div>
+            </section>
+
+            <section>
+                <div class="contenedor-titulo-servicios">
+                    <div class="titulo-servicios">
+                        <h2>LLEVAMOS TU NEGOCIO AL PROXIMO NIVEL</h2>
                     </div>
                 </div>
-            </div>
+               
+                        
+
+                <div class="contenedor-servicios">
+                   
+                    <div class="servicios">
+                        
+                        
+                        <div class="titulo-del-servicio">
+                            <h3>ONE PAGE</h3>
+                        </div>
+                        
+                        <div class="texto-servicios"></div>
+                        <div class="precio-servicio">
+                            <h2>$4000-</h2>
+                           
+                        </div>
+                        <div class="texto-servicios">
+                            
+                            <li><i class="fas fa-check"></i>Diseño un Solo Cuerpo</li>
+                            <li><i class="fas fa-check"></i>Diseño Multiplataforma</li>
+                            <li><i class="fas fa-check"></i>Alta en Google</li>
+                            <li><i class="fas fa-check"></i>E-mail Directo desde Celulares</li>
+                            <li><i class="fas fa-check"></i>Llamadas desde celulares</li>
+                            <li><i class="fas fa-check"></i>Integracion con Redes Sociales</li>
+                            <li><i class="fas fa-check"></i>Mapa Google</li>
+                            <li><i class="fas fa-check"></i>10 Imagenes en Total</li>
+                            <br>
+                           
+                                                       
+                        </div>
+                    </div>
+
+                    <div class="servicios">
+                        
+                        
+                        <div class="titulo-del-servicio">
+                            <h3>$4000</h3>
+                        </div>
+                        
+                        <div class="texto-servicios"></div>
+                        <div class="precio-servicio">
+                            <h2>$4000-</h2>
+                           
+                        </div>
+                        <div class="texto-servicios">
+                            <div></i><img src="/images/onepage.svg" width="300px">
+                            </div>
+                            <br>
+                           
+                           
+                                                       
+                        </div>
+                    </div>
+
+                    <div class="servicios">
+                        
+                        
+                        <div class="titulo-del-servicio">
+                            <h3>ONE PAGE</h3>
+                        </div>
+                        
+                        <div class="texto-servicios"></div>
+                        <div class="precio-servicio">
+                            <h2>$4000-</h2>
+                           
+                        </div>
+                        <div class="texto-servicios">
+                            
+                           
+                           
+                            <div class="contenedor-btn">
+                            <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
+                            </div>                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+                </div>
+            </section>
+
+
         </main>
         <footer>
             <%- include('./partials/footer.ejs'); -%>
         </footer>
 </body>
-
-</html>
