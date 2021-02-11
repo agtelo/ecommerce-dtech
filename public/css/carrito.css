@@ -70,6 +70,25 @@
     border-radius: 10px;
 }
 
+.contenido-login {
+    background-color: #c73333de;
+    width: 500px;
+    height: 150px;
+    margin: 0px;
+    border: solid 1px #c7333354;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+/*Seccion finalizar compra*/
+
+.contenedor-finalizar {
+    display: flex;
+    width:100%;
+    height:300px;
+    background-color:#c73333;
+}
 
 
 
@@ -93,6 +112,7 @@
 .contenedor-btn {
     display: flex;
     justify-content: center;
+    align-content: space-around;                
 }
 
 .boton-estilo {
@@ -164,7 +184,7 @@
     .precio-servicio {
         display: none;
     }
-    
+
     .contenedor-btn
     .contenedor-servicios li {
         display: none;
