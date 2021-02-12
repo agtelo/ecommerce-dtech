@@ -2,6 +2,7 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        font-family: 'Oswald', sans-serif;
 }
     /*Seccion Descripcion de servicios*/
     
@@ -116,10 +117,10 @@
         margin: 15px 50px;
  }
     
-    .imagen-mision-empresa {
+   .imagen-mision-empresa {
         display: none;
         margin: 15px 40px;
-        box-shadow: 10px 5px 10px 3px rgba(0, 0, 0, 0.295) }
+    }
     
     .descripcion-servicios {
         display: flex;
@@ -138,7 +139,7 @@
     .imagen-descripcion-servicios {
         display: none;
         margin: 15px 40px;
-        box-shadow: -10px -5px 10px 3px rgba(0, 0, 0, 0.295)
+        
 
     
 }
@@ -146,12 +147,12 @@
 
 @media(min-width:700px) {
     .imagen-mision-empresa {
-        display: block;
+        display: none;
             
 }
     .imagen-descripcion-servicios {
-        display: block;
-        box-shadow: none;
+        display: none;
+        
         }
     .imagen-mision-empresa {
         box-shadow: none;
@@ -159,10 +160,10 @@
 }
 
     .texto-mision-empresa {
-        font-size: 14px;
+        font-size: 18px;
 }
     .texto-descripcion-servicios {
-        font-size:14px;
+        font-size:18px;
 }
 
     .mision-empresa h1 {
@@ -222,7 +223,18 @@
     .slide h3 {
         font-size: 30px;
     }
+
+    .imagen-descripcion-servicios {
+        display: block;
+    }
+    .imagen-mision-empresa {
+        display: block;
+    }
+
+
+
 }
+
 
 
     
