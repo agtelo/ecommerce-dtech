@@ -43,9 +43,10 @@ la operacion del ecommerce.</h4>
 <h4>Basado en el siguiente link: https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff </h4>
 
 ### Tipografia:
-<h4>Basado en el siguiente link: https://fonts.google.com/specimen/Varela+Round </h4>
+<h4>Basado en el siguiente link: https://fonts.google.com/specimen/Oswald?preview.text_type=custom&query=oswa </h4>
 
 ### Tablero de trabajo:
-<h4> Link a tablero de proyecto: https://trello.com/alantelo/boards </h4>
+<h4> Link a tablero de proyecto: https://trello.com/b/Dyo1gWnK/avances-proyecto-digital-house </h4>
 
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
