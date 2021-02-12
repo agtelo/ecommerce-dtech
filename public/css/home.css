@@ -7,14 +7,14 @@
     /*Seccion Descripcion de servicios*/
     
     .contenedor-titulo-servicios {
-        background-color: #272727;
+        background-color: #2c2c2c;
         height: 60px;
         margin-bottom: 30px;
 }
     
     .titulo-servicios h2 {
         color: white;
-        background-color: #272727;
+        background-color: #2c2c2c;
         font-size: 20px;
         text-align: center;
         padding: 15px;
@@ -268,6 +268,7 @@
     .subtitulo-productos h1 {
         font-size:40px;
         font-style: italic;
+        padding-left: 40px;
 }
     .slide h3 {
         font-size: 60px;
@@ -287,7 +288,7 @@
     }
     .titulo-servicios h2 {
         color: white;
-        background-color: #272727;
+        background-color: #2c2c2c;
         font-size: 35px;
         text-align: center;
         padding: 15px;
