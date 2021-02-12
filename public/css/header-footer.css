@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Oswald', sans-serif;
     background-color: white;
     width: 100%;
 }
@@ -28,7 +29,7 @@ html {
 .texto-header-top {
     padding: 12px 30px;
     color: white;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .icono-carrito {
@@ -308,7 +309,7 @@ nav>:hover {
     
     color: #aaa;
     padding: 15px 20px;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     text-align: center;
     
@@ -318,6 +319,7 @@ nav>:hover {
 .copyright {
     padding: 20px 15px ;
     justify-content: center;
+    font-size:15px;
     
     
 }
