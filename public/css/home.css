@@ -273,6 +273,19 @@
     .slide h3 {
         font-size: 60px;
 }
+.titulo-servicios h2 {
+    color: white;
+    background-color: #2c2c2c;
+    font-size: 20 px;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+.contenedor-titulo-servicios {
+    background-color: #2c2c2c;
+    height: 60px;
+    margin-bottom: 30px;
+}
 
 }
 
@@ -294,6 +307,14 @@
         padding: 15px;
         width: 100%;
     }
+
+    .contenedor-titulo-servicios {
+        background-color: #2c2c2c;
+        height: 60px;
+        margin-bottom: 30px;
+    }
+
+    
 
     .slide h3 {
         font-size: 100px;
