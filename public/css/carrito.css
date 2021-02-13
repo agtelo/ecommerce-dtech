@@ -6,19 +6,19 @@
 }
 /*Seccion Descripcion de servicios*/
 
+.titulo-servicios h2 {
+    color: white;
+    background-color: #2c2c2c;
+    font-size: 35px;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
 .contenedor-titulo-servicios {
     background-color: #2c2c2c;
     height: 60px;
     margin-bottom: 30px;
-}
-
-.titulo-servicios h2 {
-    color: white;
-    background-color: #2c2c2c;
-    font-size: 20 px;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
 }
 
 
@@ -170,19 +170,15 @@
     .contenedor-servicios {
         flex-wrap: wrap;
     }
-    .titulo-servicios h2 {
-        color: white;
-        background-color: #2c2c2c;
-        font-size: 20 px;
-        text-align: center;
-        padding: 15px;
-        width: 100%;
-    }
+  
     .precio-servicio {
         display: none;
     }
+   
+   
     
 }
+
 
 @media(min-width:900px) {
     .contenedor-servicios {
@@ -197,14 +193,8 @@
         display: none;
 
     }
-    .titulo-servicios h2 {
-        color: white;
-        background-color: #2c2c2c;
-        font-size: 20 px;
-        text-align: center;
-        padding: 15px;
-        width: 100%;
-    }
+ 
+   
     
     }
     
