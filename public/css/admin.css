@@ -117,3 +117,20 @@ a {
         font-size: 16px;
     }
 }
+
+
+
+@media(min-width:900px) {
+.subtitulo-productos h1 {
+    font-size:40px;
+    font-style: italic;
+    padding-left: 40px;
+}
+.subtitulo-productos {
+    width: 30%;
+    height: 50px;
+    background-color: #2c2c2c;
+    color: #fff;
+    margin-right: 50%;
+}
+}
