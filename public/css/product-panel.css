@@ -68,7 +68,7 @@ select {
 .contenido-login {
     background-color:#c73333de;
     width: 500px;
-    height: 350px;
+    height: 400px;
     margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
@@ -160,4 +160,17 @@ select {
         text-align: justify;
         
     }
+
+    .subtitulo-productos {
+        width: 30%;
+        height: 50px;
+        background-color: #2c2c2c;
+        color: #fff;
+        margin-right: 50%;
+}
+    .subtitulo-productos h1 {
+        font-size:40px;
+        font-style: italic;
+        padding-left: 40px;
+}
 }
