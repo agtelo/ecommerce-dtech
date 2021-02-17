@@ -251,7 +251,8 @@ nav>:hover {
     border-top:solid 1px;
     text-align: center;
     height: 1px;
-    
+    padding-left: 20px;
+    width: 100%;
 }
 
 
@@ -320,7 +321,7 @@ nav>:hover {
     padding: 20px 15px ;
     justify-content: center;
     font-size:15px;
-    
+    padding-left: 50px;
     
 }
 
