@@ -292,7 +292,21 @@
 
 /*Seccion Medio Queris*/
 
-@media(min-width:970px) {
+
+@media(min-width:1024px) {
+    .contenedor-servicios {
+        margin:20px 10px;
+        
+
+    }
+    .texto-servicios img {
+        justify-content: center;
+        display: flex;
+        margin: auto;
+    }
+}
+
+@media(min-width:1300px) {
     .contenedor-servicios {
         flex-wrap: nowrap;
     }
