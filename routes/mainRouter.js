@@ -16,6 +16,7 @@ const storage = multer.diskStorage({
         
     }
 });
+const uploadFIle = multer ({ storage});
 
 
 // Al hacer una petición get a la ruta base,
