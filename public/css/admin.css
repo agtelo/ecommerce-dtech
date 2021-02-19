@@ -26,7 +26,7 @@ a {
 .contenido-login {
     background-color: #14100f;
     width: 500px;
-    height: 350px;
+    height: 400px;
     margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
@@ -110,7 +110,7 @@ a {
 
 @media(min-width:430px) {
     .campos-form {
-        width: 220px;
+        width: 270px;
         font-size: 14px;
     }
     .etiquetas-form {
@@ -132,5 +132,12 @@ a {
     background-color: #2c2c2c;
     color: #fff;
     margin-right: 50%;
+}
+.campos-form {
+    width: 270px;
+    font-size: 14px;
+}
+.etiquetas-form {
+    font-size: 16px;
 }
 }

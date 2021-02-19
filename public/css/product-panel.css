@@ -140,7 +140,7 @@ select {
 
 @media(min-width:430px) {
     .campos-form {
-        width: 220px;
+        width: 250px;
         font-size: 14px;
     }
     .etiquetas-form {
