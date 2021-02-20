@@ -15,8 +15,11 @@ const productController = {
     crear: function(req, res) {
         return res.render('products/crear', { title: "Panel", css: "crud" });
     },
+    guardar: function (req, res) {
+        res.send("HOLA");
+        
+    },
 
-   
     editar: function(req, res) {
         return res.render('products/editar', { title: "Panel", css: "crud" });
     },

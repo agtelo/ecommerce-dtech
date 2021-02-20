@@ -23,7 +23,7 @@ router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
 
 router.get('/product-panel/crear', productController.crear);
-router.post('/product-panel/crear', productController.crear);
+router.post('/product-panel/crear', productController.guardar);
 
 router.get('/product-panel/editar', productController.editar);
 router.put('/product-panel/editar', productController.editar);
