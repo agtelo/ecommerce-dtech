@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/product-panel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <title>Panel Producto</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs'); -%>
+        </header>
+
+        <div class="subtitulo-productos">
+            <h1>PANEL GESTION ADMINISTRADOR</h1>
+        </div>
+        <br>
+
+        <div class="contenedor-login">
+            <div class="contenido-login">
+                <div class="titulo-login">
+                    <h2>Crear Producto</h2>
+                    <br>
+                </div>
+                <form action="/product-panel/crear" method="POST" class="form-login">
+                    <div class="etiquetas-form">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre-c" class="campos-form" placeholder="" required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label class="campos-form-label">Descripcion:</label>
+                        <input type="text" name="descripcion-c " class="campos-form" placeholder="" required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Categoria:</label>
+                        <input type="text" class="campos-form" name="categoria-c" required/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label>Precio:</label>
+                        <input type="number" class="campos-form" name="precio-c" required/>
+                    </div>
+                    <br>
+                    <div class="contenedor-btn">
+                        <input type="submit" class="boton-estilo" value="Aceptar">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
+</body>
+
+</html>
