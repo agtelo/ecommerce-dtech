@@ -13,13 +13,15 @@ const productController = {
     },
 
     crear: function(req, res) {
-        return res.render('products/crear', { title: "Panel", css: "product-panel" });
+        return res.render('products/crear', { title: "Panel", css: "crud" });
     },
+
+   
     editar: function(req, res) {
-        return res.render('products/editar', { title: "Panel", css: "product-panel" });
+        return res.render('products/editar', { title: "Panel", css: "crud" });
     },
     borrar: function(req, res) {
-        return res.render('products/borrar', { title: "Panel", css: "product-panel" });
+        return res.render('products/borrar', { title: "Panel", css: "crud" });
     },
 
 

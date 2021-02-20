@@ -20,9 +20,16 @@ const uploadFIle = multer({ storage });
 
 router.get('/productos', productController.producto);
 router.get('/carrito', productController.carrito);
+router.get('/product-panel', productController.panel);
+
 router.get('/product-panel/crear', productController.crear);
+router.post('/product-panel/crear', productController.crear);
+
 router.get('/product-panel/editar', productController.editar);
+router.put('/product-panel/editar', productController.editar);
+
 router.get('/product-panel/borrar', productController.borrar);
+router.delete('/product-panel/borrar', productController.borrar);
 
 
 module.exports = router;

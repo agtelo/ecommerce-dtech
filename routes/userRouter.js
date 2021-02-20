@@ -6,7 +6,9 @@ const userController = require('../controllers/userController');
 
 
 router.get('/login', userController.login);
+
 router.get('/registro', userController.registro);
+
 router.get('/recupero-pass', userController.recuperoPass);
 router.get('/admin', userController.admin);
 
