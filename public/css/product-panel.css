@@ -16,7 +16,7 @@ select {
     border-radius: 20px;
     color: #202020;
     background-color: #ffffff54;
-    width: 65%;
+    width: 270px;
     height: 30px;
     margin-left: 10px;
     margin-top: 5px;
@@ -29,7 +29,7 @@ select {
     display: block;
     justify-items: center;
     justify-content: center;
-    padding-top: 123px;
+    padding-top: px;
     padding-bottom: 120px;
     height: 550px;
     width: 100%;
@@ -65,6 +65,17 @@ select {
     color: white;
     font-size: 70px;
     text-decoration: none;
+}
+
+
+.titulo-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-icono {
+    display: flex;
+    justify-content: center;
 }
 
 

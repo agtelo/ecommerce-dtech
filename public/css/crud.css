@@ -10,6 +10,18 @@ a {
     text-decoration: none;
 }
 
+select {
+    padding: 18px 22px;
+    border: none;
+    border-radius: 20px;
+    color: #202020;
+    background-color: #ffffff54;
+    width: 270px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
 .contenedor-login {
     background-image: url(/images/backgorund-login.jpg);
     /*background-size: cover;*/
