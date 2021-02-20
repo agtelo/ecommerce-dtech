@@ -8,19 +8,21 @@ const productController = require('../controllers/productController');
 const path = require("path");
 const multer = require("multer");
 const storage = multer.diskStorage({
-    destination: function (req , file , cb) {
+    destination: function(req, file, cb) {
         cb(null, "./public/images/avatars");
     },
-    filename: function (req, file, cb) {
-        cb(null,"${Date.now()}_img_${path.extname(filename.originalname)}")
-        
+    filename: function(req, file, cb) {
+        cb(null, "${Date.now()}_img_${path.extname(filename.originalname)}")
+
     }
 });
-const uploadFIle = multer ({ storage});
+const uploadFIle = multer({ storage });
 
 router.get('/productos', productController.producto);
 router.get('/carrito', productController.carrito);
-router.get('/product-panel', productController.panel);
+router.get('/product-panel/crear', productController.crear);
+router.get('/product-panel/editar', productController.editar);
+router.get('/product-panel/borrar', productController.borrar);
 
 
 module.exports = router;
