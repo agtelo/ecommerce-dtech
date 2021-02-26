@@ -9,7 +9,7 @@ const path = require("path");
 const multer = require("multer");
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, "./public/images/avatars");
+        cb(null, "./public/images/products");
     },
     filename: function(req, file, cb) {
         cb(null, "${Date.now()}_img_${path.extname(filename.originalname)}")
@@ -22,11 +22,11 @@ router.get('/productos', productController.producto);
 router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
 
-router.get('/product-panel/crear', productController.crear);
-router.post('/product-panel/crear', productController.guardar);
+router.get('/product-panel/crear',  productController.crear);
+router.post('/product-panel/crear', uploadFIle.any(), productController.guardar);
 
 router.get('/product-panel/editar', productController.editar);
-router.put('/product-panel/editar', productController.editar);
+router.put('/product-panel/editar', productController.actualizar);
 
 router.get('/product-panel/borrar', productController.borrar);
 router.delete('/product-panel/borrar', productController.borrar);

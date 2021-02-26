@@ -34,15 +34,13 @@ const productController = {
         productos.push(producto);
 
         productoJSON = JSON.stringify(producto);
-        fs.appendFileSync( "./data/productoNuevo.json", productoJSON);
+        fs.appendFileSync( "./data/product.json", productoJSON);
         res.redirect('./crear');
     },
-
     editar: function(req, res) {
         return res.render('products/editar', { title: "Panel", css: "crud" });
     },
-    actualizar: function(req, res) {
-        
+    actualizar: function(req, res) {  
     },
     borrar: function(req, res) {
         return res.render('products/borrar', { title: "Panel", css: "crud" });
