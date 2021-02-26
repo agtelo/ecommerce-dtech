@@ -7,7 +7,7 @@
   "item2": "Diseño Multiplataforma",
   "item3": "Alta en Google",
   "item4": "E-mail Directo desde Celulares",
-  "item5":"Llamadas desde celulares",
+  "item5": "Llamadas desde celulares",
   "item6": "integracion con Redes Sociales",
   "item7": "iapa Gooile",
   "item8": "i0 Imagenes en Total",
@@ -21,7 +21,7 @@
   "item2": "Formulario Contacto",
   "item3": "Alta en Google",
   "item4": "E-mail Directo desde Celulares",
-  "item5":"Llamadas desde Celulares",
+  "item5": "Llamadas desde Celulares",
   "item6": "Integracion con Redes Sociales",
   "item7": "Mapa Google",
   "item8": "10 Imagenes en Total",
@@ -70,4 +70,11 @@
   "image": "lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna"
 }]
 
-{"id":"prueba","name":"prueba","description":"prueba","item":"prueba","category":"prueba","price":"123213213"}
+{
+  "id": "prueba",
+  "name": "prueba",
+  "description": "prueba",
+  "item": "prueba",
+  "category": "prueba",
+  "price": "1232131"
+}

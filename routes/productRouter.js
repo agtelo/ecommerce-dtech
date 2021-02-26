@@ -12,10 +12,9 @@ const storage = multer.diskStorage({
         cb(null, "./public/images/products");
     },
     filename: function(req, file, cb) {
-        cb(null, "${Date.now()}_img_${path.extname(filename.originalname)}")
-    }
+        cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))}
 });
-const uploadFIle = multer({ storage });
+const uploadFIle = multer({ storage: storage});
 
 // Routes
 router.get('/productos', productController.producto);
@@ -26,7 +25,7 @@ router.get('/product-panel/crear',  productController.crear);
 router.post('/product-panel/crear', uploadFIle.any(), productController.guardar);
 
 router.get('/product-panel/editar', productController.editar);
-router.put('/product-panel/editar', productController.actualizar);
+router.patch('/product-panel/editar', productController.actualizar);
 
 router.get('/product-panel/borrar', productController.borrar);
 router.delete('/product-panel/borrar', productController.borrar);

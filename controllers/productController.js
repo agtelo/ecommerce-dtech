@@ -33,7 +33,7 @@ const productController = {
         }
         productos.push(producto);
 
-        productoJSON = JSON.stringify(producto);
+        productoJSON = JSON.stringify(producto,null,2);
         fs.appendFileSync( "./data/product.json", productoJSON);
         res.redirect('./crear');
     },
