@@ -60,12 +60,13 @@ select {
 .contenido-login3 {
     background-color: #c73333de;
     width: 500px;
-    height: 550px;
+    height: 600px;
     margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
     margin-bottom: 50px;
     z-index: 1;
+    
 }
 
 

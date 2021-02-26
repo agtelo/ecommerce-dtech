@@ -27,9 +27,9 @@ const productController = {
         let archivoProducto = fs.readFileSync("./data/product.json", {encoding:"utf-8"});
         let productos;
         if (archivoProducto == ""){
-             productos = [];
+            productos = [];
         } else {
-             productos = JSON.parse(archivoProducto);
+            productos = JSON.parse(archivoProducto);
         }
         productos.push(producto);
 
@@ -40,6 +40,9 @@ const productController = {
 
     editar: function(req, res) {
         return res.render('products/editar', { title: "Panel", css: "crud" });
+    },
+    actualizar: function(req, res) {
+        
     },
     borrar: function(req, res) {
         return res.render('products/borrar', { title: "Panel", css: "crud" });
