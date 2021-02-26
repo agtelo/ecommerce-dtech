@@ -13,11 +13,11 @@ const storage = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         cb(null, "${Date.now()}_img_${path.extname(filename.originalname)}")
-
     }
 });
 const uploadFIle = multer({ storage });
 
+// Routes
 router.get('/productos', productController.producto);
 router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
