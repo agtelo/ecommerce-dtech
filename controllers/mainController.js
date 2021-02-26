@@ -11,10 +11,9 @@ const mainController = {
     desarrollo: function(req,res){
         return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollo"});
     },
-    
+
     
 }
-
 
 
 module.exports = mainController;
