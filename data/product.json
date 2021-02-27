@@ -71,10 +71,10 @@
 }]
 
 {
-  "id": "prueba",
-  "name": "prueba",
-  "description": "prueba",
-  "item": "prueba",
-  "category": "prueba",
-  "price": "1232131"
+  "id": "prod_1",
+  "name": "prod_1",
+  "description": "prod_1",
+  "item": "prod_1",
+  "category": "prod_1",
+  "price": "112313"
 }
