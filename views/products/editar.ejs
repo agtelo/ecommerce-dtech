@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
     <title>Panel Producto</title>
 </head>
-
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
-
         <div class="subtitulo-productos">
             <h1>PANEL GESTION ADMINISTRADOR</h1>
         </div>
         <br>
-
         <div class="contenedor-login">
             <div class="contenido-login3">
                 <div class="titulo-login">
@@ -31,9 +27,9 @@
                         <div class="etiquetas-form">
                         <label>Buscar:</label>
                         <select>
-                                <option>Producto1</option>
-                                <option>Producto2</option>
-                                <option>Producto3</option>
+                            <% for( let i = 1 ; i <= 10; i++ ) { %>
+                                <option> Producto <%= i %> </option>
+                            <% } %>  
                             </select>
                         </div>
                     <br>
@@ -79,11 +75,8 @@
                 </div>
             </div>
         </div>
-
-
         <footer>
             <%- include('../partials/footer.ejs'); -%>
         </footer>
 </body>
-
 </html>
