@@ -28,15 +28,20 @@
                 <div class="titulo-del-servicio">
                     <h3><%= products[i].name%></h3>
                 </div>
-                <div class="texto-servicios"></div>
-                <h3><%= products[i].description%></h3>
+                
                 <div class="texto-servicios">
                     <div></i><img src="/images/onepage.svg" width="300px">
                     </div>
-                    
                     <div class="contenedor-btn">
-                    <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
-                    </div>                            
+                        <input type="submit" class="boton-estilo" value="EDITAR PRODUCTO">  
+                        </div>  
+                    <br>
+                    
+                <form action="" method="POST">
+                    <div class="contenedor-btn">
+                    <input type="submit" class="boton-estilo" value="ELIMINAR">
+                    </div> 
+                </form>                           
                 </div>
             </div>
        <% } %>
