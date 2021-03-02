@@ -1,4 +1,7 @@
 const fs = require("fs");
+const path = require('path');
+const productsFilePath = path.resolve(__dirname, '../data/product.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
 
@@ -15,26 +18,18 @@ const productController = {
         return res.render('products/crear', { title: "Panel", css: "crud" });
     },
     guardar: function(req, res) {
-        let producto = {
+        let productoNuevo = {
             id: req.body.id,
             name: req.body.nombre,
             description: req.body.descripcion,
             item: req.body.item,
             category: req.body.categoria,
             price: req.body.precio,
-            image: req.body.imagen
+            image: req.file.filename
         };
-        let archivoProducto = fs.readFileSync("./data/product.json", {encoding:"utf-8"});
-        let productos;
-        if (archivoProducto == ""){
-            productos = [];
-        } else {
-            productos = JSON.parse(archivoProducto);
-        }
-        productos.push(producto);
-
-        productoJSON = JSON.stringify(producto,null,2);
-        fs.appendFileSync( "./data/product.json", productoJSON);
+        products.push(productoNuevo);
+        let productoSubir = JSON.stringify(products, null , 2);
+		fs.writeFileSync(productsFilePath ,productoSubir)
         res.redirect('./crear');
     },
     editar: function(req, res) {

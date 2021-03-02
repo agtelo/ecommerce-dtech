@@ -22,7 +22,7 @@ router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
 
 router.get('/product-panel/crear',  productController.crear);
-router.post('/product-panel/crear', uploadFIle.any(), productController.guardar);
+router.post('/product-panel/crear', uploadFIle.single("imagen"), productController.guardar);
 
 router.get('/product-panel/editar', productController.editar);
 router.patch('/product-panel/editar', productController.actualizar);
