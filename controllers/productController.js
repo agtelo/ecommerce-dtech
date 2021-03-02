@@ -33,7 +33,7 @@ const productController = {
         res.redirect('./crear');
     },
     editar: function(req, res) {
-        return res.render('products/editar', { title: "Panel", css: "crud" });
+        return res.render('products/editar', { title: "Panel", css: "crud"});
     },
     actualizar: function(req, res) {  
     },
