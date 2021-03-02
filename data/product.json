@@ -1,6 +1,6 @@
 [
   {
-    "id": "PRODUCTO 1",
+    "id": "1",
     "name": "ONE PAGE",
     "description": "TU PRIMER SITIO WEB",
     "item1": "Diseño un Solo Cuerpo",
@@ -13,10 +13,10 @@
     "item8": "10 Imagenes en Total",
     "category": "DESARROLO WEB",
     "price": "6000",
-    "image": "imagen-1614660464851.svg"
+    "image": "imagen-1614660464850.svg"
   },
   {
-    "id": "PRODUCTO 2",
+    "id": "2",
     "name": "AUTOADMINISTRABLE",
     "description": "AUMENTA TUS VENTAS ",
     "item1": "Panel 100% Autoadministrable",
@@ -29,10 +29,10 @@
     "item8": "10 Imagenes en Total",
     "category": "DESARROLO WEB",
     "price": "6000",
-    "image": "imagen-1614660464851.svg"
+    "image": "imagen-1614660464860.svg"
   },
   {
-    "id": "PRODUCTO 3",
+    "id": "3",
     "name": "TIENDA ONLINE",
     "description": "COMPLEMENTA TU NEGOCIO",
     "item1": "Panel Autoadministrable PLUS",
@@ -45,12 +45,12 @@
     "item8": "Boton de WhatsApp",
     "category": "DESARROLO WEB",
     "price": "6000",
-    "image": "imagen-1614660464851.svg"
+    "image": "imagen-1614660464865.svg"
   },
 
   {
-    "id": "PRODUCTO 3",
-    "name": "TIENDA ONLINE",
+    "id": "4",
+    "name": "APLICACION MOVIL",
     "description": "COMPLEMENTA TU NEGOCIO",
     "item1": "Panel Autoadministrable PLUS",
     "item2": "SEO durante 180 Dias",
@@ -62,11 +62,11 @@
     "item8": "Boton de WhatsApp",
     "category": "DESARROLO WEB",
     "price": "6000",
-    "image": "imagen-1614660464851.svg"
+    "image": "imagen-1614660464869.svg"
   },
   {
-    "id": "PRODUCTO 3",
-    "name": "TIENDA ONLINE",
+    "id": "5",
+    "name": "FULL SOCIAL",
     "description": "COMPLEMENTA TU NEGOCIO",
     "item1": "Panel Autoadministrable PLUS",
     "item2": "SEO durante 180 Dias",
@@ -78,6 +78,6 @@
     "item8": "Boton de WhatsApp",
     "category": "DESARROLO WEB",
     "price": "6000",
-    "image": "imagen-1614660464851.svg"
+    "image": "imagen-1614660464890.svg"
   }
 ]
