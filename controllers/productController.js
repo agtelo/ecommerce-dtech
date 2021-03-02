@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require('path');
 const productsFilePath = path.resolve(__dirname, '../data/product.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const image = path.resolve(__dirname, '../public/image/products');
 const productController = {
 
     producto: function(req, res) {
@@ -12,10 +12,10 @@ const productController = {
         return res.render('products/carrito', { title: "Carrito", css: "carrito" });
     },
     panel: function(req, res) {
-        return res.render('products/product-panel', { title: "Panel", css: "product-panel" });
+        return res.render('products/product-panel', { title: "Panel", css: "product-panel", "products" : products, "image" : image});
     },
     crear: function(req, res) {
-        return res.render('products/crear', { title: "Panel", css: "crud" });
+        return res.render('products/crear', { title: "Panel", css: "crud"});
     },
     guardar: function(req, res) {
         let productoNuevo = {

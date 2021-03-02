@@ -42,7 +42,7 @@
     
     .contenedor-servicios {
         display: flex;
-        justify-content: center;
+        justify-content:  row;
         flex-wrap: wrap;
         height: auto;
         margin: auto;
