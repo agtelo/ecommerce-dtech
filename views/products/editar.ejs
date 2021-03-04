@@ -23,49 +23,70 @@
                     <h2>Editar Producto</h2>
                     <br>
                 </div>
-                <form action="/product-panel/edit?_method=PATCH" method="POST" class="form-login">
-                        <div class="etiquetas-form">
-                        <label>Buscar:</label>
-                        <select>
-                            <% for( let i = 1 ; i <= 10; i++ ) { %>
-                                <option> Producto <%= i %> </option>
-                            <% } %>  
-                            </select>
-                        </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="pwd ">ID:</label>
-                        <input type="type"  class="campos-form " name="id"/>
-                    </div>
-                    <br>
+                <form action="/products/editar/<%= productoAEditar.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
                     <div class="etiquetas-form">
-                        <label for="pwd">Nombre:</label>
-                        <input type="type"  class="campos-form" name="nombre"/>
+                        <label for="name">Nombre:</label>
+                        <input type="type"  class="campos-form" name="no" value ="<%= productoAEditar.name %>"/>
                     </div>
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Descripcion:</label>
-                        <input type="type"  name= "descripcion" class="campos-form"  >
+                        <input type="type"  name= "descripcion" class="campos-form" value ="<%= productoAEditar.description %>">
                         </div>
                         <br>
                         <div class="etiquetas-form ">
-                            <label for="pwd">Item:</label>
-                            <input type="type"  class="campos-form " name="item"/>
+                            <label for="item1">Item1 :</label>
+                            <input type="type"  class="campos-form " name="item1" value ="<%= productoAEditar.item1 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item1 :</label>
+                            <input type="type"  class="campos-form " name="item2" value ="<%= productoAEditar.item2 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item2 :</label>
+                            <input type="type"  class="campos-form " name="item3" value ="<%= productoAEditar.item3 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item3 :</label>
+                            <input type="type"  class="campos-form " name="item4" value ="<%= productoAEditar.item4 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item4 :</label>
+                            <input type="type"  class="campos-form " name="item5" value ="<%= productoAEditar.item5 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item5 :</label>
+                            <input type="type"  class="campos-form " name="item6" value ="<%= productoAEditar.item6 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item7 :</label>
+                            <input type="type"  class="campos-form " name="item7" value ="<%= productoAEditar.item7 %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Item8 :</label>
+                            <input type="type"  class="campos-form " name="item8" value ="<%= productoAEditar.item8 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form">
                             <label for="categoria">Categoria:</label>
-                            <input type="type "  class="campos-form" name="categoria" >
+                            <input type="type "  class="campos-form" name="categoria" value ="<%= productoAEditar.category %>" >
                         </div>
                         <br>
                         <div class="etiquetas-form">
                             <label for="precio ">Precio:</label>
-                            <input type="type " class="campos-form" name="precio" required/>
+                            <input type="type " class="campos-form" name="precio" required value ="<%= productoAEditar.price %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="imegen">Imagen:</label>
-                            <input type="file"  class="campos-form" name="imagen"/>
+                            <input type="file"  class="campos-form" name="imagen" value ="<%= productoAEditar.image %>"/>
                         </div>
                         <br>
                         <div class="contenedor-btn ">

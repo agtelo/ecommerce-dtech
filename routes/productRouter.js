@@ -20,12 +20,14 @@ const uploadFIle = multer({ storage: storage});
 router.get('/productos', productController.producto);
 router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
+router.get('/articulo', productController.show);
 
 router.get('/product-panel/crear',  productController.crear);
 router.post('/product-panel/crear', uploadFIle.single("imagen"), productController.guardar);
 
-router.get('/product-panel/editar', productController.editar);
-router.patch('/product-panel/editar', productController.actualizar);
+//router.get('/product-panel/editar', productController.panel);
+router.get('/editar/:id', productController.editar);
+router.patch('/editar/:id', productController.actualizar);
 
 router.get('/product-panel/borrar', productController.borrar);
 router.delete('/product-panel/borrar', productController.borrar);
