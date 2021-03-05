@@ -5,15 +5,15 @@ const userController = {
     },
 
     registro: function(req,res){
-        return res.render ('/registro', {title: "Registro", css: "login"});
+        return res.render ('users/registro', {title: "Registro", css: "login"});
     },
 
     recuperoPass: function(req,res){
-        return res.render ('/recupero-pass', {title: "Recupero" ,css: "login,"} );
+        return res.render ('users/recupero-pass', {title: "Recupero" ,css: "login,"} );
     },
 
     admin: function(req,res) {
-        return res.render ('users/admin', {title: "Admin", css: "admin"});
+        return res.render ('/users/admin', {title: "Admin", css: "admin"});
     },
     
     
