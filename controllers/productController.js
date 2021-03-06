@@ -49,33 +49,12 @@ const productController = {
     },
     actualizar: function(req, res) {
         let productoAEditar = products.find( producto => producto.id == req.params.id);
-
-		const productoEditado = products.map( producto => {
-			if(products.id == productoAEditar.id ){
-                producto.name = req.body.name;
-                producto.description = req.body.description;
-                producto.item1 = req.body.item1;
-                producto.item2 = req.body.item2;
-                producto.item3 = req.body.item3;
-                producto.item4 = req.body.item4;
-                producto.item5 = req.body.item5;
-                producto.item6 = req.body.item6;
-                producto.item7 = req.body.item7;
-                producto.item8 = req.body.item8;           
-                producto.category = req.body.category;
-                producto.price = req.body.price;
-                producto.image = req.body.image;
-             }
-        return producto;
-			 
-		})
-
-		let productoSubir = JSON.stringify(productoEditado, null , 2);
-		fs.writeFileSync(productsFilePath,productoSubir);
-
-		res.redirect("./editar");
+        console.log(productoAEditar);
 
         
+
+
+
     },
     borrar: function(req, res) {
         return res.render('products/borrar', { title: "Panel", css: "crud" });

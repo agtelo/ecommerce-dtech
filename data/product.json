@@ -78,21 +78,5 @@
     "category": "DESARROLO WEB",
     "price": "6000",
     "image": "imagen-1614660464890.svg"
-  },
-  {
-    "id": "/products",
-    "name": "/products",
-    "description": "/products",
-    "item1": "/products",
-    "item2": "/products",
-    "item3": "/products",
-    "item4": "/products",
-    "item5": "/products",
-    "item6": "/products",
-    "item7": "/products",
-    "item8": "/products",
-    "category": "/products",
-    "price": "123",
-    "image": "imagen-1614969342599.jpg"
   }
 ]

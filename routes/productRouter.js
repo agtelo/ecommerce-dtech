@@ -27,7 +27,7 @@ router.post('/crear', uploadFIle.single("imagen"), productController.guardar);
 
 //router.get('/product-panel/editar', productController.panel);
 router.get('/editar/:id', productController.editar);
-router.patch('/editar/:id', productController.actualizar);
+router.put('/editar/:id', productController.actualizar);
 
 router.get('/borrar/:id', productController.borrar);
 router.delete('/borrar/:id', productController.borrar);
