@@ -40,7 +40,7 @@
     </header>
 
     <div class="contenedor-login">
-        <div class="contenido-login">
+        <div class="contenido-login-registrate">
             <div class="titulo-login">
                 <h2>Registrate</h2>
                 <br>
@@ -50,22 +50,37 @@
             <form action="/" method=""class="form-login">
                 <div class="etiquetas-form">
                     <label>Usuario:</label>
-                    <input type="text" name="nombre" class="campos-form" placeholder="Ingresá su nombre" required/>
+                    <input type="text" name="nombreUsuario" class="campos-form" placeholder="Ingresá su usuario" required/>
                 </div>
                 <br>
                 <div class="etiquetas-form">
                     <label class="campos-form-label">Mail:</label>
-                    <input type="email" id="user-email" class="campos-form" placeholder=" Ingresá tu mail" required/>
+                    <input type="email" id="user-email"name= "mail"  class="campos-form" placeholder=" Ingresá tu mail" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label class="campos-form-label">Nombre:</label>
+                    <input type="text" id="user-name" name= "nombre" class="campos-form" placeholder=" Ingresá tu nombre" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label class="campos-form-label">Apellido:</label>
+                    <input type="text" id="user-lastname" name="apellido" class="campos-form" placeholder=" Ingresá tu apellido" required/>
+                </div>
+                <br>
+                <div class="etiquetas-form">
+                    <label class="campos-form-label">Teléfono:</label>
+                    <input type="number" id="user-phone" name="telefono" class="campos-form" placeholder=" Ingresá tu teléfono" required/>
                 </div>
                 <br>
                 <div class="etiquetas-form">
                     <label for="pwd">Password:</label>
-                    <input type="password" id="pwd" class="campos-form" name="pwd" required/>
+                    <input type="password" id="pwd" name="password" class="campos-form" placeholder=" Ingresá tu contraseña"  required/>
                 </div>
                 <br>
                 <div class="etiquetas-form">
                     <label for="pwd">Repetir Password:</label>
-                    <input type="password" id="pwd" class="campos-form" name="pwd" required/>
+                    <input type="password" id="pwd" name="password-rpt" class="campos-form" placeholder=" Repetí tu contraseña" required/>
                 </div>
                 <br>
 

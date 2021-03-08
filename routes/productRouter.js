@@ -25,12 +25,12 @@ router.get('/articulo', productController.show);
 router.get('/crear',  productController.crear);
 router.post('/crear', uploadFIle.single("imagen"), productController.guardar);
 
-//router.get('/product-panel/editar', productController.panel);
+
 router.get('/editar/:id', productController.editar);
 router.put('/editar/:id', productController.actualizar);
 
 router.get('/borrar/:id', productController.borrar);
-router.delete('/borrar/:id', productController.borrar);
+router.delete('/borrar/:id', productController.destruir);
 
 
 module.exports = router;
