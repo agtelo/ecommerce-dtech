@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require('path');
-const productsFilePath = path.resolve(__dirname, '../data/product.json');
+let productsFilePath = path.resolve(__dirname, '../data/product.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
@@ -48,33 +48,32 @@ const productController = {
         return res.render("products/editar", {"productoAEditar" : productoAEditar});        
     },
     actualizar: function(req, res) {
-        let productAEditar=products.find(product=>(product.id==req.params.id));
+        const productoAEditar = products.find( producto => producto.id == req.params.id);
 
-		let productoEditado = [];
+		const productoEditado = products.map( producto => {
+			if(producto.id == productoAEditar.id ){
+                producto.name = req.body.name;
+                producto.description = req.body.description;
+                producto.name = req.body.item1;
+                producto.name = req.body.item2;
+                producto.name = req.body.item3;
+                producto.name = req.body.item4;
+                producto.name = req.body.item5;
+                producto.name = req.body.item6;
+                producto.name = req.body.item7;
+                producto.name = req.body.item8;
+                producto.category = req.body.category;
+                producto.price = req.body.price;
+                producto.image = req.body.image;
 
-        products.map((product) => {
-            if(product.id==productAEditar.id){
-                product.name = req.body.name;
-                product.description = req.body.description;
-                product.item1 = req.body.item1;
-                product.item2 = req.body.item2;
-                product.item3 = req.body.item3;
-                product.item3 = req.body.item;
-                product.item5 = req.body.item5;
-                product.item6 = req.body.item6;
-                product.item7 = req.body.item7;
-                product.item8 = req.body.item8;
-                product.category = req.body.category;                
-                product.price = req.body.price;
-                product.image =req.body.image;
-            };
-            productoEditado.push(product)
-        });   
-                console.log(productoEditado);        
-        
-		let productJsonEditado = JSON.stringify(productoEditado, null, 2);
-		fs.writeFileSync('./data/product.json', productJsonEditado);
-		res.redirect("/");
+            }
+			return producto;
+		})
+
+		let productoSubir = JSON.stringify(productoEditado, null , 2);
+		fs.writeFileSync(productsFilePath,productoSubir);
+
+		res.redirect("/")
 
 
     },
@@ -85,16 +84,16 @@ const productController = {
 
     destruir: function(req, res) {
 
-        let productoEliminado = products.filter(producto => producto.id != req.params.id);
+        let productoAEliminar = products.filter(producto => producto.id != req.params.id);
             
-            /*let imagenABorrar = products.find( producto => producto.id == req.params.id);
+            let imagenABorrar = products.find( producto => producto.id == req.params.id);
             let filePath = path.resolve(__dirname,'../public/img/products/' + imagenABorrar.image);
             console.log(imagenABorrar);
             console.log(filePath);
-            fs.unlinkSync(filePath);*/
+            fs.unlinkSync(filePath);
 
-            let productoSubir = JSON.stringify(productoEliminado, null , 2);
-            fs.writeFileSync(productsFilePath,productoSubir);
+            let productoASubirJSON = JSON.stringify(productoAEliminar, null , 2);
+            fs.writeFileSync(productsFilePath,productoASubirJSON);
             res.redirect("/")
     }
 
