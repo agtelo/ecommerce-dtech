@@ -21,12 +21,24 @@ a {
     padding-bottom: 120px;
     height: 100%;
     width: 100%;
+    
 }
 
 .contenido-login {
     background-color: #c73333de;
     width: 500px;
     height: 400px;
+    margin: 20px;
+    border: solid 1px #c7333354;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
+.contenido-login-olvide {
+    background-color: #c73333de;
+    width: 500px;
+    height: 320px;
     margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
@@ -66,7 +78,7 @@ a {
 
 .titulo-login p {
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 20px;
@@ -84,11 +96,11 @@ a {
     align-items: center;
     font-size: 12px;
     width: 80%;
+    
 }
 
 .campos-form {
     border: solid 1px #ffffff54;
-    color: #FFF;
     font-size: 10px;
     border-radius: 20px;
     width: 65%;
@@ -96,6 +108,7 @@ a {
     margin-left: 10px;
     margin-top: 5px;
     text-align: center;
+    color:black;
 }
 
 #radio-permanecer {
@@ -130,8 +143,14 @@ a {
 }
 
 .etiqueta-permanecer {
-    font-size:12px;
+    font-size:16px;
+    margin-left: -20px;
+
+}
+
+.etiqueta-permanecer label {
     margin-left: 10px;
+
 }
 
 @media(min-width:430px) {
