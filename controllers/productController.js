@@ -86,11 +86,11 @@ const productController = {
 
         let productoAEliminar = products.filter(producto => producto.id != req.params.id);
             
-            let imagenABorrar = products.find( producto => producto.id == req.params.id);
+            /*let imagenABorrar = products.find( producto => producto.id == req.params.id);
             let filePath = path.resolve(__dirname,'../public/img/products/' + imagenABorrar.image);
             console.log(imagenABorrar);
             console.log(filePath);
-            fs.unlinkSync(filePath);
+            fs.unlinkSync(filePath);*/
 
             let productoASubirJSON = JSON.stringify(productoAEliminar, null , 2);
             fs.writeFileSync(productsFilePath,productoASubirJSON);
