@@ -65,23 +65,18 @@ const productController = {
                 producto.category = req.body.category;
                 producto.price = req.body.price;
                 producto.image = req.body.image;
-
             }
 			return producto;
-		})
+		});
 
 		let productoSubir = JSON.stringify(productoEditado, null , 2);
 		fs.writeFileSync(productsFilePath,productoSubir);
 
 		res.redirect("/")
-
-
     },
     borrar: function(req, res) {
         res.render()
-
     },
-
     destruir: function(req, res) {
 
         let productoAEliminar = products.filter(producto => producto.id != req.params.id);
