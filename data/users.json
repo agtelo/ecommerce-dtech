@@ -1,4 +1,11 @@
 [
- 
-
+  {
+    "username": "Alan",
+    "email": "alan@gmail.com",
+    "firt_name": "Alan",
+    "last_name": "Telo",
+    "phone": "125511",
+    "password": "$2a$10$PU5UX04XluGIvQdEJ.8U9.OlYkocKePvTz6rVulMNKPHTc/PdA18m",
+    "image": "imagen-1616040681959.png"
+  }
 ]
