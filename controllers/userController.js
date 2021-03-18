@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require('path');
 let usuariosFilePath = path.resolve(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 
 const userController = {
     
@@ -15,12 +15,11 @@ const userController = {
     },
     crearUsuario: function (req,res) {
         let usuarioNuevo = {
-            username: req.body.usuario,
-            email: req.body.email,
             firt_name: req.body.nombre,
             last_name: req.body.apellido,
+            email: req.body.email,
             phone: req.body.telefono,
-            password: bcrypt.hashSync(req.body.password,10),
+            password: bcryptjs.hashSync(req.body.password,10),
             image: req.file.filename
             
         };
