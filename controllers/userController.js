@@ -15,7 +15,7 @@ const userController = {
     },
     crearUsuario: function (req,res) {
         let usuarioNuevo = {
-            firt_name: req.body.nombre,
+            first_name: req.body.nombre,
             last_name: req.body.apellido,
             email: req.body.email,
             phone: req.body.telefono,
