@@ -1,11 +1,10 @@
 [
   {
-    "username": "Alan",
-    "email": "alan@gmail.com",
-    "firt_name": "Alan",
+    "first_name": "Alan",
     "last_name": "Telo",
-    "phone": "125511",
-    "password": "$2a$10$PU5UX04XluGIvQdEJ.8U9.OlYkocKePvTz6rVulMNKPHTc/PdA18m",
-    "image": "imagen-1616040681959.png"
+    "email": "alantelo1987@gmail.com",
+    "phone": "1141697278",
+    "password": "$2a$10$Bqo6lF1pIAytD.D/OPnJZujoPpjV4lso3ocs03RbHgHU1G5Yp.Poq",
+    "image": "imagen-1616195077822.svg"
   }
 ]

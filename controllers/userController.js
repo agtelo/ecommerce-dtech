@@ -32,6 +32,9 @@ const userController = {
     recuperoPass: function(req,res){
         return res.render ('users/recupero-pass', {title: "Recupero" ,css: "login,"} );
     },
+    recuperoValidacion: function(req,res){
+        return res.render ('users/recupero-validacion', {title: "Recupero" ,css: "login" } );
+    },
 
     admin: function(req,res) {
         return res.render ('/users/admin', {title: "Admin", css: "admin"});

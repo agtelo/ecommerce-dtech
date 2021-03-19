@@ -21,12 +21,22 @@
             <div class="contenedor-login">
                 <div class="contenido-login-olvide ">
                     <div class="titulo-login">
-                        <div class="imagen-perfil">
-                            <img src="/images/users/<%= usuarioNuevo.image %>" alt="" srcset="" width="330px">
-                        </div>
-                        <h2>Bienvenid@ <%- usuarioNuevo.first_name %> !</h2>
+                        <h2>Recupera tu contraseña</h2>
                         <p>A continuación ingresa tu nueva contraseña, por favor completa los siguientes campos.</p>
-                    </div>    
+                    </div>
+
+                    <form action="" class="form-login">
+                        <div class="etiquetas-form">
+                            <label>Nueva Contraseña</label>
+                            <input type="text" name="nombre" class="campos-form" placeholder="Ingresá tu nueva contraseña" required/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label>Repite tu contraseña:</label>
+                            <input type="email" id="user-email" class="campos-form" placeholder="Reingresá tu contraseña" required/>
+                        </div>
+                        <br>
+                        <br>
                         <div class="contenedor-btn">
                             <input type="submit" class="boton-estilo" value="Aceptar">
                         </div>

@@ -57,6 +57,15 @@ a {
     z-index: 1;
 }
 
+.imagen-perfil img{
+    border: whitesmoke solid 3px;
+    background-color: white ;
+    height: 140px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    width: 140px;
+}
+
 .subtitulo-productos h1 {
     font-size:40px;
     font-style: italic;
