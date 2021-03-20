@@ -362,5 +362,6 @@ nav>:hover {
 .fa-twitter:hover {
     color: #b93232;
     font-size: 30px;
+    padding: 7px;
     text-decoration: none;
 }

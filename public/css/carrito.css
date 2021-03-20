@@ -21,35 +21,9 @@
     margin-bottom: 30px;
 }
 
-
-.precio-servicio {
-    padding-top: 30px;
-    padding-bottom: px;
-}
-
-.precio-servicio h2 {
-    color:#2c2c2c;
-}
-
-
-
-.titulo-del-servicio {
-    background-color: #c73333;
-    width: 100%;
-    height: 50px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    padding: 15px;
-    z-index: 5;
-}
-
 .contenedor-servicios {
     display: flex;
-    justify-content:flex-start;
+    justify-content:center;
     flex-wrap: wrap;
     height: auto;
     margin: auto;
@@ -60,95 +34,114 @@
     
 }
 
-
-.servicios {
-    display:grid;
-    position: relative;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 20px 30px;
-    background-color: #ffffff; 
-    border-radius: 10px;
+.contenedor-producto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: grey solid 1px;
+    
 }
 
+.titulo-producto {
+    
+    width: 200px;
+    font-style: italic;
+    display: flex;
+    justify-content: start;
+    padding-left: 15px;
+    border-bottom: grey solid 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.titulo-producto2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-left:400px;
+    border-bottom: grey solid 1px;
+    
+}
+
+.titulo-producto2 p {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
 .contenido-login {
-    background-color: #c73333de;
-    width: 500px;
-    height: 150px;
-    margin: 0px;
-    border: solid 1px #c7333354;
+    background-color: white;
+    width: 700px;
+    height: auto;
+    margin: 20px;
     border-radius: 25px;
     margin-bottom: 50px;
     z-index: 1;
-}
-
-/*Seccion finalizar compra*/
-
-.contenedor-finalizar {
-    display: flex;
-    width:100%;
-    height:300px;
-    background-color:#c73333;
-}
-
-
-
-
-/*.servicios {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #ffffff;  
-    width: 100%;
-    height: 810px;
-    margin: 20px 30px;
-    border-radius: 10px;
     
 }
-*/
+.btn-crud{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
 
+.cantidad {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 10px;
+    margin-left:-15px;
+    border: black solid 1px;
+    width: 40px;
+}
 
+.fa-plus-circle,
+.fa-minus-circle {
+    color: #b93232;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 30px;
+    
+}
+
+.fa-trash {
+    color: #b93232;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
 .contenedor-btn {
     display: flex;
-    justify-content: center;
-    align-content: space-around;                
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin-bottom:30px;
 }
 
 .boton-estilo {
-    background-color: #929292;
+    background-color: #202020;
     color: #fff;
     border: 0;
-    height: 35px;
+    height: 40px;
     border-radius: 20px;
-    width: 60%;
-    ;
+    width: 200px;
+    font-size: 16px;
+    margin-right: 50px;
 }
 
 .boton-estilo:hover {
-    background-color: #202020;
+    background-color: #929292;
     color: #fff;
 }
 
 
-.texto-servicios {
-    margin: 20px 10px;
-    color: #2b2b2b;
-}
 
-.texto-servicios li {
-    list-style: none;
-}
 
-.texto-servicios .fa-check {
-    color:#c73333;
-    margin: 10px;
-}
-    .titulo-servicios1 {
-        display: flex;
-        
-}
     .subtitulo-productos {
         width: 30%;
         height: 50px;
@@ -160,10 +153,10 @@
         position: absolute;
 
 }
-    .subtitulo-productos h1 {
-        font-size:40px;
-        font-style: italic;
-
+.subtitulo-productos h1 {
+    font-size: 40px;
+    font-style: italic;
+    margin-left: 15px;
 }
 
 @media(min-width:768px) {
