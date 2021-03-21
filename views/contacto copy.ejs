@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs'); -%>
+
+        </header>
+        <main>
+            <div class="contenedor-banner-contacto">
+                <div class="banner-contacto">
+                    <p>CONTACTANOS</p>
+                </div>
+            </div>
+            <div class="titulo-contacto">
+                
+                <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</.>
+            </div>
+
+            <form class="form-contacto" action="">
+                <div class="contenedor-form">
+                    <div class="contenedor-form1">
+                        <div class="etiquetas-form">
+                            <label>Nombre:</label>
+                            <input type="text " name="nombre-c" class="campos-form" placeholder="Ingresá tu Nombre " required/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label>Telefono:</label>
+                            <input type="number " name="telefono-c" class="campos-form" placeholder="Ingresá tu telefono " required/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form">
+                            <label>Mail:</label>
+                            <input type="email " id="user-email" name="mail-c" class="campos-form" placeholder=" Ingresa tu mail " required/>
+                        </div>                      
+                    </div>
+                </div>
+                <div class="etiquetas-form-textarea">
+                    <label class="etiquetas-form">Describa brevemente el motivo de su consulta</label>
+                    <textarea class="campos-form-textarea" name="mensaje-c"></textarea>
+                    <div class="contenedor-btn">
+                        <input type="submit " class="boton-estilo" value="Enviar">
+                    </div>
+                </div>
+                
+            </form>
+        </main>
+        <footer>
+            <%- include('./partials/footer.ejs'); -%>
+        </footer>
+</body>
+
+</html>

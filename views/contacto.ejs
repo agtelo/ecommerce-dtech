@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
-    <title>Contacto</title>
+    <title>Login</title>
 </head>
-
 <body>
     <%- include('./partials/header.ejs'); -%>
-
         </header>
         <main>
-            <div class="contenedor-banner-contacto">
-                <div class="banner-contacto">
-                    <p>CONTACTANOS</p>
+            <div class="subtitulo-productos">
+                <h1>CONTACTANOS</h1>
                 </div>
-            </div>
-            <div class="titulo-contacto">
-                
-                <p>Si querés ponerte en contacto con nosotros, por favor completa el siguiente formulario y un representante comercial se estara comunicando con vos. Muchas gracias</.>
-            </div>
-
-            <form class="form-contacto" action="">
-                <div class="contenedor-form">
-                    <div class="contenedor-form1">
+                <br>
+            <div class="contenedor-login">
+                <div class="contenido-login">
+                    <div class="titulo-login">
+                        <h2>Dejanos tu consulta</h2>
+                        <br>
+                    </div>
+                    <form class="form-login" action="/" method="">
                         <div class="etiquetas-form">
-                            <label>Nombre:</label>
-                            <input type="text " name="nombre-c" class="campos-form" placeholder="Ingresá tu Nombre " required/>
+                            
+                            <input type="text" class="campos-form" name="nombre" placeholder="NOMBRE" required/>
                         </div>
                         <br>
                         <div class="etiquetas-form">
-                            <label>Telefono:</label>
-                            <input type="number " name="telefono-c" class="campos-form" placeholder="Ingresá tu telefono " required/>
+                            
+                            <input type="text" class="campos-form" name="apellido"  placeholder="APELLIDO" required  pattern="[A-Za-z0-9]{4,10}" title="Un código válido debe tener entre 4 y 10 caracteres de logitud, donde cada carácter puede ser una letra mayúscula o un dígito"/>
                         </div>
                         <br>
                         <div class="etiquetas-form">
-                            <label>Mail:</label>
-                            <input type="email " id="user-email" name="mail-c" class="campos-form" placeholder=" Ingresa tu mail " required/>
-                        </div>                      
-                    </div>
+                            
+                            <input type="text" class="campos-form" name="apellido"  placeholder="CORREO ELECTRONICO" required  pattern="[A-Za-z0-9]{4,10}" title="Un código válido debe tener entre 4 y 10 caracteres de logitud, donde cada carácter puede ser una letra mayúscula o un dígito"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form-textarea">
+                            <label class="etiquetas-form">Describa brevemente el motivo de su consulta</label>
+                            <textarea class="campos-form-textarea" name="mensaje-c"></textarea>
+                        </div>
+                        <br>
+                        <div class="contenedor-btn">
+                            <input type="submit" class="boton-estilo" value="Enviar">
+                        </div>
+                        <br>
+                </form>
                 </div>
-                <div class="etiquetas-form-textarea">
-                    <label class="etiquetas-form">Describa brevemente el motivo de su consulta</label>
-                    <textarea class="campos-form-textarea" name="mensaje-c"></textarea>
-                    <div class="contenedor-btn">
-                        <input type="submit " class="boton-estilo" value="Enviar">
-                    </div>
-                </div>
-                
-            </form>
+            </div>
         </main>
         <footer>
             <%- include('./partials/footer.ejs'); -%>
         </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
