@@ -18,40 +18,45 @@
                 <h1>CONTACTANOS</h1>
                 </div>
                 <br>
-            <div class="contenedor-login">
-                <div class="contenido-login">
-                    <div class="titulo-login">
-                        <h2>Dejanos tu consulta</h2>
-                        <br>
+            <div class="background">
+                <div class="container">
+                  <div class="screen">
+                    
+                    <div class="screen-body">
+                      <div class="screen-body-item left">
+                        <div class="app-title">
+                          <span>DEJANOS TU</span>
+                          <span>MENSAJE</span>
+                        </div>
+                       
+                      </div>
+                      <div class="screen-body-item">
+                        <form action="">
+                        <div class="app-form">
+                          <div class="app-form-group">
+                            <input class="app-form-control" placeholder="NOMBRE">
+                          </div>
+                          <div class="app-form-group">
+                            <input class="app-form-control" placeholder="EMAIL">
+                          </div>
+                          <div class="app-form-group">
+                            <input class="app-form-control" placeholder="TELEFONO">
+                          </div>
+                          <div class="app-form-group message">
+                            <input class="app-form-control" placeholder="MENSAJE">
+                          </div>
+                          <div class="app-form-group buttons">
+                            <input class="app-form-button"></input>
+                            <input class="app-form-button"></input>
+                          </div>
+                        </div>
+                    </form>
+                      </div>
                     </div>
-                    <form class="form-login" action="/" method="">
-                        <div class="etiquetas-form">
-                            
-                            <input type="text" class="campos-form" name="nombre" placeholder="NOMBRE" required/>
-                        </div>
-                        <br>
-                        <div class="etiquetas-form">
-                            
-                            <input type="text" class="campos-form" name="apellido"  placeholder="APELLIDO" required  pattern="[A-Za-z0-9]{4,10}" title="Un código válido debe tener entre 4 y 10 caracteres de logitud, donde cada carácter puede ser una letra mayúscula o un dígito"/>
-                        </div>
-                        <br>
-                        <div class="etiquetas-form">
-                            
-                            <input type="text" class="campos-form" name="apellido"  placeholder="CORREO ELECTRONICO" required  pattern="[A-Za-z0-9]{4,10}" title="Un código válido debe tener entre 4 y 10 caracteres de logitud, donde cada carácter puede ser una letra mayúscula o un dígito"/>
-                        </div>
-                        <br>
-                        <div class="etiquetas-form-textarea">
-                            <label class="etiquetas-form">Describa brevemente el motivo de su consulta</label>
-                            <textarea class="campos-form-textarea" name="mensaje-c"></textarea>
-                        </div>
-                        <br>
-                        <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="Enviar">
-                        </div>
-                        <br>
-                </form>
+                  </div>
+                
                 </div>
-            </div>
+              </div>
         </main>
         <footer>
             <%- include('./partials/footer.ejs'); -%>
