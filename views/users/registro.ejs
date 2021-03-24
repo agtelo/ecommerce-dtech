@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
     <title>Registro</title>
 </head>
-
 <body>
     <%- include('../partials/header.ejs'); -%>
-
         </header>
-
         <div class="contenedor-login">
             <div class="contenido-login-registrate">
                 <div class="titulo-login">
                     <h2>Registrate</h2>
                     <br>
-
                 </div>
-
                 <form action="/users/registro" method="POST" class="form-login" enctype="multipart/form-data">
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Nombre:</label>
@@ -64,8 +58,7 @@
 
                     <div class="contenedor-btn">
                         <input type="submit" class="boton-estilo" value="Registrarse">
-                    </div>
-                    
+                    </div>          
                 </form>
             </div>
         </div>
@@ -75,5 +68,4 @@
             <%- include('../partials/footer.ejs'); -%>
         </footer>
 </body>
-
 </html>

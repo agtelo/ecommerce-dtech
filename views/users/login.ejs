@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
     <title>Login</title>
 </head>
-
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
@@ -27,21 +25,18 @@
                         <br>
                         <% errors.forEach(error => { %>
                             <p> <%= error.msg %> </p>
-                           <% }) %>
+                        <% }) %>
                     </div>
                     <form class="form-login" action="/users/login" method="POST">
                         <div class="etiquetas-form">
                             <label>Email:</label>
-                            <input type="text" class="campos-form" name="email" placeholder="Escriba su usuario" />
-                         
+                            <input type="text" class="campos-form" name="email" placeholder="Escriba su usuario" />      
                         </div>
                         <br>
                         <div class="etiquetas-form">
                             <label for="pwd">Password:</label>
-                            <input type="password" class="campos-form" id="pwd" name="password" placeholder="Escriba su contraseña"   />
-                            
+                            <input type="password" class="campos-form" id="pwd" name="password" placeholder="Escriba su contraseña"   />        
                         </div>
-
                         <br>
                         <div class="etiqueta-permanecer">
                             <input type="radio" name="permanecer" id="radio-permanecer" value="a" id="a">
@@ -51,25 +46,19 @@
                         <div class="contenedor-btn">
                             <input type="submit" class="boton-estilo" value="Acceder">
                         </div>
-                        <br>
-                        
+                        <br>   
                         <a href="./recupero-pass">Olvide mi contraseña</a>
                         <br>
                         <br>
                         <a href="./registro">Registrarme</a>
-
                     </form>
                 </div>
             </div>
         </main>
-
         <footer>
             <%- include('../partials/footer.ejs'); -%>
-
         </footer>
-
 </body>
-
 </html>
 
 
