@@ -40,141 +40,37 @@
                         
 
                 <div class="contenedor-servicios">
-                   
+                    <% for (let i = 0; i < products.length; i++) { %>
                     <div class="servicios">
                         <div class="titulo-del-servicio">
-                            <h3>ONE PAGE</h3>
+                            <h3><%= products[i].name%></h3>
                         </div>
                         <div class="texto-servicios"></div>
                         <div class="precio-servicio">
-                            <h2>$4000-</h2>
+                            <h2>AR$ <%= products[i].price%>-</h2>
                            
                         </div>
                         <div class="texto-servicios">
-                            <div></i><img src="/images/onepage.svg" width="300px">
+                            <div></i><img src="../images/products/<%= products[i].image %>" width="300px">
                             </div>
                             <br>
-                            <li><i class="fas fa-check"></i>Diseño un Solo Cuerpo</li>
-                            <li><i class="fas fa-check"></i>Diseño Multiplataforma</li>
-                            <li><i class="fas fa-check"></i>Alta en Google</li>
-                            
-                            <li><i class="fas fa-check"></i>E-mail Directo desde Celulares</li>
-                            <li><i class="fas fa-check"></i>Llamadas desde celulares</li>
-                            <li><i class="fas fa-check"></i>Integracion con Redes Sociales</li>
-                            <li><i class="fas fa-check"></i>Mapa Google</li>
-                            <li><i class="fas fa-check"></i>10 Imagenes en Total</li>
+                            <li><i class="fas fa-check"></i><%= products[i].item1 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item2 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item3 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item4 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item5 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item6 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item7 %></li>
+                            <li><i class="fas fa-check"></i><%= products[i].item8 %></li>
                             <br>
                            
                             <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
+                             <button type="submit" class="boton-estilo"> AGREGAR AL CARRITO</button>
                             </div>                            
                         </div>
                     </div>
-                    <div class="servicios">
-                        <div class="titulo-del-servicio">
-                            <h3>AUTOADMINISTRABLE</h3>
-                        </div>
-                        <div class="precio-servicio">
-                            <h2>$6000-</h2>
-                          
-                        </div>
-                        <div class="texto-servicios">
-                            <div></i><img src="/images/autoadministrable.svg" width="300px">
-                            </div>
-                            <br>
-                            <li><i class="fas fa-check"></i>Panel 100% Autoadministrable</li>
-                            <li><i class="fas fa-check"></i>Formulario Contacto</li>
-                            <li><i class="fas fa-check"></i>Alta en Google</li>
-                            
-                            <li><i class="fas fa-check"></i>E-mail Directo desde Celulares</li>
-                            <li><i class="fas fa-check"></i>Llamadas desde Celulares</li>
-                            <li><i class="fas fa-check"></i>Integracion con Redes Sociales</li>
-                            <li><i class="fas fa-check"></i>Mapa Google</li>
-                            <li><i class="fas fa-check"></i>10 Imagenes en Total</li>
-                            <br>
-                            <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
-                            </div>    
-                            
-                        </div>
-                    </div>
-                    <div class="servicios">
-                        <div class="titulo-del-servicio">
-                            <h3>TIENDA ONLINE</h3>
-                            
-                        </div>
-                        <div class="precio-servicio">
-                            <h2>$8000-</h2>
-                        </div>
-                        <div class="texto-servicios">
-                            <div></i><img src="/images/tienda3.svg" width="300px"></div>
-                            <br>
-                            <li><i class="fas fa-check"></i>Panel Autoadministrable PLUS</li>
-                            <li><i class="fas fa-check"></i>SEO durante 180 Dias</li>
-                            <li><i class="fas fa-check"></i>Alta en Google</li>
-                            
-                            <li><i class="fas fa-check"></i>Sin Gastos ni Comisiones</li>
-                            <li><i class="fas fa-check"></i>Integracion Medios de Pago</li>
-                            <li><i class="fas fa-check"></i>Integracion con redes Sociales</li>
-                            <li><i class="fas fa-check"></i>Mapa Google</li>
-                            <li><i class="fas fa-check"></i>Boton de WhatsApp</li>
-                            <br>
-                            <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="servicios">
-                        <div class="titulo-del-servicio">
-                            <h3>APLICACION MOVIL </h3>
-                        </div>
-                        <div class="precio-servicio">
-                            <h2>$4000-</h2>
-                        </div>
-                        <div class="texto-servicios">
-                            <div></i><img src="/images/tienda.svg" width="300px"></div>
-                            <br>
-                            <li><i class="fas fa-check"></i>Panel Autoadministrable PLUS</li>
-                            <li><i class="fas fa-check"></i>Formulario Contacto</li>
-                            <li><i class="fas fa-check"></i>Alta en Google</li>
-                            
-                            <li><i class="fas fa-check"></i>Sin Gaston ni Comisiones</li>
-                            <li><i class="fas fa-check"></i>Integracion Medios de Pago</li>
-                            <li><i class="fas fa-check"></i>Integracion con redes Sociales</li>
-                            <li><i class="fas fa-check"></i>Mapa Google</li>
-                            <li><i class="fas fa-check"></i>Boton de WhatsApp</li>
-                            <br>
-                            <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
-                            </div>   
-                            
-                        </div>
-                    </div>
-                    <div class="servicios">
-                        <div class="titulo-del-servicio">
-                            <h3>FULL SOCIAL </h3>
-                        </div>
-                        <div class="precio-servicio">
-                            <h2>$4000-</h2>
-                        </div>
-                        <div class="texto-servicios">
-                            <div></i><img src="/images/marketing.svg"width="300px">
-                            </div>
-                            <br>
-                            <li><i class="fas fa-check"></i>Panel Autoadministrable PLUS</li>
-                            <li><i class="fas fa-check"></i>Formulario Contacto</li>
-                            <li><i class="fas fa-check"></i>Alta en Google</li>
-                            
-                            <li><i class="fas fa-check"></i>E-mail directo desde celulares</li>
-                            <li><i class="fas fa-check"></i>Integracion Medios de Pago</li>
-                            <li><i class="fas fa-check"></i>Integracion con redes Sociales</li>
-                            <li><i class="fas fa-check"></i>Mapa Google</li>
-                            <li><i class="fas fa-check"></i>10 Imagenes en Total</li>
-                            <br>
-                            <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="AGREGAR AL CARRITO">
-                            </div>   
-                            
+                    <% } %>
+                    
                         </div>
                     </div>
                 </div>
