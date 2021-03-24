@@ -3,11 +3,24 @@ const path = require('path');
 let usuariosFilePath = path.resolve(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
+const { validationResult } = require("express-validator");
+
+
 
 const userController = {
     
     login: function(req,res){
-        return res.render ('users/login' , {title: "Login", css:"login"});
+        let errors = validationResult(req)
+        return res.render ('users/login' , { errors: errors.array(), old: req.body});
+    },
+    ingresar: function (req, res) {
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+            res.render("users/login");
+        } else {
+            res.render("users/login", { errors: errors.mapped(), old: req.body});
+        };
+        
     },
 
     registro: function(req,res){

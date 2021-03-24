@@ -29,7 +29,7 @@ app.listen(process.env.PORT || 3000, function() {
     console.log("El servidor esta corriendo en puerto 3000 ")
 }) 
 
-// Routers 
+// Routes 
 const mainRouter = require('./routes/mainRouter');
 const productRouter = require('./routes/productRouter');
 const userRouter = require('./routes/userRouter');
