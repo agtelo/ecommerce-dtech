@@ -12,7 +12,7 @@ const userController = {
     login: function(req,res){
         return res.render ('users/login');
     },
-    validacionLogin: function (req, res) {
+    ingresoUsuario: function (req, res) {
         const resultValidation = validationResult(req);
 
         if ( resultValidation.errors.length > 0) {

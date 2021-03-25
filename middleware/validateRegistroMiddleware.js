@@ -1,4 +1,5 @@
 const path = require("path");
+
 const {body} = require("express-validator");
 
 let validateRegistro = [
@@ -22,12 +23,7 @@ let validateRegistro = [
                 throw new Error("Las extensiones validas son .JPG , .PNG , .SVG")
             }
         }
-
-
-
     }) 
-
-    
 ];
 
 module.exports = validateRegistro;

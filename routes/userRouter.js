@@ -5,13 +5,13 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 const uploadFile = require('../middleware/multerMiddleware');
 const validateLogin = require('../middleware/validateLoginMiddleware')
-
+const validateRegistro = require('../middleware/validateRegistroMiddleware')
 
 router.get('/login', userController.login);
-router.post('/login', validateLogin, userController.validacionLogin);
+router.post('/login', validateLogin, userController.ingresoUsuario);
 
 router.get('/registro', userController.registro);
-router.post('/registro',uploadFile.single("imagen"), userController.crearUsuario);
+router.post('/registro',validateRegistro , uploadFile.single("imagen"), userController.crearUsuario);
 
 router.get('/usuario', userController.show);
 
