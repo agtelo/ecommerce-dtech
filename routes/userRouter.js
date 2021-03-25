@@ -27,7 +27,7 @@ let validateLogin = [
 
 
 router.get('/login', userController.login);
-router.post('/login', validateLogin, userController.ingresar);
+router.post('/login', validateLogin, userController.validacionLogin);
 
 router.get('/registro', userController.registro);
 router.post('/registro',uploadFIle.single("imagen"), userController.crearUsuario);

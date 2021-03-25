@@ -11,17 +11,17 @@ const userController = {
     
     login: function(req,res){
         let errors = validationResult(req)
-        return res.render ('users/login' , { errors: errors.array(), old: req.body});
+        return res.render ('users/login');
     },
-    ingresar: function (req, res) {
-        let errors = validationResult(req);
-        if (errors.isEmpty()){
-            res.render("users/login");
-        } else {
-            res.render("users/login", { errors: errors.mapped(), old: req.body});
-        };
-        
+    validacionLogin: function (req, res) {
+        const resultValidation = validationResult(req);
+
+        if ( resultValidation.errors.length > 0) {
+            return res.render("users/login", { errors: resultValidation.mapped(), oldData: req.body});
+                
+        } 
     },
+
 
     registro: function(req,res){
         return res.render ('users/registro', {title: "Registro", css: "login"});

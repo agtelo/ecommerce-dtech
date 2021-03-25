@@ -23,21 +23,25 @@
                     <div class="titulo-login">
                         <h2>Ingresa</h2>
                         <br>
-                        <% errors.forEach(error => { %>
-                            <p> <%= error.msg %> </p>
-                        <% }) %>
                     </div>
                     <form class="form-login" action="/users/login" method="POST">
                         <div class="etiquetas-form">
                             <label>Email:</label>
-                            <input type="text" class="campos-form" name="email" placeholder="Escriba su usuario" />      
+                            <input type="text" class="campos-form" name="email" placeholder="Escriba su usuario" value="<%= locals.oldData ? oldData.email : null%>" />  
+                              
                         </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>
+                            <% } %>  
                         <br>
                         <div class="etiquetas-form">
                             <label for="pwd">Password:</label>
-                            <input type="password" class="campos-form" id="pwd" name="password" placeholder="Escriba su contraseña"   />        
+                            <input type="password" class="campos-form" id="pwd" name="password" placeholder="Escriba su contraseña" />        
                         </div>
                         <br>
+                        <% if (locals.errors && errors.password) { %>
+                            <%= errors.password.msg %>
+                            <% } %>  
                         <div class="etiqueta-permanecer">
                             <input type="radio" name="permanecer" id="radio-permanecer" value="a" id="a">
                             <label for="a">Permancer conectado</label>
