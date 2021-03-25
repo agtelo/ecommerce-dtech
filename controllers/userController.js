@@ -10,7 +10,6 @@ const { validationResult } = require("express-validator");
 const userController = {
     
     login: function(req,res){
-        let errors = validationResult(req)
         return res.render ('users/login');
     },
     validacionLogin: function (req, res) {
