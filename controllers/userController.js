@@ -49,6 +49,13 @@ const userController = {
         return res.render('users/registro', {title: "Registro", css: "login"});
     },
     crearUsuario: function (req,res) {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render("users/registro", { 
+                errors: resultValidation.mapped(), 
+                oldData: req.body
+            })};
+        
         let usuarioNuevo = {
             first_name: req.body.nombre,
             last_name: req.body.apellido,
@@ -56,8 +63,10 @@ const userController = {
             phone: req.body.telefono,
             password: bcryptjs.hashSync(req.body.password,10),
             image: req.file.filename
+        
             
-        };
+        };        
+
         usuarios.push(usuarioNuevo);
         let usuarioSubir = JSON.stringify(usuarios, null , 2);
 		fs.writeFileSync(usuariosFilePath ,usuarioSubir)

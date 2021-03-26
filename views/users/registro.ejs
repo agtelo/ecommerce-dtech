@@ -22,33 +22,51 @@
                 <form action="/users/registro" method="POST" class="form-login" enctype="multipart/form-data">
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Nombre:</label>
-                        <input type="text" id="user-name" name="nombre" class="campos-form" placeholder=" Ingresá tu nombre" />
+                        <input type="text" id="user-name" name="nombre" class="campos-form" placeholder=" Ingresá tu nombre" value="<%= locals.oldData ? oldData.nombre : null%>"/>       
                     </div>
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p> <%= errors.nombre.msg %>  </p>   
+                        <% } %> 
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Apellido:</label>
-                        <input type="text" id="user-lastname" name="apellido" class="campos-form" placeholder=" Ingresá tu apellido" />
+                        <input type="text" id="user-lastname" name="apellido" class="campos-form" placeholder=" Ingresá tu apellido" value="<%= locals.oldData ? oldData.apellido : null%>" />
                     </div>
+                    <% if (locals.errors && errors.apellido) { %>
+                        <p> <%= errors.apellido.msg %>  </p>   
+                        <% } %> 
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Mail:</label>
-                        <input type="email" id="user-email" name="email" class="campos-form" placeholder=" Ingresá tu mail" />
+                        <input type="email" id="user-email" name="email" class="campos-form" placeholder=" Ingresá tu mail" value="<%= locals.oldData ? oldData.email : null%>"/>
                     </div>
+                    <% if (locals.errors && errors.email) { %>
+                        <p> <%= errors.email.msg %>  </p>   
+                        <% } %> 
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Teléfono:</label>
-                        <input type="number" id="user-phone" name="telefono" class="campos-form" placeholder=" Ingresá tu teléfono" />
+                        <input type="number" id="user-phone" name="telefono" class="campos-form" placeholder=" Ingresá tu teléfono"  value="<%= locals.oldData ? oldData.telefono : null%>"/>
                     </div>
+                    <% if (locals.errors && errors.telefono) { %>
+                        <p> <%= errors.telefono.msg %>  </p>   
+                        <% } %> 
                     <br>
                     <div class="etiquetas-form">
                         <label for="pwd">Password:</label>
-                        <input type="password" id="pwd" name="password" class="campos-form" placeholder=" Ingresá tu contraseña" />
+                        <input type="password" id="pwd" name="password" class="campos-form" placeholder=" Ingresá tu contraseña"  />
                     </div>
+                    <% if (locals.errors && errors.password) { %>
+                        <p> <%= errors.password.msg %>  </p>   
+                        <% } %> 
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Imagen:</label>
-                        <input type="file" id="user-phone" name="imagen" class="campos-form" placeholder=" Ingresá una imagen" />
+                        <input type="file" id="imagen" name="imagen" class="campos-form" placeholder=" Ingresá una imagen" />
                     </div>
+                    <% if (locals.errors && errors.imagen) { %>
+                        <p> <%= errors.imagen.msg %>  </p>   
+                        <% } %> 
                     <br>
 
                     <div class="contenedor-btn">

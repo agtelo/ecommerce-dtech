@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 // la constante mainController requerirá el controlador
 const userController = require('../controllers/userController');
+// se requieren middlewares para aplicar por ruta
 const uploadFile = require('../middleware/multerMiddleware');
 const validateLogin = require('../middleware/validateLoginMiddleware')
 const validateRegistro = require('../middleware/validateRegistroMiddleware')
@@ -11,7 +12,7 @@ router.get('/login', userController.login);
 router.post('/login', validateLogin, userController.ingresoUsuario);
 
 router.get('/registro', userController.registro);
-router.post('/registro',validateRegistro , uploadFile.single("imagen"), userController.crearUsuario);
+router.post('/registro', uploadFile.single("imagen"), validateRegistro , userController.crearUsuario);
 
 router.get('/usuario', userController.show);
 

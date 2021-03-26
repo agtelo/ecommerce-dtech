@@ -17,12 +17,14 @@ let validateRegistro = [
         if (!file) {
             throw new Error ("Tienes que subir una imagen");
 
+            
         }else {
             let fileExtension = path.extname(file.originalname);
             if (!extensionValida.includes(fileExtension)) {
                 throw new Error("Las extensiones validas son .JPG , .PNG , .SVG")
             }
         }
+        return true;
     }) 
 ];
 
