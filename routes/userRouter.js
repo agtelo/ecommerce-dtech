@@ -10,13 +10,15 @@ const validateRegistro = require('../middleware/validateRegistroMiddleware')
 const guestMiddleware = require("../middleware/guestMiddleware")
 const authMiddleware = require("../middleware/authMiddleware")
 
-router.get('/login', guestMiddleware,userController.login);
+router.get('/login',guestMiddleware,userController.login);
 router.post('/login', validateLogin, userController.ingresoUsuario);
 
-router.get('/registro', guestMiddleware, userController.registro);
+router.get('/registro',guestMiddleware, userController.registro);
 router.post('/registro', uploadFile.single("imagen"), validateRegistro , userController.crearUsuario);
 
-router.get('/usuario', authMiddleware,userController.show);
+router.get('/bienvenida',userController.bienvenida);
+router.get('/perfil',authMiddleware, userController.perfil);
+
 
 router.get('/recupero-pass', userController.recuperoPass);
 router.get('/recupero-validacion', userController.recuperoValidacion);

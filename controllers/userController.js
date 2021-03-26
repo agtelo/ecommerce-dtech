@@ -27,7 +27,7 @@ const userController = {
             if (validatePassword) {
             delete userALogearse.password;
             req.session.userLogged = userALogearse;
-            return res.redirect("../users/usuario");
+            return res.redirect("../users/perfil");
         }
         return res.render("users/login", {
             errors: { 
@@ -72,7 +72,7 @@ const userController = {
         usuarios.push(usuarioNuevo);
         let usuarioSubir = JSON.stringify(usuarios, null , 2);
 		fs.writeFileSync(usuariosFilePath ,usuarioSubir)
-        res.render('users/usuario', {"usuarioNuevo" : usuarioNuevo});
+        return res.render('users/bienvenida', {"usuarioNuevo" : usuarioNuevo});
     },
 
     recuperoPass: function(req,res){
@@ -85,14 +85,15 @@ const userController = {
     admin: function(req,res) {
         return res.render ('/users/admin', {title: "Admin", css: "admin"});
     },
-    show: function (req,res) {
-        console.log("estas en ussuario");
-        console.log(req.session);
-        return res.render ('./users/usuario')
-    }
+    bienvenida: function (req,res) {
+        return res.render ('./users/bienvenida')
+    },
+    perfil: function (req,res) {
+        return res.render ('./users/perfil', { 
+            user: req.session.userLogged
+        })
+    },
     
-    
-
 }
 
 
