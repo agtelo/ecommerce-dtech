@@ -7,14 +7,16 @@ const userController = require('../controllers/userController');
 const uploadFile = require('../middleware/multerMiddleware');
 const validateLogin = require('../middleware/validateLoginMiddleware')
 const validateRegistro = require('../middleware/validateRegistroMiddleware')
+const guestMiddleware = require("../middleware/guestMiddleware")
+const authMiddleware = require("../middleware/authMiddleware")
 
-router.get('/login', userController.login);
+router.get('/login', guestMiddleware,userController.login);
 router.post('/login', validateLogin, userController.ingresoUsuario);
 
-router.get('/registro', userController.registro);
+router.get('/registro', guestMiddleware, userController.registro);
 router.post('/registro', uploadFile.single("imagen"), validateRegistro , userController.crearUsuario);
 
-router.get('/usuario', userController.show);
+router.get('/usuario', authMiddleware,userController.show);
 
 router.get('/recupero-pass', userController.recuperoPass);
 router.get('/recupero-validacion', userController.recuperoValidacion);

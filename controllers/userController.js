@@ -25,7 +25,9 @@ const userController = {
         if (userALogearse){
             let validatePassword = bcryptjs.compareSync(req.body.password , userALogearse.password);
             if (validatePassword) {
-            return res.redirect("../products/carrito");
+            delete userALogearse.password;
+            req.session.userLogged = userALogearse;
+            return res.redirect("../users/usuario");
         }
         return res.render("users/login", {
             errors: { 
@@ -84,6 +86,8 @@ const userController = {
         return res.render ('/users/admin', {title: "Admin", css: "admin"});
     },
     show: function (req,res) {
+        console.log("estas en ussuario");
+        console.log(req.session);
         return res.render ('./users/usuario')
     }
     
