@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
     <title>Validacion</title>
 </head>
+
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
@@ -20,12 +22,13 @@
                         <div class="imagen-perfil">
                             <img src="/images/users/<%= usuarioNuevo.image %>" width="330px">
                         </div>
-                        <h2>Bienvenid@ <%- usuarioNuevo.first_name %> !</h2>
+                        <h2>Bienvenid@
+                            <%- usuarioNuevo.first_name %> !</h2>
                         <p>Acabas de crear tu cuenta DTECH ahora podes disfrutar de todos los contenidos.</p>
-                    </div>    
-                        <div class="contenedor-btn">
-                            <button  class="boton-estilo">
-                                <a href="../../"> Volver a Inicio</a>
+                    </div>
+                    <div class="contenedor-btn">
+                        <button class="boton-estilo">
+                                <a href="../users/login"> Ir a loguearte</a>
                         </div>
                     </form>
                 </div>
