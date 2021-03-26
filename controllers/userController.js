@@ -89,13 +89,19 @@ const userController = {
         return res.render ('./users/bienvenida')
     },
     perfil: function (req,res) {
+        console.log("Estas en PERFIL");
+        console.log(req.session)
         return res.render ('./users/perfil', { 
             user: req.session.userLogged
         })
     },
+    logout: function (req, res) {
+        req.session.destroy();
+        console.log(req.session)
+        return res.render("./index")
+        
+    }
     
 }
-
-
 
 module.exports = userController;

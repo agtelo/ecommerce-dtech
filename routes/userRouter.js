@@ -25,6 +25,9 @@ router.get('/recupero-validacion', userController.recuperoValidacion);
 
 router.get('/admin', userController.admin);
 
+router.get('/logout', userController.logout);
+
+
 
 
 

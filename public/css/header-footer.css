@@ -127,7 +127,7 @@ header label:hover {
     flex-direction: column;
     background-color: #ffffff;
     width: 130%;
-    visibility: hidden;
+    display: none;
     
     
     
@@ -137,12 +137,10 @@ header label:hover {
 .submenu li  {
     display: block;
     align-items: center;
-    visibility: hidden;
+    display: none;
 }
 
-.menu-user li :hover .submenu {
-    visibility: visible;
-    }
+
 
 
 
