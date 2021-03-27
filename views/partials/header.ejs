@@ -18,20 +18,16 @@
             <li><a href="../products/productos">Planes</a></li>
             <li><a href="../desarrollos">Desarrollos</a></li>
             <li><a href="../contacto">Contacto</a></li>
-            
-            <li><a href="../users/logout">Logout</a></li>
+
             <% if (locals.isLogged) { %>
-             
             
-            <li><a href="">Hola <%= locals.userLogged.first_name %> <i class="fas fa-user-circle"></i></a></i>
-                <ul class="submenu">
-                    <li><a href="">Mi Perfil</a></li>
-                    <li><a href="">Logout</a></li>
-                </ul>
+            <li><a href="../users/perfil">Hola <%= locals.userLogged.first_name %> <i class="fas fa-chevron-down"></i></a></i> 
+            <li><a href="../users/logout">Logout</a></li>    
             </li>
             <% } else { %>
                 <li><a href="../users/registro">Registro</a></li>
                 <li><a href="../users/login">Login</a></li>
+
             <% } %>
         </ul>
 

@@ -150,7 +150,34 @@ header label:hover {
     font-size: 25px;
 }
 
+.imagen-perfil-user {
+    display: ;
+    border: whitesmoke solid 3px;
+    background-color: white ;
+    height: 70px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    width: 70px;
+}
 
+.imagen-perfil-user img{
+    border: whitesmoke solid 3px;
+    background-color: white ;
+    height: 140px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    width: 140px;
+}
+
+
+.imagen-perfil img{
+    border: whitesmoke solid 3px;
+    background-color: white ;
+    height: 140px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    width: 140px;
+}
 
 @media(max-width:900px) {
     header label {

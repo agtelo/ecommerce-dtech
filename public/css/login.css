@@ -68,6 +68,15 @@ a {
     z-index: 1;
 }
 
+.imagen-perfil-user {
+    border: whitesmoke solid 3px;
+    background-color: white ;
+    height: 50px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    width: 50px;
+}
+
 .imagen-perfil img{
     border: whitesmoke solid 3px;
     background-color: white ;
