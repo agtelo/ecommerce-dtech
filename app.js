@@ -11,12 +11,21 @@ const methodOverride = require("method-override");
 // Requerimos el modulo express-session
 const session = require("express-session")
 
-// Aplicmaos session como middleware global
+// Requerimos userLooggedMuddleware
+
+const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
+
+
+
+// Aplicmoms session como middleware global
 app.use(session({
     secret: "esto es un secreto",
     resave: false,
     saveUninitialized: false,
 }));
+
+// Aplicmoms userLoggedMiddleware
+app.use(userLoggedMiddleware);
 
 // Configuramos el "template-engine" para hacer dinamicas nuestras vistas
 app.set('views', path.join(__dirname, 'views'));

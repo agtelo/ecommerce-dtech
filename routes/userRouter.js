@@ -10,6 +10,7 @@ const validateRegistro = require('../middleware/validateRegistroMiddleware')
 const guestMiddleware = require("../middleware/guestMiddleware")
 const authMiddleware = require("../middleware/authMiddleware")
 
+
 router.get('/login',guestMiddleware,userController.login);
 router.post('/login', validateLogin, userController.ingresoUsuario);
 
@@ -26,9 +27,6 @@ router.get('/recupero-validacion', userController.recuperoValidacion);
 router.get('/admin', userController.admin);
 
 router.get('/logout', userController.logout);
-
-
-
 
 
 module.exports = router; 
