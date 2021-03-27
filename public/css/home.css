@@ -152,7 +152,7 @@
     height: 55vh; /* Optional */
     background-image: url(../images/img3.jpg);
     overflow: hidden; /* Hide scrollbars */
-    display: none;
+    display: display;
 }
 
   /* MIDDLE WRAPPER */
