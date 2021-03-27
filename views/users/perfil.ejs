@@ -17,20 +17,30 @@
         </header>
         <div class="imagen-fondo-login">
             <div class="contenedor-login">
-                <div class="contenido-login-olvide ">
+                <div class="contenido-login-perfil ">
                     <div class="titulo-login">
-                        <div class="imagen-perfil">
-                            <img src="/images/users/<%= user.image %>" width="330px">
-                        </div>
-                        <h2>Mi CUENTA
-                             <%= user.first_name %> !</h2>
-                        <p>Acabas de crear tu cuenta DTECH ahora podes disfrutar de todos los contenidos.</p>
+                        
+                        <h2>MI PERFIL </h2>
+                        <br>
+                             <div class="imagen-perfil">
+                                <img src="/images/users/<%= user.image %>" width="330px">
+                            </div>
+                            <h2>Nombre: <%= user.first_name %></h2>
+                            <h2>Apellido: <%= user.last_name %></h2>
+                            <h2>Email: <%= user.email %></h2>
+                            <h2>Telefono: <%= user.phone %></h2>
                     </div>
+                    <br>
                     <div class="contenedor-btn">
                         <button class="boton-estilo">
-                                <a href="../users/login"> Ir a loguearte</a>
+                                <a href="../users/login"> Editar</a>
                         </div>
-                    </form>
+                        <br>    
+                        <div class="contenedor-btn">
+                            <button class="boton-estilo">
+                                    <a href="../users/login"> Eliminar</a>
+                            </div>
+                    
                 </div>
             </div>
         </div>

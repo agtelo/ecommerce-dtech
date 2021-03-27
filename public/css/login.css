@@ -46,6 +46,17 @@ a {
     z-index: 1;
 }
 
+.contenido-login-perfil {
+    background-color: #c73333de;
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    border: solid 1px #c7333354;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+
 .contenido-login-registrate {
     background-color: #c73333de;
     width: 500px;
