@@ -11,11 +11,13 @@ const methodOverride = require("method-override");
 // Requerimos el modulo express-session
 const session = require("express-session")
 
+// Requerimos al modulo cookie-parser
+
+const cookies = require("cookie-parser") 
+
 // Requerimos userLooggedMuddleware
 
 const userLoggedMiddleware = require("./middleware/userLoggedMiddleware");
-
-
 
 // Aplicmoms session como middleware global
 app.use(session({
@@ -26,6 +28,9 @@ app.use(session({
 
 // Aplicmoms userLoggedMiddleware
 app.use(userLoggedMiddleware);
+
+// Aplicamos cookies
+app.use(cookies());
 
 // Configuramos el "template-engine" para hacer dinamicas nuestras vistas
 app.set('views', path.join(__dirname, 'views'));
