@@ -60,7 +60,6 @@ header img {
 menu {
     display: flex;
     justify-content: space-between;
-    
 }
 
 header {
@@ -87,8 +86,6 @@ header label:hover {
     text-align: right;
 }
 
-
-
 .menu ul {
     margin: 0;
     list-style: none;
@@ -96,12 +93,10 @@ header label:hover {
     display: flex;
 }
 
-
-
-.menu  li a {
+.menu li a {
     text-decoration: none;
     color: black;
-    display: block;
+    display: flex;
     padding: 15px 20px;
     transition: all 50ms ease;
 }
@@ -111,14 +106,11 @@ header label:hover {
 }
 
 .menu-user li {
-    
     text-decoration: none;
     color: black;
     display: block;
     padding: 15px 20px;
-    transition: all 50ms ease; 
-
-
+    transition: all 50ms ease;
 }
 
 .submenu {
@@ -128,21 +120,13 @@ header label:hover {
     background-color: #ffffff;
     width: 130%;
     display: none;
-    
-    
-    
-
 }
 
-.submenu li  {
+.submenu li {
     display: block;
     align-items: center;
     display: none;
 }
-
-
-
-
 
 .fa-user-circle {
     display: flex;
@@ -151,30 +135,28 @@ header label:hover {
 }
 
 .imagen-perfil-user {
-    display: ;
     border: whitesmoke solid 3px;
-    background-color: white ;
+    background-color: white;
     height: 70px;
-    -moz-border-radius:75px;
+    -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
     width: 70px;
 }
 
-.imagen-perfil-user img{
+.imagen-perfil-user img {
     border: whitesmoke solid 3px;
-    background-color: white ;
+    background-color: white;
     height: 140px;
-    -moz-border-radius:75px;
+    -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
     width: 140px;
 }
 
-
-.imagen-perfil img{
+.imagen-perfil img {
     border: whitesmoke solid 3px;
-    background-color: white ;
+    background-color: white;
     height: 140px;
-    -moz-border-radius:75px;
+    -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
     width: 140px;
 }
@@ -234,24 +216,20 @@ header label:hover {
     align-content: space-around;
     background-color: #141010;
     height: 300px;
-    
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
-    
 }
 
-
-.footer-logo  {
-    display: flex;    
+.footer-logo {
+    display: flex;
     align-items: center;
     justify-items: center;
     margin-left: 10px;
     width: 150px;
     height: 150px;
-    
 }
 
 .copyright {
@@ -264,16 +242,15 @@ header label:hover {
     text-transform: uppercase;
     padding: 41px 0;
     margin: 0px;
-    border-top:solid 1px;
+    border-top: solid 1px;
     text-align: center;
     height: 1px;
     padding-left: 20px;
     width: 100%;
 }
 
-
 .extra ul {
-    list-style:none;
+    list-style: none;
     color: #aaa;
     padding: 30px;
     display: flex;
@@ -283,9 +260,6 @@ header label:hover {
     margin: 0px;
     width: 100%;
 }
-
-
-
 
 .extra li a {
     justify-content: space-around;
@@ -300,60 +274,43 @@ header label:hover {
 }
 
 @media(min-width:768px) {
-
-.footer-logo {
-    margin-left: 30px;
-}    
-
-.contenedor-footer {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 150px;
-    
-}  
-
-.extra ul {
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px;
-    padding: 0px 0;
-    margin-left: 0px;
-    width: 100%;
-
-}
-
-.extra li a {
-    
-    color: #aaa;
-    padding: 15px 20px;
-    font-size: 18px;
-    text-align: center;
-    text-align: center;
-    
-    
-}
-
-.copyright {
-    padding: 20px 15px ;
-    justify-content: center;
-    font-size:15px;
-    padding-left: 50px;
-    
+    .footer-logo {
+        margin-left: 30px;
+    }
+    .contenedor-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 150px;
+    }
+    .extra ul {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0px;
+        padding: 0px 0;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .extra li a {
+        color: #aaa;
+        padding: 15px 20px;
+        font-size: 18px;
+        text-align: center;
+        text-align: center;
+    }
+    .copyright {
+        padding: 20px 15px;
+        justify-content: center;
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    .iconos-footer {
+        width: none;
+        margin-right: 35px;
+    }
 }
 
 .iconos-footer {
     width: none;
-    margin-right: 35px;
-}
-
-}
-
-
-
-
-.iconos-footer {
-    width: none;
-    
 }
 
 .iconos-footer ul {

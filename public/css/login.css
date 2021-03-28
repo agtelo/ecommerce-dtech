@@ -21,7 +21,6 @@ a {
     padding-bottom: 120px;
     height: 100%;
     width: 100%;
-    
 }
 
 .contenido-login {
@@ -71,47 +70,40 @@ a {
 .contenedor-login-user {
     top: 5px;
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
-
-
-
-
 
 .imagen-perfil-user {
-    display: flex;
-    align-items: center;
     border: whitesmoke solid 3px;
-    background-color: white ;
-    height: 20px;
-    -moz-border-radius:75px;
+    background-color: white;
+    height: 25px;
+    -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
-    width: 20px;
+    width: 25px;
 }
 
-
-
-.imagen-perfil img{
+.imagen-perfil img {
     border: whitesmoke solid 3px;
-    background-color: white ;
+    background-color: white;
     height: 140px;
-    -moz-border-radius:75px;
+    -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
     width: 140px;
 }
 
 .subtitulo-productos h1 {
-    font-size:40px;
+    font-size: 40px;
     font-style: italic;
     padding-left: 40px;
 }
+
 .subtitulo-productos {
     width: 30%;
     height: 50px;
     background-color: #2c2c2c;
     color: #fff;
     margin-right: 50%;
-} 
+}
 
 .titulo-login {
     color: #ffffff;
@@ -139,7 +131,6 @@ a {
     align-items: center;
     font-size: 12px;
     width: 80%;
-    
 }
 
 .campos-form {
@@ -151,7 +142,7 @@ a {
     margin-left: 10px;
     margin-top: 5px;
     text-align: center;
-    color:black;
+    color: black;
 }
 
 #radio-permanecer {
@@ -163,8 +154,8 @@ a {
     justify-content: center;
     color: #fff;
     margin-left: 50px;
-
 }
+
 .contenedor-btn {
     display: flex;
     justify-content: center;
@@ -186,14 +177,12 @@ a {
 }
 
 .etiqueta-permanecer {
-    font-size:16px;
+    font-size: 16px;
     margin-left: -20px;
-
 }
 
 .etiqueta-permanecer label {
     margin-left: 10px;
-
 }
 
 @media(min-width:430px) {
@@ -204,5 +193,4 @@ a {
     .etiquetas-form {
         font-size: 16px;
     }
-
 }
