@@ -24,6 +24,7 @@ const userController = {
 
         if (userALogearse){
             let validatePassword = bcryptjs.compareSync(req.body.password , userALogearse.password);
+            console.log(validatePassword)
             if (validatePassword) {
             delete userALogearse.password;
             req.session.userLogged = userALogearse;
@@ -45,8 +46,6 @@ const userController = {
         
     },
     
-
-
     registro: function(req,res){
         return res.render('users/registro', {title: "Registro", css: "login"});
     },
@@ -81,7 +80,6 @@ const userController = {
     recuperoValidacion: function(req,res){
         return res.render ('users/recupero-validacion', {title: "Recupero" ,css: "login" } );
     },
-
     admin: function(req,res) {
         return res.render ('/users/admin', {title: "Admin", css: "admin"});
     },
@@ -95,6 +93,15 @@ const userController = {
             user: req.session.userLogged
         })
     },
+    editarPerfil: function (req,res) {
+        return res.render ('./users/edit-perfil', { 
+            user: req.session.userLogged
+        })
+    },
+    actualizarPerfil: function (req,res) {
+       
+    },
+
     logout: function (req, res) {
         req.session.destroy();
         console.log(req.session)
@@ -102,6 +109,6 @@ const userController = {
         
     }
     
-}
+};
 
 module.exports = userController;

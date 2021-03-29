@@ -141,6 +141,7 @@ header label:hover {
     -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
     width: 70px;
+    display: none;
 }
 
 .imagen-perfil-user img {
@@ -150,6 +151,7 @@ header label:hover {
     -moz-border-radius: 75px;
     -webkit-border-radius: 75px;
     width: 140px;
+    display: none;
 }
 
 .imagen-perfil img {

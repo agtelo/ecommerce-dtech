@@ -20,6 +20,9 @@ router.post('/registro', uploadFile.single("imagen"), validateRegistro , userCon
 router.get('/bienvenida',userController.bienvenida);
 router.get('/perfil',authMiddleware, userController.perfil);
 
+router.get('/editar-perfil', userController.editarPerfil);
+router.put('/editar-perfil',uploadFile.single("imagen") ,userController.actualizarPerfil);
+
 
 router.get('/recupero-pass', userController.recuperoPass);
 router.get('/recupero-validacion', userController.recuperoValidacion);
