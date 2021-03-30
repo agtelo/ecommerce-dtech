@@ -8,9 +8,12 @@ const { validationResult } = require("express-validator");
 const userController = {
     
     login: function(req,res){
+        
+        console.log(req.cookies.testing)
         return res.render ('users/login');
     },
     ingresoUsuario: function (req, res) {
+        
         const resultValidation = validationResult(req);
         let userALogearse = usuarios.find( usuario => usuario.email == req.body.email);
 
@@ -24,12 +27,15 @@ const userController = {
 
         if (userALogearse){
             let validatePassword = bcryptjs.compareSync(req.body.password , userALogearse.password);
-            console.log(validatePassword)
+            
             if (validatePassword) {
             delete userALogearse.password;
             req.session.userLogged = userALogearse;
+            if(req.body.remember_user){
+                res.cookie("userEmail" , req.body.email , { maxAge: (1000 * 60) * 3 })
+            }
             return res.redirect("../users/perfil");
-        }
+        };
         return res.render("users/login", {
             errors: { 
                 password: { 
@@ -47,6 +53,7 @@ const userController = {
     },
     
     registro: function(req,res){
+        res.cookie("testing" , "Hola mundo", { maxAge: 1000 * 30})
         return res.render('users/registro', {title: "Registro", css: "login"});
     },
     crearUsuario: function (req,res) {
@@ -64,8 +71,6 @@ const userController = {
             phone: req.body.telefono,
             password: bcryptjs.hashSync(req.body.password,10),
             image: req.file.filename
-        
-            
         };        
 
         usuarios.push(usuarioNuevo);
@@ -87,8 +92,7 @@ const userController = {
         return res.render ('./users/bienvenida')
     },
     perfil: function (req,res) {
-        console.log("Estas en PERFIL");
-        console.log(req.session)
+        console.log(req.cookies.userEmail);
         return res.render ('./users/perfil', { 
             user: req.session.userLogged
         })
@@ -99,10 +103,11 @@ const userController = {
         })
     },
     actualizarPerfil: function (req,res) {
-       
+    
     },
 
     logout: function (req, res) {
+        res.clearCookie("userEmail");
         req.session.destroy();
         console.log(req.session)
         return res.render("./index")

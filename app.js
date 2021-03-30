@@ -26,11 +26,13 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+// Aplicamos cookies
+app.use(cookies());
+
 // Aplicmoms userLoggedMiddleware
 app.use(userLoggedMiddleware);
 
-// Aplicamos cookies
-app.use(cookies());
+
 
 // Configuramos el "template-engine" para hacer dinamicas nuestras vistas
 app.set('views', path.join(__dirname, 'views'));
