@@ -1,13 +1,11 @@
-
-module.export =
+module.exports=
 {
   "development": {
     "username": "root",
     "password": null,
     "database": "dtech_database",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorAliases" : "false"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
