@@ -30,7 +30,8 @@ const productController = {
         return res.render('products/crear', { title: "Panel", css: "crud"});
     },
     guardar: function(req, res) {
-        db.Product.create ({
+        let productoNuevo = {
+            id: req.body.id,
             name: req.body.nombre,
             description: req.body.descripcion,
             item1: req.body.item1,
@@ -41,10 +42,13 @@ const productController = {
             item6: req.body.item6,
             item7: req.body.item7,
             item8: req.body.item8,
-            category_id: req.body.categoria,
+            category: req.body.categoria,
             price: req.body.precio,
             image: req.file.filename
-        });        
+        };
+        products.push(productoNuevo);
+        let productoSubir = JSON.stringify(products, null , 2);
+		fs.writeFileSync(productsFilePath ,productoSubir)
         res.redirect('./crear');
     },
     editar: function(req, res) {
