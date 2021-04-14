@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header-footer.css">
-    
+
     <link rel="stylesheet" href="/css/product-panelcrud.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
     <title>Panel Producto</title>
 </head>
+
 <body>
     <%- include('../partials/header.ejs'); -%>
-</header>  
-<div class="subtitulo-productos">
-                    <h1>PANEL GESTION PRODUCTOS</h1>
-                    </div>
-                    <br>              
-    <div class="contenedor-servicios">
-        <div class="servicios">
-            <div class="titulo-del-servicio">
-                <h3>NUEVO</h3>
-            </div>  
-            <div class="texto-servicios">
-                <nav class="iconos-panel">
-                    <ul>
-                        <div class="crear">
-                            <a href="../products/crear" >
-                                <i class="fas fa-plus-circle"></i>
-                            </a>
-                            <div class="titulo-icono" ><h3></h3></div>
-                        </div>              
-                    </ul>
-                </nav>
+        </header>
+        <div class="subtitulo-productos">
+            <h1>PANEL DE GESTION PRODUCTOS</h1>
+        </div>
+        <br>
+        <div class="contenedor-btn-crear">
+            <div class="titulo-crear-producto">
+                <div class="crear"></div>
+                <h3>
+                    <a href="../products/crear"> <i class="fas fa-plus-circle"> </a></i></a> AGREGAR NUEVO PRODUCTO
+                </h3>
+                </a>
+            </div>
+            <div class="titulo-icono">
             </div>
         </div>
-        <% for (let i = 0; i < products.length; i++) { %>
-            <div class="servicios">
-                <div class="titulo-del-servicio">
-                    <h3><%= products[i].name%></h3>
-                </div>
-                <div class="texto-servicios">
-                    <div></i><img src="/images/products/<%= products[i].image %>" width="250px">
+        <div class="contenedor-servicios">
+
+            <% for (let i = 0; i < products.length; i++) { %>
+                <div class="servicios">
+                    <div class="titulo-del-servicio">
+                        <h3>
+                            <%= products[i].name%>
+                        </h3>
                     </div>
-                    <br>
-                    <div class="contenedor-btn">
-                        <a href="../products/editar/<%= products[i].id %>"> <button class="boton-estilo" type="submit"> EDITAR</button> </a>
-                        </div>  
-                    <br>      
-                <form action="../products/borrar/<%= products[i].id %>?_method=DELETE" method="POST">
-                    <div class="contenedor-btn">
-                    <input type="submit" class="boton-estilo" value="ELIMINAR">
-                    </div> 
-                </form>                           
+                    <div class="texto-servicios">
+                        <div>
+                            </i><img src="/images/products/<%= products[i].image %>" width="220px">
+                        </div>
+                        <br>
+                        <div class="contenedor-btn">
+                            <a href="../products/editar/<%= products[i].id %>"> <button class="boton-estilo" type="submit"> EDITAR</button> </a>
+                        </div>
+                        <br>
+                        <form action="../products/borrar/<%= products[i].id %>?_method=DELETE" method="POST">
+                            <div class="contenedor-btn">
+                                <input type="submit" class="boton-estilo" value="ELIMINAR">
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        <% } %> 
-</div>
-    </main>
-    <footer>
-        <%- include('../partials/footer.ejs'); -%>
-    </footer>
+                <% } %>
+        </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
 </body>
+
 </html>
