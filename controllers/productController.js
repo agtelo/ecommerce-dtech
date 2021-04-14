@@ -51,18 +51,10 @@ const productController = {
 
             )
     },
-<<<<<<< HEAD
-    guardar: function(req, res) {
-        db.Product.create ({
-<<<<<<< HEAD
-            id:"",
-=======
-=======
 
     guardado: function(req, res) {
         db.Product.create({
->>>>>>> 4a2160dde9bcfce9d1adea9f42ac29cbd47b9f7e
->>>>>>> cacdf4819a814f1c64a5db4e6d0dacf856510444
+            id:"",
             name: req.body.nombre,
             description: req.body.descripcion,
             item1: req.body.item1,
@@ -75,40 +67,15 @@ const productController = {
             item8: req.body.item8,
             category_id: req.body.categoria,
             price: req.body.precio,
-<<<<<<< HEAD
+
             image: req.file.filename
         });        
         res.redirect('./crear');
-=======
-            image: req.file.filename,
-        })
-        res.redirect("/products/product-panel");
-
-
->>>>>>> 4a2160dde9bcfce9d1adea9f42ac29cbd47b9f7e
     },
-    // guardar: function(req, res) {
-    //     let productoNuevo = {
-    //         id: req.body.id,
-    //         name: req.body.nombre,
-    //         description: req.body.descripcion,
-    //         item1: req.body.item1,
-    //         item2: req.body.item2,
-    //         item3: req.body.item3,
-    //         item4: req.body.item4,
-    //         item5: req.body.item5,
-    //         item6: req.body.item6,
-    //         item7: req.body.item7,
-    //         item8: req.body.item8,
-    //         category: req.body.categoria,
-    //         price: req.body.precio,
-    //         image: req.file.filename
-    //      };
-    //      products.push(productoNuevo);
-    //      let productoSubir = JSON.stringify(products, null, 2);
-    //      fs.writeFileSync(productsFilePath, productoSubir)
-    //       res.redirect('./crear');
-    //   },
+
+
+
+
     editar: function(req, res) {
         let productoAEditar = products.find(producto => producto.id == req.params.id);
         return res.render("products/editar", { "productoAEditar": productoAEditar });
