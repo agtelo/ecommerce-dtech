@@ -77,8 +77,15 @@ const productController = {
 
 
     editar: function(req, res) {
-        let productoAEditar = products.find(producto => producto.id == req.params.id);
-        return res.render("products/editar", { "productoAEditar": productoAEditar });
+        db.Product.findByPk(req.params.id)
+            .then(function(product){
+                return res.render("products/editar", {"productoAEditar" : product });
+            });
+        db.Category.findAll()
+            .then(function(category){
+                console.log(category)
+            })
+
     },
     actualizar: function(req, res) {
         const productoAEditar = products.find(producto => producto.id == req.params.id);

@@ -1,19 +1,6 @@
 [
   {
-    "id": "1",
-    "name": "ONE PAGE",
-    "description": "TU PRIMER SITIO WEB",
-    "item1": "Diseño un Solo Cuerpo",
-    "item2": "Diseño Multiplataforma",
-    "item3": "Alta en Google",
-    "item4": "E-mail Directo desde Celulares",
-    "item5": "Llamadas desde celulares",
-    "item6": "Integracion con Redes Sociales",
-    "item7": "Mapa Google",
-    "item8": "10 Imagenes en Total",
-    "category": "DESARROLO WEB",
-    "price": "4000",
-    "image": "imagen-1614660464850.svg"
+    "id": "1"
   },
   {
     "id": "2",
