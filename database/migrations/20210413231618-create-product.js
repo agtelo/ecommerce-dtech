@@ -47,7 +47,6 @@ module.exports = {
           key: 'id'
         },
         allowNull: false
-    
       },
       price: {
         type: Sequelize.DOUBLE

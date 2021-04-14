@@ -11,18 +11,22 @@ module.exports = {
       product_id: {
         type: Sequelize.INTEGER,
         references: {
-            model: 'products',
-            key: 'id',
-            allowNull: false
+          model: {
+            tableName: 'products',
+          },
+          key: 'id'
         },
+        allowNull: false
       },
       user_id: {
         type: Sequelize.INTEGER,
         references: {
-            model: 'users',
-            key: 'id',
-            allowNull: false
+          model: {
+            tableName: 'users',
+          },
+          key: 'id'
         },
+        allowNull: false
       },
       orderAmount: {
         type: Sequelize.DOUBLE
