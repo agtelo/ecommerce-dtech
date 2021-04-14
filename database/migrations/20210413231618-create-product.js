@@ -45,6 +45,8 @@ module.exports = {
             tableName: 'categories',
           },
           key: 'id'
+          
+          
         },
         allowNull: false
       },
