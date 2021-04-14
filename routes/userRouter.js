@@ -4,7 +4,7 @@ const router = express.Router();
 // la constante mainController requerirá el controlador
 const userController = require('../controllers/userController');
 // se requieren middlewares para aplicar por ruta
-const uploadFile = require('../middleware/multerMiddleware');
+const uploadFile = require('../middleware/multerUserMiddleware');
 const validateLogin = require('../middleware/validateLoginMiddleware')
 const validateRegistro = require('../middleware/validateRegistroMiddleware')
 const guestMiddleware = require("../middleware/guestMiddleware")

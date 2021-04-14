@@ -5,7 +5,7 @@ const router = express.Router();
 const productController = require('../controllers/productController');
 
 // Instalamos el modulo multer para crear la unidad de almacenamiento de subida de archivos desde formularios
-const uploadFile = require("../middleware/multerMiddleware")
+const uploadFile = require("../middleware/multerProductMiddleware")
 
 // Routes
 router.get('/productos', productController.producto);
