@@ -17,29 +17,22 @@
     <%- include('../partials/header.ejs'); -%>
         </header>
         <div class="subtitulo-productos">
-            <h1>PANEL DE GESTION DE PRODUCTOS</h1>
+            <h1>PANEL DE GESTION PRODUCTOS</h1>
         </div>
         <br>
-        <div class="contenedor-servicios">
-            <div class="servicios">
-                <div class="titulo-del-servicio">
-                    <h3>NUEVO</h3>
-                </div>
-                <div class="texto-servicios">
-                    <nav class="iconos-panel">
-                        <ul>
-                            <div class="crear">
-                                <a href="../products/crear">
-                                    <i class="fas fa-plus-circle"></i>
-                                </a>
-                                <div class="titulo-icono">
-                                    <h3></h3>
-                                </div>
-                            </div>
-                        </ul>
-                    </nav>
-                </div>
+        <div class="contenedor-btn-crear">
+            <div class="titulo-crear-producto">
+                <div class="crear"></div>
+                <h3><i class="fas fa-plus-circle"></i> AGREGAR NUEVO PRODUCTO
+                    <a href="../products/crear">
+                </h3>
+                </a>
             </div>
+            <div class="titulo-icono">
+            </div>
+        </div>
+        <div class="contenedor-servicios">
+
             <% for (let i = 0; i < products.length; i++) { %>
                 <div class="servicios">
                     <div class="titulo-del-servicio">

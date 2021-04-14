@@ -52,7 +52,7 @@ const productController = {
             )
     },
 
-    guardar: function(req, res) {
+    guardado: function(req, res) {
         db.Product.create({
             name: req.body.nombre,
             description: req.body.descripcion,
