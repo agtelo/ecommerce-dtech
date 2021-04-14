@@ -13,8 +13,8 @@ router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
 router.get('/articulo', productController.show);
 
-router.get('/crear',  productController.crear);
-router.post('/crear', uploadFile.single("imagen"), productController.guardar);
+router.get('/crear', productController.crear);
+router.post('/crear', uploadFile.single("imagen"), productController.guardado);
 
 
 router.get('/editar/:id', productController.editar);
