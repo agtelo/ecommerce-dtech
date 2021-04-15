@@ -1,8 +1,3 @@
-const fs = require("fs");
-const path = require('path');
-let productsFilePath = path.resolve(__dirname, '../data/product.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const db = require("../database/models");
 
 const productController = {
@@ -11,25 +6,16 @@ const productController = {
         db.Product.findAll()
             .then(function(products) {
                     return res.render('products/productos', { title: "Articulo", css: "product-panel", "products": products })
-                }
-
-            )
-
-
+                })
     },
-
-
 
     carrito: function(req, res) {
         return res.render('products/carrito', { title: "Carrito", css: "carrito" });
     },
+
     show: function(req, res) {
         return res.render('products/articulo', { title: "Articulo", css: "product-panel", "products": products });
     },
-
-    // panel: function(req, res) {
-    //     return res.render('products/product-panel', { title: "Panel", css: "product-panel", "products": products });
-    // },
 
     panel: function(req, res) {
         db.Product.findAll()
@@ -39,17 +25,16 @@ const productController = {
 
             )
     },
-    // crear: function(req, res) {
-    //     return res.render('products/crear', { title: "Panel", css: "crud" });
-    //  },
 
     crear: function(req, res) {
+        //db.Product.findAll()
+           // .then(function(products) {
+             //       return res.render('products/crear', { title: "Articulo", css: "product-panel", "products": products })
+               // })
         db.Product.findAll()
-            .then(function(products) {
-                    return res.render('products/crear', { title: "Articulo", css: "product-panel", "products": products })
-                }
-
-            )
+         .then(function(product){
+             console.log(product)
+         })
     },
 
     guardado: function(req, res) {
@@ -73,22 +58,35 @@ const productController = {
         res.redirect('./crear');
     },
 
-
-
-
     editar: function(req, res) {
-        db.Product.findByPk(req.params.id)
+       /* const {id} = req.params;
+
+        Promise.all([
+            db.Product.findByPk(id),
+            db.Category.findAll()
+        ])
+            .then(promiseRes => {
+                const product = promiseRes[0]
+                const categories = promiseRes[1]
+            
+                if(product){
+                    res.render("products/editar", { categories: product })
+                }
+            
+            })*/
+            
+       db.Product.findByPk(req.params.id)
             .then(function(product){
                 return res.render("products/editar", {"productoAEditar" : product });
             });
-        db.Category.findAll()
+        /*db.Category.findAll()
             .then(function(category){
                 console.log(category)
-            })
+            })*/
 
     },
     actualizar: function(req, res) {
-        const productoAEditar = products.find(producto => producto.id == req.params.id);
+        /*const productoAEditar = products.find(producto => producto.id == req.params.id);
 
         const productoEditado = products.map(producto => {
             if (producto.id == productoAEditar.id) {
@@ -112,26 +110,19 @@ const productController = {
         let productoSubir = JSON.stringify(productoEditado, null, 2);
         fs.writeFileSync(productsFilePath, productoSubir);
 
-        res.redirect("/")
-    },
-    borrar: function(req, res) {
-        res.render()
+        res.redirect("/")*/
     },
     destruir: function(req, res) {
-
-        let productoAEliminar = products.filter(producto => producto.id != req.params.id);
-
-        /*let imagenABorrar = products.find( producto => producto.id == req.params.id);
-        let filePath = path.resolve(__dirname,'../public/img/products/' + imagenABorrar.image);
-        console.log(imagenABorrar);
-        console.log(filePath);
-        fs.unlinkSync(filePath);*/
-
-        let productoASubirJSON = JSON.stringify(productoAEliminar, null, 2);
-        fs.writeFileSync(productsFilePath, productoASubirJSON);
-        res.redirect("/")
+        const { id } = req.params
+     db.Product.destroy({
+           where: {
+               id
+           }
+       })
+        .then(() => {
+            res.redirect('/products/product-panel')
+        })
     }
-
 }
 
 module.exports = productController;

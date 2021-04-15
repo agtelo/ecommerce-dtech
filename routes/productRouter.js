@@ -20,7 +20,7 @@ router.post('/crear', uploadFile.single("imagen"), productController.guardado);
 router.get('/editar/:id', productController.editar);
 router.put('/editar/:id', productController.actualizar);
 
-router.get('/borrar/:id', productController.borrar);
+
 router.delete('/borrar/:id', productController.destruir);
 
 
