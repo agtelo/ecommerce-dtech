@@ -5,8 +5,6 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
 
-const db = require("../database/models");
-
 const userController = {
     
     login: function(req,res){
@@ -15,10 +13,10 @@ const userController = {
         return res.render ('users/login');
     },
     ingresoUsuario: function (req, res) {
-
-
-        let userALogearse = usuarios.find( usuario => usuario.email == req.body.email);
+        
         const resultValidation = validationResult(req);
+        let userALogearse = usuarios.find( usuario => usuario.email == req.body.email);
+
         if (resultValidation.errors.length > 0) {
             return res.render("users/login", { 
                 errors: resultValidation.mapped(), 
@@ -66,19 +64,19 @@ const userController = {
                 oldData: req.body
             })};
         
-        db.User.create({
-            firstName: req.body.nombre,
-            lastName: req.body.apellido,
+        let usuarioNuevo = {
+            first_name: req.body.nombre,
+            last_name: req.body.apellido,
             email: req.body.email,
             phone: req.body.telefono,
             password: bcryptjs.hashSync(req.body.password,10),
-            image: req.file.filename,
-            rol_id: 2
-        })
-        .then(function(user){
-            return res.render('users/bienvenida', {"user" : user});
-        })        
+            image: req.file.filename
+        };        
 
+        usuarios.push(usuarioNuevo);
+        let usuarioSubir = JSON.stringify(usuarios, null , 2);
+		fs.writeFileSync(usuariosFilePath ,usuarioSubir)
+        return res.render('users/bienvenida', {"usuarioNuevo" : usuarioNuevo});
     },
 
     recuperoPass: function(req,res){
