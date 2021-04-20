@@ -10,13 +10,10 @@ const userController = {
 
     login: function(req, res) {
 
-        console.log(req.cookies.testing)
+       
         return res.render('users/login');
     },
     ingresoUsuario: function(req, res) {
-
-
-        let userALogearse = usuarios.find(usuario => usuario.email == req.body.email);
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             return res.render("users/login", {
@@ -25,6 +22,17 @@ const userController = {
             });
 
         };
+
+        db.User.findOne({
+            where:{
+                email: req.body.email
+            }
+            
+        })
+        .then(function(user) {
+            return res.render('users/bienvenida', { "user": user });
+        })
+
 
         if (userALogearse) {
             let validatePassword = bcryptjs.compareSync(req.body.password, userALogearse.password);
@@ -120,6 +128,8 @@ const userController = {
 
     },
     show: function(req, res) {
+        
+
         return res.render("./users/userlist");
     }
 
