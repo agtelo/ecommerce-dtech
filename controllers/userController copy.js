@@ -7,15 +7,13 @@ const { validationResult } = require("express-validator");
 
 const userController = {
 
-    login: function(req, res) {
-
-        console.log(req.cookies.testing)
+    login: function(req, res) {     
         return res.render('users/login');
     },
     ingresoUsuario: function(req, res) {
 
         const resultValidation = validationResult(req);
-        let userALogearse = usuarios.find(usuario => usuario.email == req.body.email);
+       
 
         if (resultValidation.errors.length > 0) {
             return res.render("users/login", {
@@ -24,6 +22,8 @@ const userController = {
             });
 
         };
+
+        let userALogearse = usuarios.find(usuario => usuario.email == req.body.email);
 
         if (userALogearse) {
             let validatePassword = bcryptjs.compareSync(req.body.password, userALogearse.password);
@@ -117,7 +117,7 @@ const userController = {
         console.log(req.session)
         return res.render("./index")
 
-    }
+    },
     show: function(req, res) {
         return res.render('./users/userlist')
     },

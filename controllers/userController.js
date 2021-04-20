@@ -4,7 +4,6 @@ let usuariosFilePath = path.resolve(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
-
 const db = require("../database/models");
 
 const userController = {
