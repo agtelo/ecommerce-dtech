@@ -27,14 +27,11 @@ const productController = {
     },
 
     crear: function(req, res) {
-        //db.Product.findAll()
-           // .then(function(products) {
-             //       return res.render('products/crear', { title: "Articulo", css: "product-panel", "products": products })
-               // })
         db.Product.findAll()
-         .then(function(product){
-             console.log(product)
-         })
+            .then(function(products) {
+                return res.render('products/crear', { title: "Articulo", css: "product-panel", "products": products })
+                })
+        
     },
 
     guardado: function(req, res) {
