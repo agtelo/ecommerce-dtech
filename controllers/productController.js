@@ -5,8 +5,8 @@ const productController = {
     producto: function(req, res) {
         db.Product.findAll()
             .then(function(products) {
-                    return res.render('products/productos', { title: "Articulo", css: "product-panel", "products": products })
-                })
+                return res.render('products/productos', { title: "Articulo", css: "product-panel", "products": products })
+            })
     },
 
     carrito: function(req, res) {
@@ -30,13 +30,13 @@ const productController = {
         db.Product.findAll()
             .then(function(products) {
                 return res.render('products/crear', { title: "Articulo", css: "product-panel", "products": products })
-                })
-        
+            })
+
     },
 
     guardado: function(req, res) {
         db.Product.create({
-            id:"",
+            id: "",
             name: req.body.nombre,
             description: req.body.descripcion,
             item1: req.body.item1,
@@ -51,30 +51,30 @@ const productController = {
             price: req.body.precio,
 
             image: req.file.filename
-        });        
+        });
         res.redirect('./crear');
     },
 
     editar: function(req, res) {
-       /* const {id} = req.params;
+        /* const {id} = req.params;
 
-        Promise.all([
-            db.Product.findByPk(id),
-            db.Category.findAll()
-        ])
-            .then(promiseRes => {
-                const product = promiseRes[0]
-                const categories = promiseRes[1]
-            
-                if(product){
-                    res.render("products/editar", { categories: product })
-                }
-            
-            })*/
-            
-       db.Product.findByPk(req.params.id)
-            .then(function(product){
-                return res.render("products/editar", {"productoAEditar" : product });
+         Promise.all([
+             db.Product.findByPk(id),
+             db.Category.findAll()
+         ])
+             .then(promiseRes => {
+                 const product = promiseRes[0]
+                 const categories = promiseRes[1]
+             
+                 if(product){
+                     res.render("products/editar", { categories: product })
+                 }
+             
+             })*/
+
+        db.Product.findByPk(req.params.id)
+            .then(function(product) {
+                return res.render("products/editar", { "productoAEditar": product });
             });
         /*db.Category.findAll()
             .then(function(category){
@@ -111,14 +111,14 @@ const productController = {
     },
     destruir: function(req, res) {
         const { id } = req.params
-     db.Product.destroy({
-           where: {
-               id
-           }
-       })
-        .then(() => {
-            res.redirect('/products/product-panel')
-        })
+        db.Product.destroy({
+                where: {
+                    id
+                }
+            })
+            .then(() => {
+                res.redirect('/products/product-panel')
+            })
     }
 }
 
