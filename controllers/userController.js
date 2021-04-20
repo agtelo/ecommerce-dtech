@@ -128,11 +128,19 @@ const userController = {
 
     },
     show: function(req, res) {
+<<<<<<< HEAD
         
 
         return res.render("./users/userlist");
     }
+=======
+        db.User.findAll()
+            .then(function(users) {
+                return res.render("./users/userlist", { "users": users });
+>>>>>>> d89818de6fe6590e3379a99624e5b2754b3129b6
 
+            })
+    }
 };
 
 module.exports = userController;
