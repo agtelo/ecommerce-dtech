@@ -19,7 +19,15 @@
         <div class="subtitulo-productos">
             <h1>Listado de Usuarios</h1>
         </div>
+        <ul>
+            <% for (let i=0; i< users.length; i++){ %>
+                <li>
 
+                    <%=users[i].firstName +" "+ users[i].lastName  %>
+                        </a>
+                </li>
+                <% } %>
+        </ul>
 
         </main>
         <footer>
