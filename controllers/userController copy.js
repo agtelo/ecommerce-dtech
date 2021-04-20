@@ -5,6 +5,8 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
 
+
+
 const userController = {
 
     login: function(req, res) {     
@@ -13,7 +15,6 @@ const userController = {
     ingresoUsuario: function(req, res) {
 
         const resultValidation = validationResult(req);
-       
 
         if (resultValidation.errors.length > 0) {
             return res.render("users/login", {
