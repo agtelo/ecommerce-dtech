@@ -10,7 +10,7 @@ const userController = {
 
     login: function(req, res) {
 
-       
+
         return res.render('users/login');
     },
     ingresoUsuario: function(req, res) {
@@ -24,14 +24,14 @@ const userController = {
         };
 
         db.User.findOne({
-            where:{
-                email: req.body.email
-            }
-            
-        })
-        .then(function(user) {
-            return res.render('users/bienvenida', { "user": user });
-        })
+                where: {
+                    email: req.body.email
+                }
+
+            })
+            .then(function(user) {
+                return res.render('users/bienvenida', { "user": user });
+            })
 
 
         if (userALogearse) {
@@ -128,19 +128,13 @@ const userController = {
 
     },
     show: function(req, res) {
-<<<<<<< HEAD
-        
-
-        return res.render("./users/userlist");
-    }
-=======
         db.User.findAll()
             .then(function(users) {
                 return res.render("./users/userlist", { "users": users });
->>>>>>> d89818de6fe6590e3379a99624e5b2754b3129b6
 
             })
     },
+
     delete: function(req, res) {
         const { id } = req.params
         db.User.destroy({
@@ -152,6 +146,7 @@ const userController = {
                 res.redirect('./users/userlist')
             })
     }
+
 
 };
 
