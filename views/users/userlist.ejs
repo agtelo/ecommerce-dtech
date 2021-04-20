@@ -19,12 +19,20 @@
         <div class="subtitulo-productos">
             <h1>Listado de Usuarios</h1>
         </div>
+        <br>
+
+        <br>
         <ul>
             <% for (let i=0; i< users.length; i++){ %>
                 <li>
+                    <div>
+                        <%=users[i].firstName +" "+ users[i].lastName  %>
+                            <i class="fas fa-edit"></i>
 
-                    <%=users[i].firstName +" "+ users[i].lastName  %>
-                        </a>
+                            <form action="../userslist/borrar/<%= users[i].id %>?_method=DELETE" method="POST">
+                                <input type="submit" value="borrar"><i class="fas fa-trash-alt"></i></form>
+                    </div>
+
                 </li>
                 <% } %>
         </ul>

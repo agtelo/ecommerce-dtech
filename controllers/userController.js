@@ -125,7 +125,19 @@ const userController = {
                 return res.render("./users/userlist", { "users": users });
 
             })
+    },
+    delete: function(req, res) {
+        const { id } = req.params
+        db.User.destroy({
+                where: {
+                    id
+                }
+            })
+            .then(() => {
+                res.redirect('./users/userlist')
+            })
     }
+
 };
 
 module.exports = userController;

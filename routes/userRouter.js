@@ -32,4 +32,6 @@ router.get('/admin', userController.admin);
 router.get('/logout', userController.logout);
 
 router.get('/userlist', userController.show);
+router.post('/borrar/:id', userController.delete);
+
 module.exports = router;
