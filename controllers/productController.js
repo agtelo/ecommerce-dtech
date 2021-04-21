@@ -27,9 +27,15 @@ const productController = {
     },
 
     crear: function(req, res) {
+        
+        let categories = db.Category.findAll()
+            .then(function(categories) {
+                return(categories)
+            }) 
+        
         db.Product.findAll()
             .then(function(products) {
-                return res.render('products/crear', { title: "Articulo", css: "product-panel", "products": products })
+                return res.render('products/crear', { title: "Articulo", css: "product-panel", products , categories })
             })
 
     },
@@ -56,7 +62,7 @@ const productController = {
     },
 
     editar: function(req, res) {
-        /* const {id} = req.params;
+        const {id} = req.params;
 
          Promise.all([
              db.Product.findByPk(id),
@@ -67,15 +73,15 @@ const productController = {
                  const categories = promiseRes[1]
              
                  if(product){
-                     res.render("products/editar", { categories: product })
+                     res.render("products/editar", { categories , product })
                  }
              
-             })*/
+             })
 
-        db.Product.findByPk(req.params.id)
+        /*db.Product.findByPk(req.params.id)
             .then(function(product) {
                 return res.render("products/editar", { "productoAEditar": product });
-            });
+            });*/
         /*db.Category.findAll()
             .then(function(category){
                 console.log(category)
