@@ -17,25 +17,11 @@
     <%- include('../partials/header.ejs'); -%>
         </header>
         <div class="subtitulo-productos">
-            <h1>Listado de Usuarios</h1>
-        </div>
-        <br>
-        <br>
-
-        <div class="user-list">
-            <ul>
-                <% for (let i=0; i< users.length; i++){ %>
-                    <li class="contenedor-user-edit">
-                        <%=users[i].firstName +" "+ users[i].lastName  %>
-                            <a href="../users/useredit/:id"> <i class="fas fa-edit"></i></a>
-                            <form action="/users/userslist/borrar/<%= users[i].id %>?_method=DELETE" method="POST">
-                                <input type="submit" value="borrar"></form>
-
-                    </li>
-                    <% } %>
-            </ul>
+            <h1>Edicion de usuarios</h1>
         </div>
 
+
+        </form>
         </main>
         <footer>
             <%- include('../partials/footer.ejs'); -%>

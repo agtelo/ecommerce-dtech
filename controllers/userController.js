@@ -136,18 +136,25 @@ const userController = {
     },
 
     delete: function(req, res) {
-        const { id } = req.params
         db.User.destroy({
                 where: {
-                    id
+                    id: req.params.id
                 }
             })
             .then(() => {
-                res.redirect('./users/userlist')
+                res.redirect('./userlist')
             })
+    },
+    editUser: function(req, res) {
+
+        db.User.findByPk(req.params.id)
+            .then(function(users) {
+                return res.render("./users/useredit", { "usuarioAEditar": users });
+            });
+
+
+
     }
 
-
-};
-
+}
 module.exports = userController;

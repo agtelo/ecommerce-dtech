@@ -33,5 +33,7 @@ router.get('/logout', userController.logout);
 
 router.get('/userlist', userController.show);
 router.post('/borrar/:id', userController.delete);
+router.get('/useredit/:id', userController.editUser);
+//router.put('/editar/:id', userController.refresh);
 
 module.exports = router;
