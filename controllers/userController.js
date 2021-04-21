@@ -149,7 +149,7 @@ const userController = {
 
         db.User.findByPk(req.params.id)
             .then(function(users) {
-                return res.render("./users/useredit", { "usuarioAEditar": users });
+                return res.render("./users/useredit", { "userAEditar": users });
             });
 
 

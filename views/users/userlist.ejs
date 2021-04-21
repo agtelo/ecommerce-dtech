@@ -27,7 +27,7 @@
                 <% for (let i=0; i< users.length; i++){ %>
                     <li class="contenedor-user-edit">
                         <%=users[i].firstName +" "+ users[i].lastName  %>
-                            <a href="../users/useredit/:id"> <i class="fas fa-edit"></i></a>
+                            <a href="../users/useredit/<%= users[i].id %>"> <i class="fas fa-edit"></i></a>
                             <form action="/users/userslist/borrar/<%= users[i].id %>?_method=DELETE" method="POST">
                                 <input type="submit" value="borrar"></form>
 

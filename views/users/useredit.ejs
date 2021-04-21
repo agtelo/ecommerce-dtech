@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header-footer.css">
-
+    <link rel="stylesheet" href="/css/crud.css">
     <link rel="stylesheet" href="/css/product-panelcrud.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +17,52 @@
     <%- include('../partials/header.ejs'); -%>
         </header>
         <div class="subtitulo-productos">
-            <h1>Edicion de usuarios</h1>
+            <h1>Edicion de Usuarios</h1>
+        </div>
+        <div class="contenedor-login">
+            <div class="contenido-login3">
+                <div class="titulo-login">
+                    <h2>Editar Usuario</h2>
+                    <br>
+                </div>
+                <form action="/users/useredit/<%= userAEditar.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
+                    <div class="etiquetas-form">
+                        <label for="name">Nombre:</label>
+                        <input type="type"  class="campos-form" name="nombre" value ="<%= userAEditar.firstName %>"/>
+                    </div>
+                    <br>
+                    <div class="etiquetas-form">
+                        <label class="campos-form-label">Apellido:</label>
+                        <input type="type"  name= "apellido" class="campos-form" value ="<%= userAEditar.lastName %>">
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Mail :</label>
+                            <input type="type"  class="campos-form " name="email" value ="<%= userAEditar.email %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Teléfono :</label>
+                            <input type="type"  class="campos-form " name="Teléfono" value ="<%= userAEditar.phone %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="item1">Password :</label>
+                            <input type="type"  class="campos-form " name="password" value ="<%= userAEditar.password %>"/>
+                        </div>
+                        <br>
+                        <div class="etiquetas-form ">
+                            <label for="imegen">Imagen:</label>
+                            <input type="file"  class="campos-form" name="image" value ="<%= userAEditar.image %>"/>
+                        </div>
+                        <br>
+                    
+                        <div class="contenedor-btn ">
+                            <input type="submit" class="boton-estilo" value="Aceptar">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
 
