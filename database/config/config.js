@@ -5,6 +5,10 @@ module.exports ={
     "database": "database_dtech",
     "host": "127.0.0.1",
     "dialect": "mysql",
+    "define":{
+      "timestamps": false,
+      "underscored": true
+    }
     
   },
   "test": {

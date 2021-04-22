@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Rol.belongsTo(models.User, {
-        as: "users"
+        as: "users",
+        allowNull: false
       })
       
     }

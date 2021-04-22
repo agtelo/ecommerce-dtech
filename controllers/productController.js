@@ -26,21 +26,24 @@ const productController = {
             )
     },
 
-    crear: function(req, res) {
+    crear(req, res) {
+        db.Category.findAll()
+        .then(categories => {
+            res.render('products/crear', { title: "Articulo", css: "product-panel", categories })
+        })
         
-        let categories = db.Category.findAll()
-            .then(function(categories) {
-                return(categories)
-            }) 
-        
-        db.Product.findAll()
-            .then(function(products) {
-                return res.render('products/crear', { title: "Articulo", css: "product-panel", products , categories })
-            })
 
     },
+        /*db.Category.findAll()
+            .then(function(categories) {
+                return res.render('products/crear', { title: "Articulo", css: "product-panel", categories })
+            })*/
+
+    
 
     guardado: function(req, res) {
+        
+        
         db.Product.create({
             id: "",
             name: req.body.nombre,
@@ -73,7 +76,7 @@ const productController = {
                  const categories = promiseRes[1]
              
                  if(product){
-                     res.render("products/editar", { categories , product })
+                    return res.render("products/editar", { categories , product })
                  }
              
              })
