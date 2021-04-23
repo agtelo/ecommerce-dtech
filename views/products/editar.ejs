@@ -23,63 +23,63 @@
                     <h2>Editar Producto</h2>
                     <br>
                 </div>
-                <form action="/products/editar/<%= productoAEditar.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
+                <form action="/products/editar/<%= product.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
                     <div class="etiquetas-form">
                         <label for="name">Nombre:</label>
-                        <input type="type"  class="campos-form" name="name" value ="<%= productoAEditar.name %>"/>
+                        <input type="type"  class="campos-form" name="name" value ="<%= product.name %>"/>
                     </div>
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Descripcion:</label>
-                        <input type="type"  name= "description" class="campos-form" value ="<%= productoAEditar.description %>">
+                        <input type="type"  name= "description" class="campos-form" value ="<%= product.description %>">
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item1 :</label>
-                            <input type="type"  class="campos-form " name="item1" value ="<%= productoAEditar.item1 %>"/>
+                            <input type="type"  class="campos-form " name="item1" value ="<%= product.item1 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item1 :</label>
-                            <input type="type"  class="campos-form " name="item2" value ="<%= productoAEditar.item2 %>"/>
+                            <input type="type"  class="campos-form " name="item2" value ="<%= product.item2 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item2 :</label>
-                            <input type="type"  class="campos-form " name="item3" value ="<%= productoAEditar.item3 %>"/>
+                            <input type="type"  class="campos-form " name="item3" value ="<%= product.item3 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item3 :</label>
-                            <input type="type"  class="campos-form " name="item4" value ="<%= productoAEditar.item4 %>"/>
+                            <input type="type"  class="campos-form " name="item4" value ="<%= product.item4 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item4 :</label>
-                            <input type="type"  class="campos-form " name="item5" value ="<%= productoAEditar.item5 %>"/>
+                            <input type="type"  class="campos-form " name="item5" value ="<%= product.item5 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item5 :</label>
-                            <input type="type"  class="campos-form " name="item6" value ="<%= productoAEditar.item6 %>"/>
+                            <input type="type"  class="campos-form " name="item6" value ="<%= product.item6 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item7 :</label>
-                            <input type="type"  class="campos-form " name="item7" value ="<%= productoAEditar.item7 %>"/>
+                            <input type="type"  class="campos-form " name="item7" value ="<%= product.item7 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Item8 :</label>
-                            <input type="type"  class="campos-form " name="item8" value ="<%= productoAEditar.item8 %>"/>
+                            <input type="type"  class="campos-form " name="item8" value ="<%= product.item8 %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form">
                             <label>Categoria:</label>
-                            <select name="category" id="categoria">
-                            <% for( let i = 0; i < categoriaAEditar.length; i++ ) { %>
+                            <select name="category_id" id="categoria">
+                            <% for( let i = 0; i < categories.length; i++ ) { %>
                                 
-                                    <option value=""><%= categoriaAEditar[i].id%></option>
+                                    <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
                                 
                             <% } %>
                             </select>
@@ -87,12 +87,12 @@
                         <br>
                         <div class="etiquetas-form">
                             <label for="precio ">Precio:</label>
-                            <input type="type " class="campos-form" name="price" required value ="<%= productoAEditar.price %>"/>
+                            <input type="number" class="campos-form" name="price" required value ="<%= categories.price %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
                             <label for="imegen">Imagen:</label>
-                            <input type="file"  class="campos-form" name="image" value ="<%= productoAEditar.image %>"/>
+                            <input type="file"  class="campos-form" name="image" value ="<%= categories.image %>"/>
                         </div>
                         <br>
                         <div class="contenedor-btn ">

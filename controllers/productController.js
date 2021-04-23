@@ -18,7 +18,11 @@ const productController = {
     },
 
     panel: function(req, res) {
-        return res.render('products/product-panel', { title: "Panel", css: "product-panel", "products" : products });
+        db.Product.findAll()
+            .then(function(products) {
+                return res.render('products/product-panel', { title: "Panel", css: "product-panel", "products" : products });
+            })
+        
     },
 
     crear(req, res) {
@@ -93,7 +97,7 @@ const productController = {
                 const categories = promiseRes[1]
 
                 if(product){
-                    return res.render("products/editar", { "categoriaAEditar": categories , "productoAEditar" :product })
+                    return res.render("products/editar", {  categories , product })
                 }
 })
 
