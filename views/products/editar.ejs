@@ -75,8 +75,14 @@
                         </div>
                         <br>
                         <div class="etiquetas-form">
-                            <label for="categoria">Categoria:</label>
-                            <input type="type "  class="campos-form" name="category" value ="<%= productoAEditar.category %>" >
+                            <label>Categoria:</label>
+                            <select name="category" id="categoria">
+                            <% for( let i = 0; i < categoriaAEditar.length; i++ ) { %>
+                                
+                                    <option value=""><%= categoriaAEditar[i].id%></option>
+                                
+                            <% } %>
+                            </select>
                         </div>
                         <br>
                         <div class="etiquetas-form">

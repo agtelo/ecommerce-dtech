@@ -32,12 +32,12 @@
         
                     <div class="etiquetas-form">
                         <label>Nombre:</label>
-                        <input type="text" name="nombre" class="campos-form" placeholder="" required/>
+                        <input type="text" name="name" class="campos-form" placeholder="" required/>
                     </div>
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Descripcion:</label>
-                        <input type="text" name="descripcion" class="campos-form" placeholder="" required/>
+                        <input type="text" name="description" class="campos-form" placeholder="" required/>
                     </div>
                     <br>
                     <div class="etiquetas-form">
@@ -82,10 +82,10 @@
                     <br>
                     <div class="etiquetas-form">
                         <label>Categoria:</label>
-                        <select name="categoria" id="categoria">
+                        <select name="category" id="categoria">
                         <% for( let i = 0; i < categories.length; i++ ) { %>
                             
-                                <option value=""><%= categories[i].name%></option>
+                                <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
                             
                         <% } %>
                         </select>
@@ -93,12 +93,12 @@
                     <br>
                     <div class="etiquetas-form">
                         <label>Precio:</label>
-                        <input type="number" class="campos-form" name="precio" required/>
+                        <input type="number" class="campos-form" name="price" required/>
                     </div>
                     <br>
                     <div class="etiquetas-form">
                         <label>Imagen:</label>
-                        <input type="file" class="campos-form" name="imagen" required/>
+                        <input type="file" class="campos-form" name="image" required/>
                     </div>
                     <br>
                     <div class="contenedor-btn">
