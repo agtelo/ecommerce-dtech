@@ -13,29 +13,6 @@
 </head>
 <body>
     <%- include('../partials/header.ejs'); -%>
-<<<<<<< HEAD
-</header>  
-<div class="subtitulo-productos">
-                    <h1>PANEL GESTION PRODUCTOS</h1>
-                    </div>
-                    <br>              
-    <div class="contenedor-servicios">
-        <div class="servicios">
-            <div class="titulo-del-servicio">
-                <h3>NUEVO</h3>
-            </div>  
-            <div class="texto-servicios">
-                <nav class="iconos-panel">
-                    <ul>
-                        <div class="crear">
-                            <a href="../products/crear" >
-                                <i class="fas fa-plus-circle"></i>
-                            </a>
-                            <div class="titulo-icono" ><h3></h3></div>
-                        </div>              
-                    </ul>
-                </nav>
-=======
         </header>
         <div class="subtitulo-productos">
             <h1>PANEL DE GESTION PRODUCTOS</h1>
@@ -56,9 +33,9 @@
                 </a>
             </div>
             <div class="titulo-icono">
->>>>>>> af91d237ad705014c154eafd15bdd8ab2c560d88
             </div>
         </div>
+        <div class="contenedor-servicios">
         <% for (let i = 0; i < products.length; i++) { %>
             <div class="servicios">
                 <div class="titulo-del-servicio">
@@ -80,6 +57,7 @@
                 </div>
             </div>
         <% } %> 
+    </div>
 </div>
     </main>
     <footer>
