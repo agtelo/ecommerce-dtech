@@ -105,6 +105,66 @@ const productController = {
 
     },
     actualizar: function(req, res) {
+        const { name, description , item1, item2, item3, item4, item5, item6, item7, item8, category_id ,price} = req.body
+        const { filename } = req.file
+        
+        db.Product.update({
+            id:"",
+            name, 
+            description, 
+            item1,
+            item2,
+            item3,
+            item4,
+            item5,
+            item6,
+            item7,
+            item8, 
+            category_id: Number(category_id),
+            price,
+            image: filename
+        }, {
+            where : {
+                id : req.params.id
+            }
+        });
+        return res.redirect("../products/editar" + req.params.id)
+                        
+                    
+                    
+        
+            
+    
+    
+    
+        /*db.Product.update({
+        name : req.body.name,
+        description : req.body.description,
+        item1 : req.body.item1,
+        item2 : req.body.item2,
+        item3 : req.body.item3,
+        item4 : req.body.item4,
+        item5 : req.body.item5,
+        item6 : req.body.item6,
+        item7 : req.body.item7,
+        item8 : req.body.item8,
+        category : req.body.category,
+        price : req.body.price,
+        
+
+    }, {
+    where : {
+        id : req.params.id
+        }
+    });
+    return res.redirect("../products/product-panel")*/
+
+        
+        
+
+            
+
+
         /*const productoAEditar = products.find(producto => producto.id == req.params.id);
 
 		const productoEditado = products.map( producto => {

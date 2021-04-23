@@ -18,7 +18,7 @@ router.post('/crear', uploadFile.single("image"), productController.guardado);
 
 
 router.get('/editar/:id', productController.editar);
-router.put('/editar/:id', productController.actualizar);
+router.put('/editar/:id', uploadFile.single("image"),productController.actualizar);
 
 
 router.delete('/borrar/:id', productController.destruir);

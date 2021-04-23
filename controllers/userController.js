@@ -9,8 +9,6 @@ const db = require("../database/models");
 const userController = {
 
     login: function(req, res) {
-
-
         return res.render('users/login');
     },
     ingresoUsuario: function(req, res) {
