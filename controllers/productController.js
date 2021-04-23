@@ -19,13 +19,8 @@ const productController = {
 
     panel: function(req, res) {
         db.Product.findAll()
-<<<<<<< HEAD
-            .then(function (products) {
-                return res.render('products/product-panel', { title: "Panel", css: "product-panel", "products" : products }); 
-=======
             .then(function(products) {
                 return res.render('products/product-panel', { title: "Panel", css: "product-panel", "products" : products });
->>>>>>> e1995b02254c25d8bc9d1f14af8844355fbabcc8
             })
         
     },
