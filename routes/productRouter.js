@@ -13,8 +13,13 @@ router.get('/carrito', productController.carrito);
 router.get('/product-panel', productController.panel);
 router.get('/articulo', productController.show);
 
+<<<<<<< HEAD
+router.get('/crear',  productController.crear);
+router.post('/crear', uploadFile.single("imagen"), productController.guardar);
+=======
 router.get('/crear', productController.crear);
 router.post('/crear', uploadFile.single("image"), productController.guardado);
+>>>>>>> af91d237ad705014c154eafd15bdd8ab2c560d88
 
 
 router.get('/editar/:id', productController.editar);
