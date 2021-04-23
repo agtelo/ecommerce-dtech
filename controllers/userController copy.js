@@ -4,17 +4,18 @@ let usuariosFilePath = path.resolve(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
-const db = require("../database/models");
+
+
 
 const userController = {
 
-    login: function(req, res) {
-
-
+    login: function(req, res) {     
         return res.render('users/login');
     },
     ingresoUsuario: function(req, res) {
+
         const resultValidation = validationResult(req);
+
         if (resultValidation.errors.length > 0) {
             return res.render("users/login", {
                 errors: resultValidation.mapped(),
@@ -23,16 +24,7 @@ const userController = {
 
         };
 
-        db.User.findOne({
-                where: {
-                    email: req.body.email
-                }
-
-            })
-            .then(function(user) {
-                return res.render('users/bienvenida', { "user": user });
-            })
-
+        let userALogearse = usuarios.find(usuario => usuario.email == req.body.email);
 
         if (userALogearse) {
             let validatePassword = bcryptjs.compareSync(req.body.password, userALogearse.password);
@@ -78,19 +70,19 @@ const userController = {
             })
         };
 
-        db.User.create({
-                firstName: req.body.nombre,
-                lastName: req.body.apellido,
-                email: req.body.email,
-                phone: req.body.telefono,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                image: req.file.filename,
-                rol_id: 2
-            })
-            .then(function(user) {
-                return res.render('users/bienvenida', { "user": user });
-            })
+        let usuarioNuevo = {
+            first_name: req.body.nombre,
+            last_name: req.body.apellido,
+            email: req.body.email,
+            phone: req.body.telefono,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            image: req.file.filename
+        };
 
+        usuarios.push(usuarioNuevo);
+        let usuarioSubir = JSON.stringify(usuarios, null, 2);
+        fs.writeFileSync(usuariosFilePath, usuarioSubir)
+        return res.render('users/bienvenida', { "usuarioNuevo": usuarioNuevo });
     },
 
     recuperoPass: function(req, res) {
@@ -128,33 +120,9 @@ const userController = {
 
     },
     show: function(req, res) {
-        db.User.findAll()
-            .then(function(users) {
-                return res.render("./users/userlist", { "users": users });
-
-            })
+        return res.render('./users/userlist')
     },
 
-    delete: function(req, res) {
-        db.User.destroy({
-                where: {
-                    id: req.params.id
-                }
-            })
-            .then(() => {
-                res.redirect('./userlist')
-            })
-    },
-    editUser: function(req, res) {
+};
 
-        db.User.findByPk(req.params.id)
-            .then(function(users) {
-                return res.render("./users/useredit", { "userAEditar": users });
-            });
-
-
-
-    }
-
-}
 module.exports = userController;

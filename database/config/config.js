@@ -4,7 +4,12 @@ module.exports ={
     "password": null,
     "database": "database_dtech",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define":{
+      "timestamps": false,
+      "underscored": true
+    }
+    
   },
   "test": {
     "username": "root",

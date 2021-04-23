@@ -11,17 +11,17 @@ const guestMiddleware = require("../middleware/guestMiddleware")
 const authMiddleware = require("../middleware/authMiddleware")
 
 
-router.get('/login',guestMiddleware,userController.login);
+router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validateLogin, userController.ingresoUsuario);
 
-router.get('/registro',guestMiddleware, userController.registro);
-router.post('/registro', uploadFile.single("imagen"), validateRegistro , userController.crearUsuario);
+router.get('/registro', guestMiddleware, userController.registro);
+router.post('/registro', uploadFile.single("imagen"), validateRegistro, userController.crearUsuario);
 
-router.get('/bienvenida',userController.bienvenida);
-router.get('/perfil',authMiddleware, userController.perfil);
+router.get('/bienvenida', userController.bienvenida);
+router.get('/perfil', authMiddleware, userController.perfil);
 
 router.get('/editar-perfil', userController.editarPerfil);
-router.put('/editar-perfil',uploadFile.single("imagen") ,userController.actualizarPerfil);
+router.put('/editar-perfil', uploadFile.single("imagen"), userController.actualizarPerfil);
 
 
 router.get('/recupero-pass', userController.recuperoPass);
@@ -31,5 +31,9 @@ router.get('/admin', userController.admin);
 
 router.get('/logout', userController.logout);
 
+router.get('/userlist', userController.show);
+router.post('/borrar/:id', userController.delete);
+router.get('/useredit/:id', userController.editUser);
+//router.put('/editar/:id', userController.refresh);
 
-module.exports = router; 
+module.exports = router;
