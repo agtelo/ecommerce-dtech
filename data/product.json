@@ -1,6 +1,19 @@
 [
   {
-    "id": "1"
+    "id": "1",
+    "name": "AUTOADMINISTRABLE",
+    "description": "AUMENTA TUS VENTAS ",
+    "item1": "Panel 100% Autoadministrable",
+    "item2": "Formulario Contacto",
+    "item3": "Alta en Google",
+    "item4": "E-mail Directo desde Celulares",
+    "item5": "Llamadas desde Celulares",
+    "item6": "Integracion con Redes Sociales",
+    "item7": "Mapa Google",
+    "item8": "10 Imagenes en Total",
+    "category": "DESARROLO WEB",
+    "price": "6000",
+    "image": "imagen-1614660464860.svg"
   },
   {
     "id": "2",

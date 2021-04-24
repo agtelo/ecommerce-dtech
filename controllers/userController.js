@@ -83,7 +83,7 @@ const userController = {
                 phone: req.body.telefono,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 image: req.file.filename,
-                rol_id: 2
+                rolId: 2
             })
             .then(function(user) {
                 return res.render('users/bienvenida', { "user": user });
@@ -149,10 +149,28 @@ const userController = {
             .then(function(users) {
                 return res.render("./users/useredit", { "userAEditar": users });
             });
+    },
 
-
-
+    updateUser: function (req,res) {
+        const { firstName, lastName , email ,phone , password } = req.body
+        const { filename } = req.file
+        
+        db.User.update({
+            id:"",
+            firstName, 
+            lastName, 
+            email,
+            phone,
+            password,
+            image: filename
+        }, {
+            where : {
+                id : req.params.id
+            }
+        });
+        return res.render("./users/useredit" + req.params.id)
+                    
+    },  
     }
 
-}
 module.exports = userController;

@@ -35,7 +35,7 @@ const productController = {
     },
 
     guardado: function(req, res) {
-        const { name, description , item1, item2, item3, item4, item5, item6, item7, item8, category_id ,price} = req.body
+        const { name, description , item1, item2, item3, item4, item5, item6, item7, item8, categoryId ,price} = req.body
         const { filename } = req.file
         
         db.Product.create({
@@ -50,7 +50,7 @@ const productController = {
             item6,
             item7,
             item8, 
-            category_id: Number(category_id),
+            categoryId: Number(categoryId),
             price,
             image: filename
         })
@@ -77,7 +77,7 @@ const productController = {
             item6: req.body.item6,
             item7: req.body.item7,
             item8: req.body.item8,
-            category_id: req.body.category,
+            categoryId: req.body.category,
             price: req.body.price,
 
             image: req.file.filename
@@ -103,9 +103,9 @@ const productController = {
 
 
 
-    },
+},
     actualizar: function(req, res) {
-        const { name, description , item1, item2, item3, item4, item5, item6, item7, item8, category_id ,price} = req.body
+        const { name, description , item1, item2, item3, item4, item5, item6, item7, item8, categoryId ,price} = req.body
         const { filename } = req.file
         
         db.Product.update({
@@ -120,7 +120,7 @@ const productController = {
             item6,
             item7,
             item8, 
-            category_id: Number(category_id),
+            categoryId: Number(categoryId),
             price,
             image: filename
         }, {
@@ -129,67 +129,7 @@ const productController = {
             }
         });
         return res.redirect("../products/editar" + req.params.id)
-                        
                     
-                    
-        
-            
-    
-    
-    
-        /*db.Product.update({
-        name : req.body.name,
-        description : req.body.description,
-        item1 : req.body.item1,
-        item2 : req.body.item2,
-        item3 : req.body.item3,
-        item4 : req.body.item4,
-        item5 : req.body.item5,
-        item6 : req.body.item6,
-        item7 : req.body.item7,
-        item8 : req.body.item8,
-        category : req.body.category,
-        price : req.body.price,
-        
-
-    }, {
-    where : {
-        id : req.params.id
-        }
-    });
-    return res.redirect("../products/product-panel")*/
-
-        
-        
-
-            
-
-
-        /*const productoAEditar = products.find(producto => producto.id == req.params.id);
-
-		const productoEditado = products.map( producto => {
-			if(producto.id == productoAEditar.id ){
-                producto.name = req.body.name;
-                producto.description = req.body.description;
-                producto.item1 = req.body.item1;
-                producto.item2 = req.body.item2;
-                producto.item3 = req.body.item3;
-                producto.item4 = req.body.item4;
-                producto.item5 = req.body.item5;
-                producto.item6 = req.body.item6;
-                producto.item7 = req.body.item7;
-                producto.item8 = req.body.item8;
-                producto.category = req.body.category;
-                producto.price = req.body.price;
-                producto.image = req.body.image;
-            }
-			return producto;
-		});
-
-		let productoSubir = JSON.stringify(productoEditado, null , 2);
-		fs.writeFileSync(productsFilePath,productoSubir);
-
-        res.redirect("/")*/
     },
     destruir: function(req, res) {
         const { id } = req.params

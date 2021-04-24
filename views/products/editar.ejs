@@ -76,7 +76,7 @@
                         <br>
                         <div class="etiquetas-form">
                             <label>Categoria:</label>
-                            <select name="category_id" id="categoria">
+                            <select name="categoryId" id="categoria">
                             <% for( let i = 0; i < categories.length; i++ ) { %>
                                 
                                     <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
@@ -87,7 +87,7 @@
                         <br>
                         <div class="etiquetas-form">
                             <label for="precio ">Precio:</label>
-                            <input type="number" class="campos-form" name="price" required value ="<%= categories.price %>"/>
+                            <input type="number" class="campos-form" name="price" required value ="<%= product.price %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">

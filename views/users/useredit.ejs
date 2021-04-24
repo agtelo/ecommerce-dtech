@@ -28,12 +28,12 @@
                 <form action="/users/useredit/<%= userAEditar.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
                     <div class="etiquetas-form">
                         <label for="name">Nombre:</label>
-                        <input type="type"  class="campos-form" name="nombre" value ="<%= userAEditar.firstName %>"/>
+                        <input type="type"  class="campos-form" name="firstName" value ="<%= userAEditar.firstName %>"/>
                     </div>
                     <br>
                     <div class="etiquetas-form">
                         <label class="campos-form-label">Apellido:</label>
-                        <input type="type"  name= "apellido" class="campos-form" value ="<%= userAEditar.lastName %>">
+                        <input type="type"  name= "lastName" class="campos-form" value ="<%= userAEditar.lastName %>">
                         </div>
                         <br>
                         <div class="etiquetas-form ">
@@ -43,7 +43,7 @@
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Teléfono :</label>
-                            <input type="type"  class="campos-form " name="Teléfono" value ="<%= userAEditar.phone %>"/>
+                            <input type="type"  class="campos-form " name="phone" value ="<%= userAEditar.phone %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
@@ -52,7 +52,7 @@
                         </div>
                         <br>
                         <div class="etiquetas-form ">
-                            <label for="imegen">Imagen:</label>
+                            <label for="imagen">Imagen:</label>
                             <input type="file"  class="campos-form" name="image" value ="<%= userAEditar.image %>"/>
                         </div>
                         <br>

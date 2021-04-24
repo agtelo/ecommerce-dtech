@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.hasOne(models.Rol, {
-        foreignKey: "rol_id",
+        foreignKey: "rolId",
         as: "rol",
         allowNull: false
       })
@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     phone: DataTypes.STRING,
     password: DataTypes.STRING,
     image: DataTypes.STRING,
-    rol_id: DataTypes.INTEGER
+    rolId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',
