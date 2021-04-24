@@ -60,30 +60,7 @@ const productController = {
                     
                     
         
-            },
-
-    /*guardado: function(req, res) {
-        
-        
-        db.Product.create({
-            id: "",
-            name: req.body.name,
-            description: req.body.description,
-            item1: req.body.item1,
-            item2: req.body.item2,
-            item3: req.body.item3,
-            item4: req.body.item4,
-            item5: req.body.item5,
-            item6: req.body.item6,
-            item7: req.body.item7,
-            item8: req.body.item8,
-            categoryId: req.body.category,
-            price: req.body.price,
-
-            image: req.file.filename
-        });
-        res.redirect('./crear');
-    },*/
+    },
 
     editar: function(req, res) {
         const {id} = req.params;
@@ -99,11 +76,11 @@ const productController = {
                 if(product){
                     return res.render("products/editar", {  categories , product })
                 }
-})
+        })
 
 
 
-},
+    },
     actualizar: function(req, res) {
         const { name, description , item1, item2, item3, item4, item5, item6, item7, item8, categoryId ,price} = req.body
         const { filename } = req.file
@@ -131,8 +108,10 @@ const productController = {
         return res.redirect("../products/editar" + req.params.id)
                     
     },
+
     destruir: function(req, res) {
         const { id } = req.params
+       
         db.Product.destroy({
                 where: {
                     id

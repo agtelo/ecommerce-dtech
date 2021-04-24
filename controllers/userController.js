@@ -140,7 +140,7 @@ const userController = {
                 }
             })
             .then(() => {
-                res.redirect('./userlist')
+                res.redirect('../userlist')
             })
     },
     editUser: function(req, res) {
@@ -152,7 +152,31 @@ const userController = {
     },
 
     updateUser: function (req,res) {
-        const { firstName, lastName , email ,phone , password } = req.body
+
+
+
+        const { file } =  req
+        const { firstName, lastName, email, phone , password } =  req.body
+        db.User.findOne({ 
+            where: { id: req.params.id },
+        })
+            .then((users) => {
+                users.update({
+                    id:"",
+                    firstName,
+                    lastName,
+                    email,
+                    phone,
+                    password,
+                    image: file? file.filename : users.image,
+                })
+                    .then(() => {
+                        res.redirect("../userlist")
+                    })
+            })
+    
+        
+        /*const { firstName, lastName , email ,phone , password } = req.body
         const { filename } = req.file
         
         db.User.update({
@@ -168,7 +192,7 @@ const userController = {
                 id : req.params.id
             }
         });
-        return res.render("./users/useredit" + req.params.id)
+        return res.render("./users/useredit/" + req.params.id)*/
                     
     },  
     }

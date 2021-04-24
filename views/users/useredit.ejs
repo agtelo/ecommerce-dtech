@@ -22,7 +22,11 @@
         <div class="contenedor-login">
             <div class="contenido-login3">
                 <div class="titulo-login">
-                    <h2>Editar Usuario</h2>
+                    <h2></h2>
+                    <br>
+                    <div class="imagen-perfil">
+                        <img src="/images/users/<%= userAEditar.image %>" width="330px">
+                    </div>
                     <br>
                 </div>
                 <form action="/users/useredit/<%= userAEditar.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
@@ -43,7 +47,7 @@
                         <br>
                         <div class="etiquetas-form ">
                             <label for="item1">Teléfono :</label>
-                            <input type="type"  class="campos-form " name="phone" value ="<%= userAEditar.phone %>"/>
+                            <input type="number"  class="campos-form " name="phone" value ="<%= userAEditar.phone %>"/>
                         </div>
                         <br>
                         <div class="etiquetas-form ">
