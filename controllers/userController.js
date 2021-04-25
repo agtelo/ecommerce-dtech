@@ -1,7 +1,4 @@
-const fs = require("fs");
-const path = require('path');
-let usuariosFilePath = path.resolve(__dirname, '../data/users.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
@@ -12,7 +9,65 @@ const userController = {
         return res.render('users/login');
     },
     ingresoUsuario: function(req, res) {
-        const resultValidation = validationResult(req);
+        let errors = validationResult(req);
+
+        if(!errors.isEmpty()) {
+            return res.render('users/login', { 
+                old: req.body, 
+                errors: errors.mapped() 
+            });
+        }
+
+        
+
+        db.User.findOne({
+            where: { email: req.body.email}
+        })            
+        .then(userToLogin => {
+            // Si el email existe
+            
+            if (userToLogin) {
+                let validatePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                
+                if (validatePassword) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    if (req.body.remember_user) {
+                        res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 3 })
+                    }
+                    return res.redirect("../users/perfil");
+                };
+                return res.render("users/login", {
+                    errors: {
+                        password: {
+                            msg: "Las credenciales son inválidas"
+                        }
+                    }
+                });
+            };
+            return res.render("users/login", {
+                errors: {
+                    email: {
+                        msg: "No se encuentra este email en nuestra base de datos"
+                    }
+    
+                },
+                oldData: req.body
+            });        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        /* const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             return res.render("users/login", {
                 errors: resultValidation.mapped(),
@@ -59,10 +114,11 @@ const userController = {
 
             },
             oldData: req.body
-        });
+        });*/
 
+    })
     },
-
+    
     registro: function(req, res) {
         res.cookie("testing", "Hola mundo", { maxAge: 1000 * 30 })
         return res.render('users/registro', { title: "Registro", css: "login" });

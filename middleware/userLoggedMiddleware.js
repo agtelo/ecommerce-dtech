@@ -1,14 +1,14 @@
-const fs = require("fs");
-const path = require('path');
-let usuariosFilePath = path.resolve(__dirname, '../data/users.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+
+const db = require("../database/models");
 
 function userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
     
-    let userFromCookie = usuarios.find( usuario => usuario.email == emailInCookie);
+    let userFromCookie = db.User.findOne( usuario => usuario.email == emailInCookie);
+
+   
     
     if(userFromCookie) {
         req.session.userLogged = userFromCookie;
