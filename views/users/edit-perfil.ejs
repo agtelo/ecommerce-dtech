@@ -22,20 +22,20 @@
                         
                         <h2>EDITAR PERFIL </h2>
                         <br>
-                             <div class="imagen-perfil">
+                            <div class="imagen-perfil">
                                 <img src="/images/users/<%= user.image %>" width="330px">
                             </div>
                             <br>
                         </div>
-                        <form action="/products/editar?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
+                        <form action="/users/editar-perfil/<%= user.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
                             <div class="etiquetas-form">
                                 <label for="name">Nombre:</label>
-                                <input type="type"  class="campos-form" name="first_name" value ="<%= user.first_name %>"/>
+                                <input type="type"  class="campos-form" name="firstName" value ="<%= user.firstName %>"/>
                             </div>
                             <br>
                             <div class="etiquetas-form">
                                 <label class="campos-form-label">Apellido:</label>
-                                <input type="type"  name= "last_name" class="campos-form" value ="<%= user.last_name %>">
+                                <input type="type"  name= "lastName" class="campos-form" value ="<%= user.lastName %>">
                                 </div>
                                 <br>
                                 <div class="etiquetas-form ">

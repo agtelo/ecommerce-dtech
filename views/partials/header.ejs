@@ -21,7 +21,7 @@
 
             <% if (locals.isLogged) { %>
             
-            <li><a class="contenedor-login-user" href="../users/perfil">Hola <%= locals.userLogged.first_name %> <img src="/images/users/<%= locals.userLogged.image %>" class="imagen-perfil-user"> </a>  </li> 
+            <li><a class="contenedor-login-user" href="../users/perfil">Hola <%= locals.userLogged.firstName %> <img src="/images/users/<%= locals.userLogged.image %>" class="imagen-perfil-user"> </a>  </li> 
             <li><a href="../users/logout">Logout</a></li>    
             
             <% } else { %>

@@ -30,7 +30,7 @@ app.use(session({
 app.use(cookies());
 
 // Aplicmoms userLoggedMiddleware
-
+app.use(userLoggedMiddleware);
 
 
 
