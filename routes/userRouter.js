@@ -6,16 +6,17 @@ const userController = require('../controllers/userController');
 // se requieren middlewares para aplicar por ruta
 const uploadFile = require('../middleware/multerUserMiddleware');
 const validateLogin = require('../middleware/validateLoginMiddleware')
-const validateRegistro = require('../middleware/validateRegistroMiddleware')
+const validateRegistroMiddleware = require('../middleware/validateRegistroMiddleware')
 const guestMiddleware = require("../middleware/guestMiddleware")
 const authMiddleware = require("../middleware/authMiddleware")
+
 
 
 router.get('/login', guestMiddleware, userController.login);
 router.post('/login', validateLogin, userController.ingresoUsuario);
 
 router.get('/registro', guestMiddleware, userController.registro);
-router.post('/registro', uploadFile.single("imagen"), validateRegistro, userController.crearUsuario);
+router.post('/registro', uploadFile.single("image"), validateRegistroMiddleware, userController.crearUsuario);
 
 router.get('/bienvenida', userController.bienvenida);
 router.get('/perfil', authMiddleware, userController.perfil);
