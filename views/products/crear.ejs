@@ -18,6 +18,7 @@
 
         <div class="subtitulo-productos">
             <h1>PANEL GESTION ADMINISTRADOR</h1>
+
         </div>
         <br>
 
@@ -26,84 +27,89 @@
                 <div class="titulo-login">
                     <h2>Crear Producto</h2>
                     <br>
-                </div>                    
+                </div>
 
                 <form class="form-login" method="POST" action="/products/crear" enctype="multipart/form-data">
-        
+
                     <div class="etiquetas-form">
                         <label>Nombre:</label>
-                        <input type="text" name="name" class="campos-form" placeholder="" required/>
+                        <input type="text" name="name" class="campos-form" value="<%= locals.oldData ? oldData.name : null %>" />
                     </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Descripcion:</label>
-                        <input type="text" name="description" class="campos-form" placeholder="" required/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Item1:</label>
-                        <input type="text" name="item1" class="campos-form" placeholder="" required/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="item2">Item2 :</label>
-                        <input type="type"  class="campos-form " name="item2"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="item3">Item3 :</label>
-                        <input type="type"  class="campos-form " name="item3"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="item4">Item4 :</label>
-                        <input type="type"  class="campos-form " name="item4"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="item15">Item5 :</label>
-                        <input type="type"  class="campos-form " name="item5"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="item6">Item6 :</label>
-                        <input type="type"  class="campos-form " name="item6"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="item7">Item7 :</label>
-                        <input type="type"  class="campos-form " name="item7"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form ">
-                        <label for="ite87">Item8 :</label>
-                        <input type="type"  class="campos-form " name="item8"/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label>Categoria:</label>
-                        <select name="categoryId" id="categoria">
+                    <% if (locals.errors && errors.name) { %>
+                        <%= errors.name.msg %>
+                            <% } %>
+                                <br>
+                                <div class="etiquetas-form">
+                                    <label class="campos-form-label">Descripcion:</label>
+                                    <input type="text" name="description" class="campos-form" value="<%= locals.oldData ? oldData.description : null %>" />
+                                </div>
+                                <% if (locals.errors && errors.description) { %>
+                                    <%= errors.description.msg %>
+                                        <% } %>
+                                            <br>
+                                            <div class="etiquetas-form">
+                                                <label class="campos-form-label">Item1:</label>
+                                                <input type="text" name="item1" class="campos-form" placeholder="" required value="<%= locals.oldData ? oldData.item1 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="item2">Item2 :</label>
+                                                <input type="type" class="campos-form " name="item2" required value="<%= locals.oldData ? oldData.item2 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="item3">Item3 :</label>
+                                                <input type="type" class="campos-form " name="item3" required value="<%= locals.oldData ? oldData.item3 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="item4">Item4 :</label>
+                                                <input type="type" class="campos-form " name="item4" required value="<%= locals.oldData ? oldData.item4 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="item15">Item5 :</label>
+                                                <input type="type" class="campos-form " name="item5" required value="<%= locals.oldData ? oldData.item5 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="item6">Item6 :</label>
+                                                <input type="type" class="campos-form " name="item6" required value="<%= locals.oldData ? oldData.item6 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="item7">Item7 :</label>
+                                                <input type="type" class="campos-form " name="item7" required value="<%= locals.oldData ? oldData.item7 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form ">
+                                                <label for="ite87">Item8 :</label>
+                                                <input type="type" class="campos-form " name="item8" required value="<%= locals.oldData ? oldData.item8 : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form">
+                                                <label>Categoria:</label>
+                                                <select name="categoryId" id="categoria">
                         <% for( let i = 0; i < categories.length; i++ ) { %>
-                            
-                                <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
+                        <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
                             
                         <% } %>
                         </select>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label>Precio:</label>
-                        <input type="number" class="campos-form" name="price" required/>
-                    </div>
-                    <br>
-                    <div class="etiquetas-form">
-                        <label>Imagen:</label>
-                        <input type="file" class="campos-form" name="image" required/>
-                    </div>
-                    <br>
-                    <div class="contenedor-btn">
-                        <input type="submit" class="boton-estilo" value="Aceptar">
-                    </div>
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form">
+                                                <label>Precio:</label>
+                                                <input type="number" class="campos-form" name="price" required required value="<%= locals.oldData ? oldData.price : null %>" />
+                                            </div>
+                                            <br>
+                                            <div class="etiquetas-form">
+                                                <label>Imagen:</label>
+                                                <input type="file" class="campos-form" name="image" required/>
+                                            </div>
+                                            <br>
+                                            <div class="contenedor-btn">
+                                                <input type="submit" class="boton-estilo" value="Aceptar">
+                                            </div>
                 </form>
             </div>
         </div>
