@@ -1,6 +1,6 @@
 
 const bcryptjs = require('bcryptjs');
-const { validationResult } = require("express-validator");
+const { validationResult, body } = require("express-validator");
 const db = require("../database/models");
 
 const userController = {
@@ -70,6 +70,24 @@ const userController = {
             })
         };
 
+        db.User.findOne({
+            where: { email: req.body.email}
+        })            
+        .then(emailToLogin => {
+                
+            if (emailToLogin) {
+                return res.render("users/registro", {
+                    errors: {
+                        email: {
+                            msg: "El email ya esta registrado"
+                        }
+                    },
+                    oldData: req.body
+                })
+
+        }});
+        
+        
         db.User.create({
                 firstName: req.body.nombre,
                 lastName: req.body.apellido,
@@ -79,6 +97,7 @@ const userController = {
                 image: req.file.filename,
                 rolId: 2
             })
+            
             .then(function(user) {
                 return res.render('users/bienvenida', { "user": user });
             })
