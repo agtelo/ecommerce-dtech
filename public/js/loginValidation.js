@@ -30,11 +30,14 @@ window.addEventListener("load", function() {
         if (!/[!@#$%^&*]/.test(campoPassword.value)) {
             errores.push("La contraseña debe tener al menos 1 Simbolo");
         }
-        if (errores.lengh > 0) {
+
+
+        if (errores.length > 0) {
             e.preventDefault();
-            let ulErrores = document.getElementById("errores.ul")
-            for (let i = 0; i < errores.lenght; i++) {
+            let ulErrores = document.querySelector("div.errores ul")
+            for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+
             }
 
         }
