@@ -1,36 +1,43 @@
 window.addEventListener("load", function() {
     let formulario = document.querySelector("form.reservation");
     formulario.addEventListener("submit", function(e) {
-        e.preventDefault();
+
+        let errores = [];
 
         let campoEmail = document.getElementById("email");
         if (campoEmail.value.length < 3) {
-            alert("El mail debe contener mas de 3 caracteres");
+            errores.push("El mail debe contener mas de 3 caracteres");
         }
         if (campoEmail.value == "") {
-            alert("Por favor completa el mail");
+            errores.push("Por favor completa el mail");
         }
 
         let campoPassword = document.getElementById("pwd");
 
         if (campoPassword.value == "") {
-            alert("Debes ingresar tu password");
+            errores.push("Debes ingresar tu password");
         }
 
         if (campoPassword.value.length < 8) {
-            alert("La contraseña debe tener mas de 8 caracteres");
+            errores.push("La contraseña debe tener mas de 8 caracteres");
         }
         if (!/[A-Z]/.test(campoPassword.value)) {
-            alert("La contraseña debe tener al menos 1 mayuscula");
+            errores.push("La contraseña debe tener al menos 1 mayuscula");
         }
         if (!/[0-9]/.test(campoPassword.value)) {
-            alert("La contraseña debe tener al menos 1 Numero");
+            errores.push("La contraseña debe tener al menos 1 Numero");
         }
         if (!/[!@#$%^&*]/.test(campoPassword.value)) {
-            alert("La contraseña debe tener al menos 1 Simbolo");
+            errores.push("La contraseña debe tener al menos 1 Simbolo");
         }
+        if (errores.lengh > 0) {
+            e.preventDefault();
+            let ulErrores = document.getElementById("errores.ul")
+            for (let i = 0; i < errores.lenght; i++) {
+                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+            }
 
-
+        }
 
     })
 
