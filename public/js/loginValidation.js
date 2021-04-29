@@ -1,9 +1,5 @@
 window.addEventListener("load", function() {
     let formulario = document.querySelector("form.reservation");
-
-    /**/
-    let mayusculas = /^[A-Z]+$/;
-
     formulario.addEventListener("submit", function(e) {
         e.preventDefault();
 
@@ -24,9 +20,18 @@ window.addEventListener("load", function() {
         if (campoPassword.value.length < 8) {
             alert("La contraseña debe tener mas de 8 caracteres");
         }
-        if (campoPassword.value = mayusculas) {
+        if (!/[A-Z]/.test(campoPassword.value)) {
             alert("La contraseña debe tener al menos 1 mayuscula");
         }
+        if (!/[0-9]/.test(campoPassword.value)) {
+            alert("La contraseña debe tener al menos 1 Numero");
+        }
+        if (!/[!@#$%^&*]/.test(campoPassword.value)) {
+            alert("La contraseña debe tener al menos 1 Simbolo");
+        }
+
+
+
     })
 
 
