@@ -1,8 +1,10 @@
 window.addEventListener("load", function() {
-    let formulario = document.querySelector("form.reservation");
-    formulario.addEventListener("submit", function(e) {
 
+    let formulario = document.querySelector("form.reservation");
+
+    formulario.addEventListener("submit", function(e) {
         let errores = [];
+
 
         let campoEmail = document.getElementById("email");
         if (campoEmail.value.length < 3) {
@@ -33,10 +35,14 @@ window.addEventListener("load", function() {
 
 
         if (errores.length > 0) {
+
             e.preventDefault();
+            document.querySelector("div.errores ul").innerHTML = ""
             let ulErrores = document.querySelector("div.errores ul")
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
+
+
 
             }
 
