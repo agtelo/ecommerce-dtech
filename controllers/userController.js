@@ -89,10 +89,10 @@ const userController = {
         
         
         db.User.create({
-                firstName: req.body.nombre,
-                lastName: req.body.apellido,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
                 email: req.body.email,
-                phone: req.body.telefono,
+                phone: req.body.phone,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 image: req.file.filename,
                 rolId: 2
