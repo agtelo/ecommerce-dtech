@@ -177,6 +177,30 @@ input {
     transition: border-color .2s;
 }
 
+.app-form-control-fail {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ea1d6f;
+    color: #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control-correct {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid green ;
+    color: #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s;
+}
+
 .etiqueta-permanecer {
     color: #ea1d6f;
 }

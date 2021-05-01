@@ -33,12 +33,10 @@
                                     <ul></ul>
                                  
                                 </div>
-                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST">
-                                    
+                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST"> 
                                     <div class="app-form">
                                         <div class="app-form-group">
                                             <input type="text" class="app-form-control" name="email" id="email" placeholder="INGRESA TU EMAIL" value="<%= locals.oldData ? oldData.email : null%>" />
-
                                         </div>
                                         <div class="errores">
                                         <% if (locals.errors && errors.email) { %>
@@ -50,7 +48,6 @@
                                                         <div class="app-form-group">
                                                             <input type="password" class="app-form-control" id="pwd" name="password" placeholder="INGRESA TU CONTRASEÑA" />
                                                         </div>
-                                                        
                                                         <div class="errores">
                                                         <% if (locals.errors && errors.password) { %>
                                                             <%= errors.password.msg %>
