@@ -35,7 +35,8 @@ input {
 
 .background {
     display: flex;
-    height: 700px;
+    justify-content: center;
+    height: 750px;
     background-image: url(/images/backgorund-login.jpg);
 }
 
@@ -99,7 +100,30 @@ input {
 .screen-body-item.left {
     display: flex;
     flex-direction: column;
-    height: 620px;
+    height: 670px;
+    justify-content: space-between;
+}
+
+.screen-body-item.left h2 {
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #ffffff;
+    font-size: 45px;
+    font-style: italic;
+    border-bottom: solid 2px;
+    width: 70px;
+    margin-bottom: 10px;
+    
+}
+.errores {
+    font-size: 15px;
+    color:#ea1d6f;
+}
+
+.errores ul {
+    list-style: none;
 }
 
 .app-title {
@@ -111,21 +135,21 @@ input {
     font-style: italic;
 }
 
-.app-title:after {
-    content: '';
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 25px;
-    height: 4px;
-    background: #ea1d6f;
+.reservation {
+    
 }
 
 .app-contact {
     margin-top: auto;
     font-size: 8px;
     color: #888;
+}
+
+
+.app-form {
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .app-form-group {
@@ -149,9 +173,20 @@ input {
     border-bottom: 1px solid #666;
     color: #ddd;
     font-size: 14px;
-    text-transform: uppercase;
     outline: none;
     transition: border-color .2s;
+}
+
+.etiqueta-permanecer {
+    color: #ea1d6f;
+}
+
+.etiqueta-permanecer label {
+    color: #ddd;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+
 }
 
 .app-form-button {
@@ -170,6 +205,8 @@ input {
 .recupero a {
     color: #ffffff;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 .recupero a:hover {

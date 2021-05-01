@@ -7,13 +7,15 @@ window.addEventListener("load", function() {
 
 
         let campoEmail = document.getElementById("email");
-        if (campoEmail.value.length < 3) {
-            errores.push("El mail debe contener mas de 3 caracteres");
-        }
+        
         if (campoEmail.value == "") {
-            errores.push("Por favor completa el mail");
+            errores.push("Debes ingresar tu email");
         }
 
+        else if (campoEmail.value.length < 3) {
+            errores.push("El mail debe contener mas de 3 caracteres");
+        }
+        
         let campoPassword = document.getElementById("pwd");
 
         if (campoPassword.value == "") {
@@ -21,21 +23,19 @@ window.addEventListener("load", function() {
         }
 
         if (campoPassword.value.length < 8) {
-            errores.push("La contraseña debe tener mas de 8 caracteres");
+            errores.push("La contraseña debe al menos 8 caracteres");
         }
         if (!/[A-Z]/.test(campoPassword.value)) {
-            errores.push("La contraseña debe tener al menos 1 mayuscula");
+            errores.push("La contraseña debe tener al menos 1 mayúscula");
         }
         if (!/[0-9]/.test(campoPassword.value)) {
-            errores.push("La contraseña debe tener al menos 1 Numero");
+            errores.push("La contraseña debe tener al menos 1 número");
         }
         if (!/[!@#$%^&*]/.test(campoPassword.value)) {
-            errores.push("La contraseña debe tener al menos 1 Simbolo");
+            errores.push("La contraseña debe tener al menos 1 simbolo");
         }
 
-
         if (errores.length > 0) {
-
             e.preventDefault();
             document.querySelector("div.errores ul").innerHTML = ""
             let ulErrores = document.querySelector("div.errores ul")
