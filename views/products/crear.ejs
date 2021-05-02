@@ -21,103 +21,123 @@
 
         </div>
         <br>
+        <div class="background">
+            <div class="conteiner">
+                <div class="screen">
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                            <h2>Crear Producto</h2>
+                            <br>
 
-        <div class="contenedor-login">
-            <div class="contenido-login">
-                <div class="titulo-login">
-                    <h2>Crear Producto</h2>
-                    <br>
-                </div>
 
-                <form class="form-login" method="POST" action="/products/crear" enctype="multipart/form-data">
-
-                    <div class="etiquetas-form">
-                        <label>Nombre:</label>
-                        <input type="text" name="name" class="campos-form" value="<%= locals.oldData ? oldData.name : null %>" />
-                    </div>
-                    <% if (locals.errors && errors.name) { %>
-                        <%= errors.name.msg %>
-                            <% } %>
-                                <br>
-                                <div class="etiquetas-form">
-                                    <label class="campos-form-label">Descripcion:</label>
-                                    <input type="text" name="description" class="campos-form" value="<%= locals.oldData ? oldData.description : null %>" />
+                            <form class="form-login" method="POST" action="/products/crear" enctype="multipart/form-data">
+                                <div class="app-form">
+                                    <div class="app-form-group">
+                                        <input type="text" name="name" class="app-form-control" placeholder="TITULO" value="<%= locals.oldData ? oldData.name : null %>" />
+                                    </div>
                                 </div>
-                                <% if (locals.errors && errors.description) { %>
-                                    <%= errors.description.msg %>
+                                <% if (locals.errors && errors.name) { %>
+                                    <%= errors.name.msg %>
                                         <% } %>
                                             <br>
-                                            <div class="etiquetas-form">
-                                                <label class="campos-form-label">Item1:</label>
-                                                <input type="text" name="item1" class="campos-form" placeholder="" required value="<%= locals.oldData ? oldData.item1 : null %>" />
+                                            <div class="app-form">
+                                                <div class="app-form-group">
+                                                    <input type="text" name="description" class="app-form-control" placeholder="INGRESAR DESCRIPCION" value="<%= locals.oldData ? oldData.description : null %>" />
+                                                </div>
                                             </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="item2">Item2 :</label>
-                                                <input type="type" class="campos-form " name="item2" required value="<%= locals.oldData ? oldData.item2 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="item3">Item3 :</label>
-                                                <input type="type" class="campos-form " name="item3" required value="<%= locals.oldData ? oldData.item3 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="item4">Item4 :</label>
-                                                <input type="type" class="campos-form " name="item4" required value="<%= locals.oldData ? oldData.item4 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="item15">Item5 :</label>
-                                                <input type="type" class="campos-form " name="item5" required value="<%= locals.oldData ? oldData.item5 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="item6">Item6 :</label>
-                                                <input type="type" class="campos-form " name="item6" required value="<%= locals.oldData ? oldData.item6 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="item7">Item7 :</label>
-                                                <input type="type" class="campos-form " name="item7" required value="<%= locals.oldData ? oldData.item7 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form ">
-                                                <label for="ite87">Item8 :</label>
-                                                <input type="type" class="campos-form " name="item8" required value="<%= locals.oldData ? oldData.item8 : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form">
-                                                <label>Categoria:</label>
-                                                <select name="categoryId" id="categoria">
+
+                                            <% if (locals.errors && errors.description) { %>
+                                                <%= errors.description.msg %>
+                                                    <% } %>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="text" name="item1" class="app-form-control" placeholder=" INGRESAR ITEM 1" required value="<%= locals.oldData ? oldData.item1 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item2" placeholder=" INGRESAR ITEM 2" required value="<%= locals.oldData ? oldData.item2 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item3" placeholder=" INGRESAR ITEM 3" required value="<%= locals.oldData ? oldData.item3 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item4" placeholder=" INGRESAR ITEM 4" required value="<%= locals.oldData ? oldData.item4 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item5" placeholder=" INGRESAR ITEM 5" required value="<%= locals.oldData ? oldData.item5 : null %>" />
+                                                            </div>
+                                                        </div>
+
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item6" placeholder=" INGRESAR ITEM 6" required value="<%= locals.oldData ? oldData.item6 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item7" placeholder=" INGRESAR ITEM 7" required value="<%= locals.oldData ? oldData.item7 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="type" class="app-form-control" name="item8" placeholder=" INGRESAR ITEM 8" required value="<%= locals.oldData ? oldData.item8 : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <select name="categoryId" id="categoria" placeholder=" SELECCIONA LA CATEGORIA">
                         <% for( let i = 0; i < categories.length; i++ ) { %>
                         <option value="<%= categories[i].id%>"><%= categories[i].name%></option>
                             
                         <% } %>
                         </select>
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form">
-                                                <label>Precio:</label>
-                                                <input type="number" class="campos-form" name="price" required required value="<%= locals.oldData ? oldData.price : null %>" />
-                                            </div>
-                                            <br>
-                                            <div class="etiquetas-form">
-                                                <label>Imagen:</label>
-                                                <input type="file" class="campos-form" name="image" required/>
-                                            </div>
-                                            <br>
-                                            <div class="contenedor-btn">
-                                                <input type="submit" class="boton-estilo" value="Aceptar">
-                                            </div>
-                </form>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form">
+                                                            <div class="app-form-group">
+                                                                <input type="number" class="app-form-control" name="price" placeholder="PRECIO" required required value="<%= locals.oldData ? oldData.price : null %>" />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="etiquetas-form">
+                                                            <label>IMAGEN</label>
+                                                            <input type="file" class="app-form-control" name="image" required/>
+                                                        </div>
+                                                        <br>
+                                                        <div class="app-form-group buttons">
+                                                            <input class="app-form-button">
+                                                            <input type="submit" class="app-form-button value=" Aceptar ">
+                                                        </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
 
         <footer>
             <%- include('../partials/footer.ejs'); -%>
         </footer>
+        <script src="/js/createValidation.js "></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous "></script>
 </body>
 
 </html>
