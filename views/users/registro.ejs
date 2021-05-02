@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/header-footer.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/loginNew.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
-    <title>Registro</title>
+    <title>Login</title>
 </head>
+
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
-        <div class="contenedor-login">
-            <div class="contenido-login-registrate">
-                <div class="titulo-login">
-                    <h2>CREA TU CUENTA</h2>
-                    <br>
-                </div>
-                <form action="/users/registro" method="POST" class="form-login" enctype="multipart/form-data">
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Nombre:</label>
-                        <input type="text" id="firstName" name="firstName" class="campos-form" placeholder=" Ingresá tu nombre" value="<%= locals.oldData ? oldData.firstName : null%>"/>       
-                    </div>
-                    <% if (locals.errors && errors.firstName) { %>
-                        <p> <%= errors.firstName.msg %>  </p>   
-                        <% } %> 
-                    <br>
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Apellido:</label>
-                        <input type="text" id="lastName" name="lastName" class="campos-form" placeholder=" Ingresá tu apellido" value="<%= locals.oldData ? oldData.lastName : null%>" />
-                    </div>
-                    <% if (locals.errors && errors.lastName) { %>
-                        <p> <%= errors.lastName.msg %>  </p>   
-                        <% } %> 
-                    <br>
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Mail:</label>
-                        <input type="email" id="email" name="email" class="campos-form" placeholder=" Ingresá tu mail" value="<%= locals.oldData ? oldData.email : null%>"/>
-                    </div>
-                    <% if (locals.errors && errors.email) { %>
-                        <p> <%= errors.email.msg %>  </p>   
-                        <% } %> 
-                    <br>
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Teléfono:</label>
-                        <input type="number" id="phone" name="phone" class="campos-form" placeholder=" Ingresá tu teléfono"  value="<%= locals.oldData ? oldData.phone : null%>"/>
-                    </div>
-                    <% if (locals.errors && errors.phone) { %>
-                        <p> <%= errors.phone.msg %>  </p>   
-                        <% } %> 
-                    <br>
-                    <div class="etiquetas-form">
-                        <label for="pwd">Password:</label>
-                        <input type="password" id="password" name="password" class="campos-form" placeholder=" Ingresá tu contraseña"  />
-                    </div>
-                    <% if (locals.errors && errors.password) { %>
-                        <p> <%= errors.password.msg %>  </p>   
-                        <% } %> 
-                    <br>
-                    <div class="etiquetas-form">
-                        <label class="campos-form-label">Imagen:</label>
-                        <input type="file" id="image" name="image" class="campos-form" placeholder=" Ingresá una imagen" />
-                    </div>
-                    <% if (locals.errors && errors.image) { %>
-                        <p> <%= errors.image.msg %>  </p>   
-                        <% } %> 
-                    <br>
-
-                    <div class="contenedor-btn">
-                        <input type="submit" class="boton-estilo" value="Registrarse">
-                    </div>          
-                </form>
+        <main>
+            <div class="subtitulo-productos">
+                <h1>INGRESÁ A TU CUENTA</h1>
             </div>
-        </div>
-        </div>
+            <br>
+            <div class="background">
+                <div class="conteiner">
+                    <div class="screen">
+                        <div class="screen-body">
+                            <div class="screen-body-item left">      
+                                    <h2>REGISTRO</h2>
+                                <div class="errores">
+                                    <ul></ul>
+                                </div>
+                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST"> 
+                                    <div class="app-form">
+                                        <div class="app-form-group">
+                                            <input type="text" class="app-form-control" name="firstName" id="email" placeholder="NOMBRE" value="<%= locals.oldData ? oldData.firstName : null%>" />
+                                        </div>
+                                        <div class="errores">
+                                        <% if (locals.errors && errors.firstName) { %>
+                                            <%= errors.firstName.msg %>
+                                                <% } %>
+                                            </div>
+                                                    
+                                                    <div class="app-form">
+                                                        <div class="app-form-group">
+                                                            <input type="text" class="app-form-control" id="lastName" name="lastName" placeholder="APELLIDO" value="<%= locals.oldData ? oldData.lastName : null%>" />
+                                                        </div>
+                                                        <div class="errores">
+                                                        <% if (locals.errors && errors.lastName) { %>
+                                                            <%= errors.lastName.msg %>
+                                                                <% } %>
+                                                            </div>
+                                                            <div class="app-form-group">
+                                                                <input type="text" class="app-form-control" id="email" name="email" placeholder="EMAIL" value="<%= locals.oldData ? oldData.email : null%>"/>
+                                                            </div>
+                                                            <div class="errores">
+                                                            <% if (locals.errors && errors.email) { %>
+                                                                <%= errors.email.msg %>
+                                                                    <% } %>
+                                                                </div>
+                                                                <div class="app-form-group">
+                                                                    <input type="password" class="app-form-control" id="pwd" name="password" placeholder="CONTRASEÑA" />
+                                                                </div>
+                                                                <div class="errores">
+                                                                <% if (locals.errors && errors.password) { %>
+                                                                    <%= errors.password.msg %>
+                                                                        <% } %>
+                                                                    </div>
+                                                                    <div class="app-form-group">
+                                                                        <input type="text" class="app-form-control" id="phone" name="phone" placeholder="TELÉFONO" value="<%= locals.oldData ? oldData.phone : null%>"/>
+                                                                    </div>
+                                                                    <div class="errores">
+                                                                    <% if (locals.errors && errors.phone) { %>
+                                                                        <%= errors.phone.msg %>
+                                                                            <% } %>
+                                                                        </div>
+                                                                        <div class="app-form-group">
+                                                                            <input type="file" class="app-form-control" id="image" name="image" placeholder="INGRESA TU CONTRASEÑA" value="<%= locals.oldData ? oldData.image : null%>" />
+                                                                        </div>
+                                                                        <div class="errores">
+                                                                        <% if (locals.errors && errors.image) { %>
+                                                                            <%= errors.image.msg %>
+                                                                                <% } %>
+                                                                            </div>
+                                                    
+                                                             </div>     
+                                                                    <div class="app-form-group buttons">
+                                                                        <input class="app-form-button">
+                                                                        <button input type="submit" class="app-form-button">ENVIAR</button>
+                                                                    </div>
+                                                                    <br>
+                                                                    
+                                </form>
+                                </div>
+                                </div>
+                                <script src="/js/loginValidation.js"></script>
+                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         </main>
         <footer>
             <%- include('../partials/footer.ejs'); -%>
         </footer>
 </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+</body>
+
 </html>

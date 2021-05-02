@@ -9,7 +9,8 @@ let validateRegistroMiddleware = [
     body("lastName")
     .notEmpty().withMessage("Debes ingresar tu apellido")
     .isLength({ min: 2 }).withMessage("Debes ingresar al menos 2 caracteres"),
-    body("phone").notEmpty().withMessage("Debes ingresar tu telefono"),
+    body("phone")
+    .notEmpty().withMessage("Debes ingresar tu telefono"),
     body("email")
     .notEmpty().withMessage("Debes ingresar un email").bail()
     .isEmail().withMessage("Debes ingresar un email valido"),

@@ -2,7 +2,7 @@ window.addEventListener("load", function() {
 
     let formulario = document.querySelector("form.reservation");
 
-    formulario.addEventListener("keyup", function(e) {
+    formulario.addEventListener("submit", function(e) {
         let errores = [];
 
 

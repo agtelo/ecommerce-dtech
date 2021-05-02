@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <title>Perfil Usuario</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs'); -%>
+        </header>
+        <div class="imagen-fondo-login">
+            <div class="contenedor-login">
+                <div class="contenido-login-perfil ">
+                    <div class="titulo-login">
+                        
+                        <h2>MI CUENTA </h2>
+                        <br>
+                             <div class="imagen-perfil">
+                                <img src="/images/users/<%= user.image %>" width="330px">
+                            </div>
+                            <h2>Nombre: <%= user.firstName %></h2>
+                            <h2>Apellido: <%= user.lastName %></h2>
+                            <h2>Email: <%= user.email %></h2>
+                            <h2>Telefono: <%= user.phone %></h2>
+                    </div>
+                    <br>
+                    <div class="contenedor-btn">
+                        <button class="boton-estilo">
+                                <a href="../users/editar-perfil"> Editar</a>
+                        </div>
+                        <br>    
+                        <div class="contenedor-btn">
+                            <button class="boton-estilo">
+                                    <a href="../users/login"> Eliminar</a>
+                            </div>
+                    
+                </div>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
+</body>
+</html>
