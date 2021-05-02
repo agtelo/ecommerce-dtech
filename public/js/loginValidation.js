@@ -2,16 +2,16 @@ window.addEventListener("load", function() {
 
     let formulario = document.querySelector("form.reservation");
 
-    formulario.addEventListener("keyup", function(e) {
+    formulario.addEventListener("submit", function(e) {
         let errores = [];
 
 
         let campoEmail = document.getElementById("email");
-        
+
         if (campoEmail.value == "") {
             errores.push("Debes ingresar tu email");
             campoEmail.classList.add("app-form-control-fail");
-            
+
         } else {
             campoEmail.classList.remove("app-form-control-fail");
             campoEmail.classList.add("app-form-control");
@@ -21,20 +21,20 @@ window.addEventListener("load", function() {
             errores.push("El mail debe contener mas de 3 caracteres");
             campoEmail.classList.add("app-form-control-fail");
         }
-        
+
         let campoPassword = document.getElementById("pwd");
 
-        if (campoPassword.value == "") {    
+        if (campoPassword.value == "") {
             errores.push("Debes ingresar tu password");
             campoPassword.classList.add("app-form-control-fail");
-        
+
         }
 
         if (campoPassword.value.length < 8) {
             errores.push("La contraseña debe al menos 8 caracteres");
             campoPassword.classList.add("app-form-control-fail");
-            
-        } 
+
+        }
 
         if (!/[A-Z]/.test(campoPassword.value)) {
             errores.push("La contraseña debe tener al menos 1 mayúscula");
