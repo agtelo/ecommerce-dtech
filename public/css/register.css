@@ -146,21 +146,6 @@ input {
 
 
 
-input[type="file"] {
-    width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-.custom-file-upload  {
-    
-    cursor: pointer;
-    font-size: 15px;
-    
-    width: 112px;
-}
 
 
 
@@ -170,10 +155,8 @@ input[type="file"] {
     
 }
 
-.app-form-group-file {
-    display: flex;
-    flex-direction: row;
-}
+
+
 
 .app-form-group {
     margin-bottom: 15px;
@@ -181,7 +164,9 @@ input[type="file"] {
 
 .app-form-group label {
     font-size: 16px;
-    color: #666;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #888;
 }
 
 .app-form-group.message {

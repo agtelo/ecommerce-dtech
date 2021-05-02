@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header-footer.css">
-    <link rel="stylesheet" href="/css/loginNew.css">
+    <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
@@ -29,10 +29,10 @@
                                 <div class="errores">
                                     <ul></ul>
                                 </div>
-                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST"> 
+                                <form class="reservation" id="screen-body-item" action="/users/registro" method="POST"> 
                                     <div class="app-form">
                                         <div class="app-form-group">
-                                            <input type="text" class="app-form-control" name="firstName" id="email" placeholder="NOMBRE" value="<%= locals.oldData ? oldData.firstName : null%>" />
+                                            <input type="text" class="app-form-control" name="firstName" id="firstName" placeholder="NOMBRE" value="<%= locals.oldData ? oldData.firstName : null%>" />
                                         </div>
                                         <div class="errores">
                                         <% if (locals.errors && errors.firstName) { %>
@@ -58,7 +58,7 @@
                                                                     <% } %>
                                                                 </div>
                                                                 <div class="app-form-group">
-                                                                    <input type="password" class="app-form-control" id="pwd" name="password" placeholder="CONTRASEÑA" />
+                                                                    <input type="password" class="app-form-control" id="password" name="password" placeholder="CONTRASEÑA" />
                                                                 </div>
                                                                 <div class="errores">
                                                                 <% if (locals.errors && errors.password) { %>
@@ -73,8 +73,10 @@
                                                                         <%= errors.phone.msg %>
                                                                             <% } %>
                                                                         </div>
+                                                                        
                                                                         <div class="app-form-group">
-                                                                            <input type="file" class="app-form-control" id="image" name="image" placeholder="INGRESA TU CONTRASEÑA" value="<%= locals.oldData ? oldData.image : null%>" />
+                                                                            <label for="image"> IMAGEN PERFIL</label>
+                                                                            <input type="file" class="app-form-control" id="image" name="image" placeholder="IMAGEN PERFIL" value="<%= locals.oldData ? oldData.image : null%>" />
                                                                         </div>
                                                                         <div class="errores">
                                                                         <% if (locals.errors && errors.image) { %>
