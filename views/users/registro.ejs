@@ -15,9 +15,84 @@
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
+<<<<<<< HEAD
         <main>
             <div class="subtitulo-productos">
                 <h1>INGRESÁ A TU CUENTA</h1>
+=======
+        <div class="contenedor-login">
+            <div class="contenido-login-registrate">
+                <div class="titulo-login">
+                    <h2>CREA TU CUENTA</h2>
+                    <br>
+                </div>
+                <form action="/users/registro" method="POST" class="form-login" enctype="multipart/form-data">
+                    <div class="etiquetas-form">
+                        <label class="campos-form-label">Nombre:</label>
+                        <input type="text" id="firstName" name="firstName" class="campos-form" placeholder=" Ingresá tu nombre" value="<%= locals.oldData ? oldData.firstName : null%>" />
+                    </div>
+                    <% if (locals.errors && errors.firstName) { %>
+                        <p>
+                            <%= errors.firstName.msg %>
+                        </p>
+                        <% } %>
+                            <br>
+                            <div class="etiquetas-form">
+                                <label class="campos-form-label">Apellido:</label>
+                                <input type="text" id="lastName" name="lastName" class="campos-form" placeholder=" Ingresá tu apellido" value="<%= locals.oldData ? oldData.lastName : null%>" />
+                            </div>
+                            <% if (locals.errors && errors.lastName) { %>
+                                <p>
+                                    <%= errors.lastName.msg %>
+                                </p>
+                                <% } %>
+                                    <br>
+                                    <div class="etiquetas-form">
+                                        <label class="campos-form-label">Mail:</label>
+                                        <input type="email" id="email" name="email" class="campos-form" placeholder=" Ingresá tu mail" value="<%= locals.oldData ? oldData.email : null%>" />
+                                    </div>
+                                    <% if (locals.errors && errors.email) { %>
+                                        <p>
+                                            <%= errors.email.msg %>
+                                        </p>
+                                        <% } %>
+                                            <br>
+                                            <div class="etiquetas-form">
+                                                <label class="campos-form-label">Teléfono:</label>
+                                                <input type="number" id="phone" name="phone" class="campos-form" placeholder=" Ingresá tu teléfono" value="<%= locals.oldData ? oldData.phone : null%>" />
+                                            </div>
+                                            <% if (locals.errors && errors.phone) { %>
+                                                <p>
+                                                    <%= errors.phone.msg %>
+                                                </p>
+                                                <% } %>
+                                                    <br>
+                                                    <div class="etiquetas-form">
+                                                        <label for="pwd">Password:</label>
+                                                        <input type="password" id="password" name="password" class="campos-form" placeholder=" Ingresá tu contraseña" />
+                                                    </div>
+                                                    <% if (locals.errors && errors.password) { %>
+                                                        <p>
+                                                            <%= errors.password.msg %>
+                                                        </p>
+                                                        <% } %>
+                                                            <br>
+                                                            <div class="etiquetas-form">
+                                                                <label class="campos-form-label">Imagen:</label>
+                                                                <input type="file" id="image" name="image" class="campos-form" placeholder=" Ingresá una imagen" />
+                                                            </div>
+                                                            <% if (locals.errors && errors.image) { %>
+                                                                <p>
+                                                                    <%= errors.image.msg %>
+                                                                </p>
+                                                                <% } %>
+                                                                    <br>
+
+                                                                    <div class="contenedor-btn">
+                                                                        <input type="submit" class="boton-estilo" value="Registrarse">
+                                                                    </div>
+                </form>
+>>>>>>> c5488b964cd0b0d36eb3ec6ad13064fdb7b2d4dd
             </div>
             <br>
             <div class="background">
@@ -98,8 +173,11 @@
         <footer>
             <%- include('../partials/footer.ejs'); -%>
         </footer>
+        <script src="/js/registerValidation.js"></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
 
 
@@ -113,4 +191,6 @@
 
 </body>
 
+=======
+>>>>>>> c5488b964cd0b0d36eb3ec6ad13064fdb7b2d4dd
 </html>
