@@ -36,7 +36,7 @@ input {
 .background {
     display: flex;
     justify-content: center;
-    height: 750px;
+    height: 730px;
     background-image: url(/images/backgorund-login.jpg);
 }
 
