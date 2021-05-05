@@ -102,6 +102,7 @@ input {
     flex-direction: column;
     height: 670px;
     justify-content: space-between;
+    width: 400px
 }
 
 .screen-body-item.left h2 {
