@@ -16,99 +16,103 @@
     <%- include('../partials/header.ejs'); -%>
         </header>
         <main>
-            <div class="subtitulo-productos">
-                <h1>ACTIVÁ TU CUENTA</h1>
-                </div>
-            
             <div class="background">
-                <div class="conteiner">
-                    <div class="screen">
-                        <div class="screen-body">
-                            <div class="screen-body-item left">      
+                <div class="subtitulo-productos">
+                    <h1>ACTIVÁ TU CUENTA</h1>
+
+                    <div class="conteiner">
+                        <div class="screen">
+                            <div class="screen-body">
+                                <div class="screen-body-item left">
                                     <h2>REGISTRO</h2>
-                                <div class="errores">
-                                    <ul></ul>
-                                </div>
-                                <form class="reservation" id="screen-body-item" action="/users/registro" method="POST"> 
-                                    <div class="app-form">
-                                        <div class="app-form-group">
-                                            <input type="text" class="app-form-control" name="firstName" id="firstName" placeholder="NOMBRE" value="<%= locals.oldData ? oldData.firstName : null%>" />
-                                        </div>
-                                        <div class="errores">
-                                        <% if (locals.errors && errors.firstName) { %>
-                                            <%= errors.firstName.msg %>
-                                                <% } %>
+                                    <div class="errores">
+                                        <ul></ul>
+                                    </div>
+                                    <form class="reservation" id="screen-body-item" action="/users/registro" method="POST">
+                                        <div class="app-form">
+                                            <div class="app-form-group">
+                                                <input type="text" class="app-form-control" name="firstName" id="firstName" placeholder="NOMBRE" value="<%= locals.oldData ? oldData.firstName : null%>" />
                                             </div>
-                                                    
-                                                    <div class="app-form">
-                                                        <div class="app-form-group">
-                                                            <input type="text" class="app-form-control" id="lastName" name="lastName" placeholder="APELLIDO" value="<%= locals.oldData ? oldData.lastName : null%>" />
-                                                        </div>
-                                                        <div class="errores">
-                                                        <% if (locals.errors && errors.lastName) { %>
-                                                            <%= errors.lastName.msg %>
-                                                                <% } %>
-                                                            </div>
-                                                            <div class="app-form-group">
-                                                                <input type="text" class="app-form-control" id="email" name="email" placeholder="EMAIL" value="<%= locals.oldData ? oldData.email : null%>"/>
-                                                            </div>
-                                                            <div class="errores">
-                                                            <% if (locals.errors && errors.email) { %>
-                                                                <%= errors.email.msg %>
-                                                                    <% } %>
-                                                                </div>
-                                                                <div class="app-form-group">
-                                                                    <input type="password" class="app-form-control" id="password" name="password" placeholder="CONTRASEÑA" />
-                                                                </div>
-                                                                <div class="errores">
-                                                                <% if (locals.errors && errors.password) { %>
-                                                                    <%= errors.password.msg %>
-                                                                        <% } %>
-                                                                    </div>
-                                                                    <div class="app-form-group">
-                                                                        <input type="text" class="app-form-control" id="phone" name="phone" placeholder="TELÉFONO" value="<%= locals.oldData ? oldData.phone : null%>"/>
-                                                                    </div>
-                                                                    <div class="errores">
-                                                                    <% if (locals.errors && errors.phone) { %>
-                                                                        <%= errors.phone.msg %>
-                                                                            <% } %>
+                                            <div class="errores">
+                                                <% if (locals.errors && errors.firstName) { %>
+                                                    <%= errors.firstName.msg %>
+                                                        <% } %>
+                                            </div>
+
+                                            <div class="app-form">
+                                                <div class="app-form-group">
+                                                    <input type="text" class="app-form-control" id="lastName" name="lastName" placeholder="APELLIDO" value="<%= locals.oldData ? oldData.lastName : null%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.lastName) { %>
+                                                        <%= errors.lastName.msg %>
+                                                            <% } %>
+                                                </div>
+                                                <div class="app-form-group">
+                                                    <input type="text" class="app-form-control" id="email" name="email" placeholder="EMAIL" value="<%= locals.oldData ? oldData.email : null%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.email) { %>
+                                                        <%= errors.email.msg %>
+                                                            <% } %>
+                                                </div>
+                                                <div class="app-form-group">
+                                                    <input type="password" class="app-form-control" id="password" name="password" placeholder="CONTRASEÑA" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.password) { %>
+                                                        <%= errors.password.msg %>
+                                                            <% } %>
+                                                </div>
+                                                <div class="app-form-group">
+                                                    <input type="text" class="app-form-control" id="phone" name="phone" placeholder="TELÉFONO" value="<%= locals.oldData ? oldData.phone : null%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.phone) { %>
+                                                        <%= errors.phone.msg %>
+                                                            <% } %>
+                                                </div>
+
+                                                <div class="app-form-group">
+                                                    <label for="">IMAGEN PERFIL</label>
+                                                    <input type="file" class="app-form-control" id="image" name="image" placeholder="IMAGEN PERFIL" value="<%= locals.oldData ? oldData.image : null%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.image) { %>
+                                                        <%= errors.image.msg %>
+                                                            <% } %>
+                                                </div>
+
+                                            </div>
+                                            <div class="app-form-group buttons">
+                                                <div ">
+                                                                            <div class="app-form-agree ">
+                                                                            <input type="checkbox " name="agree "  value="on " id="agree ">
+                                                                            <label for="a ">Acepto los</label>
+                                                                            <a href="./registro ">Terminos y Condiciones</a>
                                                                         </div>
                                                                         
-                                                                        <div class="app-form-group">
-                                                                            <label for="">IMAGEN PERFIL</label>
-                                                                            <input type="file" class="app-form-control" id="image" name="image" placeholder="IMAGEN PERFIL" value="<%= locals.oldData ? oldData.image : null%>" />
-                                                                        </div>
-                                                                        <div class="errores">
-                                                                        <% if (locals.errors && errors.image) { %>
-                                                                            <%= errors.image.msg %>
-                                                                                <% } %>
-                                                                            </div>
-                                                    
-                                                             </div>     
-                                                                    <div class="app-form-group buttons">
-                                                                        <div">
-                                                                            <div class="app-form-agree">
-                                                                            <input type="checkbox" name="agree"  value="on" id="agree">
-                                                                            <label for="a">Acepto los</label>
-                                                                            <a href="./registro">Terminos y Condiciones</a>
-                                                                        </div>
-                                                                        
-                                                                        <input class="app-form-button">
-                                                                        <button input type="submit" class="app-form-button">ENVIAR</button>
+                                                                        <input class="app-form-button ">
+                                                                        <button input type="submit " class="app-form-button ">ENVIAR</button>
                                                                     </div>
                                                                     <br>
                                                                     
                                 </form>
                                 </div>
                                 </div>
-                                <script src="/js/loginValidation.js"></script>
-                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-        </main>
+                                <script src="/js/loginValidation.js "></script>
+                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous "></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+ </main>
         <footer>
             <%- include('../partials/footer.ejs'); -%>
         </footer>
-        <script src="/js/registerValidation.js"></script>
-        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        <script src="/js/registerValidation.js "></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous "></script>
 </body>
 
 </html>

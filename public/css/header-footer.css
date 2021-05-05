@@ -19,7 +19,7 @@ html {
 /*Seccion pre header & header*/
 
 .header-top {
-    background-color: #c73333;
+    background-color: #A4161A;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -98,11 +98,14 @@ header label:hover {
     color: black;
     display: flex;
     padding: 15px 20px;
-    transition: all 50ms ease;
+    height: 90px;
+    align-items: center;
+    transition: all 1s ease;
 }
 
 .menu li a:hover {
-    background-color: rgba(39, 39, 39, 0.37);
+    background-color: #A4161A;
+    color: rgb(255, 255, 255);
 }
 
 .menu-user li {

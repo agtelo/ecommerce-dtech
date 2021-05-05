@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,64 +16,72 @@
     <%- include('../partials/header.ejs'); -%>
         </header>
         <main>
-            <div class="subtitulo-productos">
-                <h1>INGRESÁ A TU CUENTA</h1>
-            </div>
             <div class="background">
-                <div class="conteiner">
-                    <div class="screen">
-                        <div class="screen-body">
-                            <div class="screen-body-item left">      
+                <div class="subtitulo-productos">
+                    <h1>INGRESÁ A TU CUENTA</h1>
+
+
+                    <div class="conteiner">
+                        <div class="screen">
+                            <div class="screen-body">
+                                <div class="screen-body-item left">
                                     <h2>LOGIN</h2>
-                                <div class="errores">
-                                    <ul></ul>
-                                    
-                                </div>
-                                
-                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST"> 
-                                    <div class="app-form">
-                                        <div class="app-form-group">
-                                            <input type="text" class="app-form-control" name="email" id="email" placeholder="INGRESA TU EMAIL" value="<%= locals.oldData ? oldData.email : null%>" />
-                                        </div>
-                                        <div class="errores">
-                                        <% if (locals.errors && errors.email) { %>
-                                            <%= errors.email.msg %>
-                                                <% } %>
+                                    <div class="errores">
+                                        <ul></ul>
+
+                                    </div>
+
+                                    <form class="reservation" id="screen-body-item" action="/users/login" method="POST">
+                                        <div class="app-form">
+                                            <div class="app-form-group">
+                                                <input type="text" class="app-form-control" name="email" id="email" placeholder="INGRESA TU EMAIL" value="<%= locals.oldData ? oldData.email : null%>" />
                                             </div>
+                                            <div class="errores">
+                                                <% if (locals.errors && errors.email) { %>
+                                                    <%= errors.email.msg %>
+                                                        <% } %>
+                                            </div>
+                                            <br>
+                                            <div class="app-form">
+                                                <div class="app-form-group">
+                                                    <input type="password" class="app-form-control" id="pwd" name="password" placeholder="INGRESA TU CONTRASEÑA" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.password) { %>
+                                                        <%= errors.password.msg %>
+                                                            <% } %>
+                                                </div>
+                                                <div class="etiqueta-permanecer">
+                                                    <input type="checkbox" name="remember_user" value="on" id="remember_user">
+                                                    <label for="a">Permancer conectado</label>
+                                                </div>
+                                                <br>
+                                                <div class="app-form-group buttons">
+                                                    <input class="app-form-button">
+                                                    <button input type="submit" class="app-form-button">ACCEDER</button>
+                                                </div>
+                                                <br>
+                                                <div class="recupero">
+                                                    <a href="./recupero-pass">Olvide mi contraseña</a>
                                                     <br>
-                                                    <div class="app-form">
-                                                        <div class="app-form-group">
-                                                            <input type="password" class="app-form-control" id="pwd" name="password" placeholder="INGRESA TU CONTRASEÑA" />
-                                                        </div>
-                                                        <div class="errores">
-                                                        <% if (locals.errors && errors.password) { %>
-                                                            <%= errors.password.msg %>
-                                                                <% } %>
-                                                            </div>
-                                                                    <div class="etiqueta-permanecer">
-                                                                        <input type="checkbox" name="remember_user"  value="on" id="remember_user">
-                                                                        <label for="a">Permancer conectado</label>
-                                                                    </div>
-                                                                    <br>
-                                                                    <div class="app-form-group buttons">
-                                                                        <input class="app-form-button">
-                                                                        <button input type="submit" class="app-form-button">ACCEDER</button>
-                                                                    </div>
-                                                                    <br>
-                                                                    <div class="recupero">
-                                                                        <a href="./recupero-pass">Olvide mi contraseña</a>
-                                                                        <br>      
-                                                                        <a href="./registro">Registrarme</a>
-                                                                    </div>
-                                </form>
+                                                    <a href="./registro">Registrarme</a>
+                                                </div>
+                                    </form>
+                                    </div>
+                                    </div>
+                                    <script src="/js/loginValidation.js"></script>
+                                    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
                                 </div>
-                                </div>
-                                <script src="/js/loginValidation.js"></script>
-                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <%- include('../partials/footer.ejs'); -%>
+            </footer>
         </main>
-        <footer>
-            <%- include('../partials/footer.ejs'); -%>
-        </footer>
+
 </body>
 
 </html>
