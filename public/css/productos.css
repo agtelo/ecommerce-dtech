@@ -87,6 +87,18 @@
     border-radius: 10px;
 }
 
+.servicios-home {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    width: 100%;
+    height: 330px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
 .servicios:hover {
     background-color: #e4e4e43d;
     border-bottom: solid 10px rgb(63, 63, 63);
