@@ -34,8 +34,14 @@ const userController = {
                     if (req.body.remember_user) {
                         res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 1000 })
                     }
+                    if(userToLogin.rolId == 1){
+                        return res.redirect("../products/product-panel")
+                    }
                     return res.redirect("../users/perfil");
+                
+                
                 };
+                
                 return res.render("users/login", {
                     errors: {
                         password: {

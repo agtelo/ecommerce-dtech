@@ -10,6 +10,12 @@ const mainController = require('../controllers/mainController');
 router.get('/', mainController.index);
 router.get('/contacto', mainController.contacto);
 router.get('/desarrollos', mainController.desarrollo);
+router.get('/about', mainController.nosotros);
+router.get('/terminos-condiciones', mainController.condiciones);
+router.get('/politica-cookies', mainController.cookies);
+router.get('/politica-privacidad', mainController.privacidad);
+
+
 
 
 

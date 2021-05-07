@@ -100,6 +100,7 @@ header label:hover {
     padding: 15px 20px;
     height: 90px;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .menu li a:hover {
