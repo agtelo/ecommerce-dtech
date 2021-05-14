@@ -84,7 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: #ffffff;
     height: 720px;
     margin: 10px 10px;
