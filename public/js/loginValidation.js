@@ -1,65 +1,78 @@
-window.addEventListener("load", function() {
-
-    let formulario = document.querySelector("form.reservation");
-
-    formulario.addEventListener("submit", function(e) {
-        let errores = [];
+window.addEventListener("load", () => {
 
 
-        let campoEmail = document.getElementById("email");
-
-        if (campoEmail.value == "") {
-            errores.push("Debes ingresar tu email");
-            campoEmail.classList.add("app-form-control-fail");
-
-        } else {
-            campoEmail.classList.remove("app-form-control-fail");
-            campoEmail.classList.add("app-form-control");
+    document.querySelector("#email").addEventListener("keyup", function(e) {
+        const validacionEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+        
+        if (this.value == ""){
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>Debes ingresar un email</li>"
+        }        
+        
+        else if (!validacionEmail.test(this.value)){
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>Debes ingresar un email valido</li>"
         }
 
-        if (campoEmail.value.length < 3) {
-            errores.push("El mail debe contener mas de 3 caracteres");
-            campoEmail.classList.add("app-form-control-fail");
-        }
-
-        let campoPassword = document.getElementById("pwd");
-
-        if (campoPassword.value == "") {
-            errores.push("Debes ingresar tu password");
-            campoPassword.classList.add("app-form-control-fail");
-
-        }
-
-        if (campoPassword.value.length < 8) {
-            errores.push("La contraseña debe al menos 8 caracteres");
-            campoPassword.classList.add("app-form-control-fail");
-
-        }
-
-        if (!/[A-Z]/.test(campoPassword.value)) {
-            errores.push("La contraseña debe tener al menos 1 mayúscula");
-            campoPassword.classList.add("app-form-control-fail");
-        }
-        if (!/[0-9]/.test(campoPassword.value)) {
-            errores.push("La contraseña debe tener al menos 1 número");
-            campoPassword.classList.add("app-form-control-fail");
-        }
-        if (!/[!@#$%^&*]/.test(campoPassword.value)) {
-            errores.push("La contraseña debe tener al menos 1 simbolo");
-            campoPassword.classList.add("app-form-control-fail");
-        }
-
-        if (errores.length > 0) {
-            e.preventDefault();
+        else {
             document.querySelector("div.errores ul").innerHTML = ""
-            let ulErrores = document.querySelector("div.errores ul")
-            for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-            }
+            this.classList.remove("app-form-control-fail");
+            this.classList.add("app-form-control-correct");
         }
     })
 
+    document.querySelector("#password").addEventListener("keyup", function(e) {
+        const validacionMayus = /[A-Z]/; 
+        const validacionNum = /[0-9]/; 
+        const validacionSim = /[!@#$%^&*]/;
 
+        if (this.value == ""){
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>Debes ingresar un password</li>"
+        }
+
+        else if (this.value.length < 8 ){
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>Tu contaseña debe contener al menos 8 caracteres</li>"
+        }
+
+        else if (!validacionMayus.test(this.value)) {
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>La contraseña debe tener al menos 1 mayúscula</li>"
+        }
+
+        else if (!validacionNum.test(this.value)) {
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>La contraseña debe tener al menos 1 número</li>"
+        }
+
+        else if (!validacionSim.test(this.value)) {
+            this.classList.remove("app-form-control");
+            this.classList.add("app-form-control-fail");
+            this.classList.remove("app-form-control-correct");
+            document.querySelector("div.errores ul").innerHTML = "<li>La contraseña debe tener al menos 1 simbolo</li>"
+        }
+
+        else {
+            document.querySelector("div.errores ul").innerHTML = ""
+            this.classList.remove("app-form-control-fail");
+            this.classList.add("app-form-control-correct");
+        }
+
+
+    })
 
 
 })

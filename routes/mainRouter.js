@@ -9,7 +9,7 @@ const mainController = require('../controllers/mainController');
 // se enviarán los datos (req y res) al método index del controller
 router.get('/', mainController.index);
 router.get('/contacto', mainController.contacto);
-router.get('/desarrollos', mainController.desarrollo);
+router.post('/contacto', mainController.submit);
 router.get('/about', mainController.nosotros);
 router.get('/terminos-condiciones', mainController.condiciones);
 router.get('/politica-cookies', mainController.cookies);

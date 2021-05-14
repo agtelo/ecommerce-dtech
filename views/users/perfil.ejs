@@ -31,17 +31,26 @@
                                         <div class="app-form-group">
                                           <img src="/images/users/<%= user.image %>" width="330px">
                                         </div>
-                                        
-                                        
+                                        <div class="app-form">
+                                            <div class="app-form-group">
+                                             <h1><%= user.firstName %>  <%= user.lastName %></h1>
+                                            </div>
+                                                <div class="app-form-group">
+                                                 <h3><%= user.email %></h3>
+                                                </div>
+                                           
                                                     <div class="app-form">
                                                         <div class="app-form-group">
+                                                          <div class="app-form-group-tittle">Mis Datos</div>
                                                           <p>Nombre: <%= user.firstName %></p>
                                                           <p>Apellido: <%= user.lastName %></p>
-                                                          <p>Email: <%= user.email %></p>
                                                           <p>Telefono: <%= user.phone %></p> 
+                                                          
                                                         </div>
-                                                        
-                                                                    
+                                                        <div class="recupero"> <a href="./recupero-pass">Cambiar mi contraseña</a>
+                                                                        
+                                                        </div>
+                                                            <br>        
                                                                    
                                                                     <div class="app-form-group buttons">
                                                                         
@@ -50,9 +59,7 @@
                                                                         <button type="submit" class="app-form-button">BORAR CUENTA</button>
                                                                     </div>
                                                                     <br>
-                                                                    <div class="recupero"> <a href="./recupero-pass">Cambiar mi contraseña</a>
-                                                                        
-                                                                    </div>
+                                                                    
                                 </form>
                                 </div>
                                 </div>

@@ -29,7 +29,7 @@
                                 <div class="errores">
                                     <ul></ul>
                                 </div>
-                                <form class="reservation" id="screen-body-item" action="/products/crear" method="POST"> 
+                                <form class="reservation" id="screen-body-item" action="/products/crear" method="POST" enctype="multipart/form-data"> 
                                     <div class="app-form">
                                         <div class="app-form-group">
                                             <input type="text" class="app-form-control" name="name" id="name" placeholder="TITULO"  />
@@ -131,14 +131,14 @@
                                                                                                 
                                                                                                     
                                                                                                 
-                                                                                                    <div class="app-form-group">
-                                                                                                        <input type="text" class="app-form-control" name="price" id="price" placeholder="PRECIO"  >
-                                                                                                    </div>
-                                                                                                    <div class="errores">
-                                                                                                        <% if (locals.errors && errors.price) { %>
-                                                                                                            <%= errors.price.msg %>
-                                                                                                                <% } %>
-                                                                                                            </div> 
+                                                                                                <div class="app-form-group">
+                                                                                                    <input type="text" class="app-form-control" name="price" id="price" placeholder="PRECIO"  >
+                                                                                                </div>
+                                                                                                <div class="errores">
+                                                                                                    <% if (locals.errors && errors.price) { %>
+                                                                                                        <%= errors.price.msg %>
+                                                                                                            <% } %>
+                                                                                                        </div> 
                                                                                                                         
                                                                                                 <div class="app-form-group">
                                                                                                     <label for=""> IMAGEN PRODUCTO</label>

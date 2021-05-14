@@ -8,6 +8,6 @@ const storage = multer.diskStorage({
     filename: function(req, file, cb) {
         cb(null, file.fieldname + "-" + Date.now() + path.extname(file.originalname))}
 });
-const uploadFile = multer({ storage: storage});
+const uploadFile = multer({ storage: storage})
 
 module.exports = uploadFile;

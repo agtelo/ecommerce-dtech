@@ -4,6 +4,11 @@
         box-sizing: border-box;
         font-family: 'Oswald', sans-serif;
     }
+
+body {
+    background-image: url(/images/backgorund-login.jpg);
+}
+
     /*Seccion Descripcion de servicios*/
     
     .contenedor-titulo-servicios {
@@ -143,6 +148,7 @@
         /* Hide scrollbars */
         display: display;
     }
+    
     /* MIDDLE WRAPPER */
     
     .s-move {

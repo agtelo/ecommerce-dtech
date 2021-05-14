@@ -165,5 +165,8 @@ input {
         height: 656px;
         
     }
+    .background {
+        min-height: 90vh;
+    }
 
 }

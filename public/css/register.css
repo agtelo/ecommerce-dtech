@@ -27,6 +27,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    background-image: url(/images/backgorund-login.jpg);
+}
+
 button,
 input {
     font-weight: 700;
@@ -34,8 +38,9 @@ input {
 }
 
 .background {
-    height: 800px;
-    background-image: url(/images/backgorund-login.jpg);
+    
+    
+    min-height: 120vh;
 }
 
 .container {
@@ -114,28 +119,24 @@ input {
     margin-bottom: 10px;
 }
 
+
+
+.errores-container {
+    height: 40px;
+    
+}
+
+
 .errores {
-    font-size: 15px;
     color: #ea1d6f;
+    
+    
 }
 
 .errores ul {
     list-style: none;
-}
+    text-transform: uppercase;
 
-.app-title {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    color: #ffffff;
-    font-size: 35px;
-    font-style: italic;
-}
-
-.app-contact {
-    margin-top: auto;
-    font-size: 8px;
-    color: #888;
 }
 
 .app-form {
@@ -147,9 +148,6 @@ input {
     margin-bottom: 15px;
 }
 
-.app-form-group.message {
-    margin-top: 40px;
-}
 
 .app-form-group.buttons {
     margin-bottom: 0;
@@ -166,6 +164,11 @@ input {
     font-size: 14px;
     outline: none;
     transition: border-color .2s;
+}
+
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+
 }
 
 .app-form-control-fail {
@@ -203,8 +206,20 @@ input {
 }
 
 .app-form-agree label{
+    
+    color: #ddd;
     margin-left: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
 
+}
+
+.app-form-agree a {
+    
+    color: #ea1d6f;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 .app-form-button {
@@ -220,19 +235,9 @@ input {
     color: #b9134f;
 }
 
-.recupero a {
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
 
-.recupero a:hover {
-    color: #b9134f;
-    text-decoration: none;
-}
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 320px) {
     .background {
         height: 760px;
     }
@@ -271,6 +276,9 @@ input {
         top: 10px;
         left: 50%;
         width: 400px;
-        height: 659px;
+        height: 700px;
+    }
+    .background {
+        min-height: 100vh;
     }
 }

@@ -1,4 +1,4 @@
-const { getRounds } = require("bcrypt");
+const submit = require("../database/config/submit")
 
 const mainController = {
     
@@ -9,11 +9,12 @@ const mainController = {
     contacto: function(req,res){
         return res.render ('contacto', {title: "Contacto", css: "contacto"});
     },
-
-    desarrollo: function(req,res){
-        return res.render ('desarrollos', {title: "Desarrollos", css: "desarrollo"});
+    submit: function(req, res){
+        let message = req.body;
+        
+         submit.sendMail(message)
+        return res.render ('contacto', {title: "Contacto", css: "contacto"});
     },
-
     nosotros: function(res,res){
         return res.render ('about', {title: "Quienes Somos", css: "contacto"});
     },

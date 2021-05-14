@@ -17,48 +17,56 @@
         </header>
         <main>
             <div class="background">
-                <div class="subtitulo-productos">
-                    <h1>CONTACTANOS</h1>
-
-                    <div class="container">
-                        <div class="screen">
-
-                            <div class="screen-body">
-                                <div class="screen-body-item left">
-                                    <div class="app-title">
-                                        <span>DEJANOS TU MENSAJE</span>
-                                    </div>
-
-                                </div>
-                                <div class="screen-body-item">
-                                    <form action="">
-                                        <div class="app-form">
-                                            <div class="app-form-group">
-                                                <input class="app-form-control" placeholder="NOMBRE">
-                                            </div>
-                                            <div class="app-form-group">
-                                                <input class="app-form-control" placeholder="EMAIL">
-                                            </div>
-                                            <div class="app-form-group">
-                                                <input class="app-form-control" placeholder="TELEFONO">
-                                            </div>
-                                            <div class="app-form-group message">
-                                                <input class="app-form-control" placeholder="MENSAJE">
-                                            </div>
-                                            <div class="app-form-group buttons">
-                                                <input class="app-form-button">
-                                                <button class="app-form-button" type="submit"> ENVIAR</button></input>
-                                                <input class="app-form-button"></input>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
+                
+                <div class="container">
+                  <div class="screen">
+                    <div class="screen-header">
+                      <div class="screen-header-left">
+                        
+                      </div>
+                      
                     </div>
+                    <div class="screen-body">
+                      <div class="screen-body-item left">
+                        <div class="app-title">
+                          <span>CONTACTO</span>
+                          <span></span>
+                        </div>
+                        <div class="app-contact">ATENCION COMERCIAL : +54 0800 999 999</div>
+                      </div>
+                      <div class="screen-body-item">
+                        <form action="/contacto" method="POST">
+                        <div class="app-form">
+                          <div class="app-form-group">
+                            <input class="app-form-control" name="name" id="name" placeholder="NOMBRE">
+                          </div>
+                          <div class="app-form-group">
+                            <input class="app-form-control" name="email" id="email" placeholder="EMAIL">
+                          </div>
+                          <div class="app-form-group">
+                            <input class="app-form-control" name="subject" id="subject" placeholder="ASUNTO">
+                          </div>
+                          <div class="app-form-group message">
+                            <input class="app-form-control" name="message" id="message" placeholder="MENSAJE">
+                          </div>
+                          <div class="app-form-group buttons">
+                            
+                            <button class="app-form-button">ENVIAR</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="credits">
+                    desarrolado por <strong>  DTECH </strong>    
+                    
+                    
+                    </a>
+                  </div>
                 </div>
-            </div>
+              </div>
+              
         </main>
         <footer>
             <%- include('./partials/footer.ejs'); -%>

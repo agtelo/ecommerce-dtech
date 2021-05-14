@@ -5,41 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header-footer.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/recupero.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
-    <title>Registro</title>
+    <title>Cambiar contraseña</title>
 </head>
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
-        <div class="imagen-fondo-login">
-            <div class="contenedor-login">
-                <div class="contenido-login-olvide ">
-                    <div class="titulo-login">
-                        <h2>Olvide mi contraseña</h2>
-                        <p>Si olvidaste tu contraseña, por favor completa los siguientes campos.</p>
+        <main>
+            <div class="background">
+                <div class="container">
+                  <div class="screen">
+                    <div class="screen-header">
+                      <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                      </div>
+                      <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                      </div>
                     </div>
-                    <form action="" class="form-login">
-                        <div class="etiquetas-form">
-                            <label>Usuario:</label>
-                            <input type="text" name="nombre" class="campos-form" placeholder="Ingresá tu nombre de usuario" required/>
+                    <div class="screen-body">
+                      <div class="screen-body-item left">
+                        <div class="app-title">
+                          <span>OLVIDE MI</span>
+                          <span>CONTRASEÑA</span>
                         </div>
-                        <br>
-                        <div class="etiquetas-form">
-                            <label>Mail:</label>
-                            <input type="email" id="user-email" class="campos-form" placeholder=" Ingresá tu mail" required/>
+                        <div class="app-contact"></div>
+                      </div>
+                      <div class="screen-body-item">
+                        <div class="app-form">
+                          <div class="app-form-group">
+                            <input type="email" class="app-form-control" placeholder="INGRESA TU EMAIL">
+                          </div>
+                          <div class="app-form-group">
+                            <input  type="email" class="app-form-control" placeholder="REPETI TU EMAIL">
+                          </div>
+                          <div class="app-form-group">
+                            
+                          </div>
+                          <div class="app-form-group message">
+                           
+                          </div>
+                          <div class="app-form-group buttons">
+                            <button class="app-form-button">VOLVER</button>
+                            <button class="app-form-button">ENVIAR</button>
+                          </div>
                         </div>
-                        <br>
-                        <br>
-                        <div class="contenedor-btn">
-                            <input type="submit" class="boton-estilo" value="Acceder">
-                        </div>
-                    </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="credits">
+                    inspired by <strong>DTECH</strong>
+                   
+                  </div>
                 </div>
-            </div>
-        </div>
+              </div>
         </main>
         <footer>
             <%- include('../partials/footer.ejs'); -%>

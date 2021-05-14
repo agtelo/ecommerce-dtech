@@ -27,15 +27,21 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+    background-image: url(/images/backgorund-login.jpg);
+}
+
 button,
 input {
+    
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     letter-spacing: 1.4px;
 }
 
 .background {
-    height: 800px;
-    background-image: url(/images/backgorund-login.jpg);
+    min-height: 110vh;
+   
 }
 
 .container {
@@ -114,13 +120,20 @@ input {
     margin-bottom: 10px;
 }
 
-.errores {
-    font-size: 15px;
-    color: #ea1d6f;
-}
+
 
 .errores ul {
     list-style: none;
+    text-transform: uppercase;
+    margin-bottom: 40px
+}
+
+.errores {
+    color: #ea1d6f; 
+}
+
+.errores-container {
+    height: 40px;
 }
 
 .app-title {
@@ -167,6 +180,10 @@ input {
     outline: none;
     transition: border-color .2s;
 }
+
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
 
 .app-form-control-fail {
     width: 100%;
@@ -229,7 +246,7 @@ input {
     text-decoration: none;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 320px) {
     .background {
         height: 760px;
     }
@@ -268,6 +285,22 @@ input {
         top: 10px;
         left: 50%;
         width: 400px;
-        height: 659px;
+        height: 700px;
+    }
+    .background {
+        min-height: 100vh;
+    }
+    .errores ul {
+        list-style: none;
+        text-transform: uppercase;
+        margin-bottom: 100px
+    }
+    .container-errores {
+        height: 100px;
+
+    }
+    .screen-body {
+        display: flex;
+        
     }
 }

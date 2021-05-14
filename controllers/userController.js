@@ -2,6 +2,7 @@
 const bcryptjs = require('bcryptjs');
 const { validationResult, body } = require("express-validator");
 const db = require("../database/models");
+const emailer = require("../database/config/emailer")
 
 const userController = {
 
@@ -105,8 +106,10 @@ const userController = {
             })
             
             .then(function(user) {
-                return res.render('users/bienvenida', { "user": user });
+                emailer.sendMail(user)
+                return res.render('users/login');
             })
+            
 
     },
 
