@@ -42,10 +42,14 @@ input {
     letter-spacing: 1.4px;
 }
 
+body {
+    background-image: url(/images/backgorund-login.jpg);
+}
+
 .background {
     display: flex;
     height: auto;
-    background-image: url(/images/backgorund-login.jpg);
+    
 }
 
 .container {

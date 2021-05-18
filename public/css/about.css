@@ -64,6 +64,7 @@
   }
   
   .app-title {
+    display: none;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -73,7 +74,9 @@
     
   }
   
+  
   .app-title:after {
+    display: none;
     content: '';
     display: block;
     position: absolute;
@@ -137,7 +140,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    color: #ffa4bd;
+    color: #3e3e3e;
     
     font-size: 16px;
     font-weight: normal;
@@ -146,7 +149,7 @@
   .credits-link {
     display: flex;
     align-items: center;
-    color: #fff;
+    color: #3e3e3e;
     font-weight: bold;
     text-decoration: none;
   }
@@ -174,7 +177,7 @@
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 600px) {
     .screen-body {
       padding: 40px;
     }
@@ -192,7 +195,12 @@
         font-size: 45px;
     }
     .app-form-control {
-        width: 500px;
-    }
-
+        width: auto;
+        font-size: 22px;
+        margin-top: 40px;
+        margin-left: 30px;
+        font-style: italic;
   }
+  
+  
+}

@@ -165,6 +165,11 @@ body {
     font-style: italic;
     padding-left: 30px;
 }
+.imagen-servicio {
+    display: flex;
+    
+    margin-left: 50px;
+}
 
 @media(min-width:768px) {
     .contenedor-servicios {
@@ -197,6 +202,11 @@ body {
         font-style: italic;
         padding-left: 30px;
     }
+    .imagen-servicio {
+        display: flex;
+        
+        margin-left: 50px;
+    }
 }
 
 @media(min-width:970px) {
@@ -224,5 +234,14 @@ body {
         font-size: 40px;
         font-style: italic;
         padding-left: 30px;
+    }
+    .titulo-del-servicio{
+        font-size: 20px;
+        font-style: italic;
+    }
+    .imagen-servicio {
+        display: flex;
+        
+        margin-left: 50px;
     }
 }
