@@ -18,11 +18,17 @@ router.post('/login', validateLogin, userController.ingresoUsuario);
 router.get('/registro', guestMiddleware, userController.registro);
 router.post('/registro', uploadFile.single("image"), validateRegistroMiddleware, userController.crearUsuario);
 
-router.get('/bienvenida', userController.bienvenida);
 router.get('/perfil', authMiddleware, userController.perfil);
 
-router.get('/editar-perfil', userController.editarPerfil);
-router.put('/editar-perfil/:id', uploadFile.single("image"), userController.actualizarPerfil);
+
+router.get('/edit-perfil/:id', userController.editarPerfil);
+router.put('/edit-perfil/:id', uploadFile.single("image"), userController.actualizarPerfil);
+
+
+
+
+
+
 
 
 router.get('/recupero-pass', userController.recuperoPass);

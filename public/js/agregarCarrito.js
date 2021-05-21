@@ -57,6 +57,7 @@ carrito.map( item => {
 })
 }
 
+JSON.stringify(localStorage.setItem("carrito", carrito))
 
 
 

@@ -20,7 +20,7 @@ const sendMail = async (user) => {
     const info = await transporter.sendMail({
         from: '"DTECH 🚀" <dtech.becommerce21@gmail.com>', // sender address
         to: `${user.email}`, // list of receivers
-        subject: "Bienvenido" `${user.email}`, // Subject line
+        subject: "Hello ✔", // Subject line
         //html: `Hola ${user.firstName} Bienevenido a DTECH`, // html body
         html : { path: 'views/templates/index.html' }
     })

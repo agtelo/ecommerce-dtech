@@ -1,4 +1,4 @@
-    localStorage.getItem("addCarritoItem");
+JSON.parse(localStorage.getItem("carrito"))
    
 
     console.log(localStorage)

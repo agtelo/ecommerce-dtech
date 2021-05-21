@@ -37,6 +37,10 @@ input {
     display: flex;
     justify-content: center;
     height: 840px;
+    
+}
+
+body {
     background-image: url(/images/backgorund-login.jpg);
 }
 

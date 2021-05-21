@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header-footer.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <title>Editar Perfil</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs'); -%>
+        </header>
+        <div class="imagen-fondo-login">
+            <div class="contenedor-login">
+                <div class="contenido-login-perfil-edit ">
+                    <div class="titulo-login">
+                        
+                        <h2>EDITAR PERFIL </h2>
+                        <br>
+                            <div class="imagen-perfil">
+                                <img src="/images/users/<%= user.image %>" width="330px">
+                            </div>
+                            <br>
+                        </div>
+                        <form action="/users/editar-perfil/<%= user.id %>?_method=PUT" method="POST" class="form-login" enctype="multipart/form-data">                   
+                            <div class="etiquetas-form">
+                                <label for="name">Nombre:</label>
+                                <input type="type"  class="campos-form" name="firstName" value ="<%= user.firstName %>"/>
+                            </div>
+                            <br>
+                            <div class="etiquetas-form">
+                                <label class="campos-form-label">Apellido:</label>
+                                <input type="type"  name= "lastName" class="campos-form" value ="<%= user.lastName %>">
+                                </div>
+                                <br>
+                                <div class="etiquetas-form ">
+                                    <label for="item1">Email :</label>
+                                    <input type="email"  class="campos-form " name="email" value ="<%= user.email%>"/>
+                                </div>
+                                <br>
+                                <div class="etiquetas-form ">
+                                    <label for="item1">Telefono :</label>
+                                    <input type="type"  class="campos-form " name="phone" value ="<%= user.phone %>"/>
+                                </div>
+                                <br>
+                                <div class="etiquetas-form ">
+                                    <label for="item1">imagen :</label>
+                                    <input type="file"  class="campos-form " name="image" value =""/>
+                                </div>
+                                <br>
+                                <div class="contenedor-btn ">
+                                    <input type="submit" class="boton-estilo" value="Aceptar">
+                                    <button type="submit" class="boton-estilo" >Cancelar</button>
+                                </div>
+                                <br>
+                              
+                            </form>
+                    </div>
+                    <br>       
+                </div>
+            </div>
+        </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
+</body>
+</html>

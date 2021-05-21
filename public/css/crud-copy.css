@@ -22,9 +22,12 @@ select {
 select option {
     color: #202020
 }
-
-.contenedor-login {
+body {
     background-image: url(/images/backgorund-login.jpg);
+}
+.contenedor-login {
+    margin-top: -100px;
+    
     /*background-size: cover;*/
     background-attachment: fixed;
     display: flex;
@@ -37,9 +40,9 @@ select option {
 }
 
 .contenido-login {
-    background-color: #c73333de;
+    background-color: #3e3e3e;
     width: 500px;
-    height: 1010px;
+    height: 900px;
     margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
@@ -59,9 +62,9 @@ select option {
 }
 
 .contenido-login3 {
-    background-color: #c73333de;
+    background-color: #3e3e3e;
     width: 500px;
-    height: 960px;
+    height: 700px;
     margin: 20px;
     border: solid 1px #c7333354;
     border-radius: 25px;
