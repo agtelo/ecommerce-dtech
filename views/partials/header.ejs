@@ -3,7 +3,7 @@
         <p>Atención Comercial: 0800-999-9999 </p>
     </div>
     <div class="icono-carrito">
-        <a href="/products/carrito"> <i class="fas fa-shopping-bag" alt="Mis Compras"></i></a>
+        <a href="/products/carrito"> <i class="fas fa-shopping-cart" alt="Mis Compras"></i></a>
     </div>
 </div>
 <header>
@@ -19,15 +19,15 @@
             <li><a href="../contacto">Contacto</a></li>
 
             <% if (locals.isLogged) { %>
-            
-            <li><a class="contenedor-login-user" href="../users/perfil">Hola <%= locals.userLogged.firstName %> <img src="/images/users/<%= locals.userLogged.image %>" class="imagen-perfil-user"> </a>  </li> 
-            <li><a href="../users/logout">Logout</a></li>    
-            
-            <% } else { %>
-            <li><a href="../users/registro">Registro</a></li>
-            <li><a href="../users/login">Login</a></li>
 
-            <% } %>
+                <li><a class="contenedor-login-user" href="../users/perfil">Hola <%= locals.userLogged.firstName %> <img src="/images/users/<%= locals.userLogged.image %>" class="imagen-perfil-user"> </a> </li>
+                <li><a href="../users/logout">Logout</a></li>
+
+                <% } else { %>
+                    <li><a href="../users/registro">Registro</a></li>
+                    <li><a href="../users/login">Login</a></li>
+
+                    <% } %>
         </ul>
 
     </nav>
