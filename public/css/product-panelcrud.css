@@ -8,6 +8,8 @@
 body {
     background-image: url(../images/backgorund-login.jpg);
 }
+
+
 /*Seccion Descripcion de servicios*/
 
 .contenedor-titulo-servicios {
@@ -77,7 +79,6 @@ body {
     flex-wrap: wrap;
     height: auto;
     margin: auto;
-    
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -101,10 +102,8 @@ body {
 }
 
 .contenedor-servicios {
-    display:flex;
-
+    display: flex;
 }
-
 
 .servicios {
     display: flex;
@@ -215,6 +214,44 @@ body {
     display: flex;
     justify-content: space-between;
     width: 300px;
+}
+
+.username {
+    width: 150px;
+    text-align: initial;
+    margin-left: 20px;
+    color: white;
+}
+
+.checkbox {
+    width: 20px;
+    text-align: center;
+}
+
+.contenedor-user-list {
+    background-color: #2c2c2c;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+
+.btn-borrar {
+    width: 100px;
+}
+
+.submit {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.fa-edit:before {
+    content: "\f044";
+    color: #a4161a;
 }
 
 @media(min-width:768px) {
