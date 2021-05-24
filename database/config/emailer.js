@@ -7,8 +7,8 @@ const createTrans = () => {
         port: 465,
         
         auth: {
-        user: "dtech.becommerce21@gmail.com",
-        pass: "bsvulfaekgxgufqf"
+        user: "detech.beco.21@gmail.com",
+        pass: "jpjahiwrwjzlzyeo"
     }
     });
     return transport;
@@ -18,7 +18,7 @@ const createTrans = () => {
 const sendMail = async (user) => {
     const transporter = createTrans()
     const info = await transporter.sendMail({
-        from: '"DTECH 🚀" <dtech.becommerce21@gmail.com>', // sender address
+        from: '"DTECH 🚀" <detech.beco.21@gmail.com>', // sender address
         to: `${user.email}`, // list of receivers
         subject: "Hello ✔", // Subject line
         //html: `Hola ${user.firstName} Bienevenido a DTECH`, // html body

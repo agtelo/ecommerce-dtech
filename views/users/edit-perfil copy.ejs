@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <title>Edicion Perfil</title>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs'); -%>
+        </header>
+        <main>
+            <div class="subtitulo-productos">
+                <h1>MI CUENTA</h1>
+            </div>
+            <div class="background">
+                <div class="conteiner">
+                    <div class="screen">
+                        <div class="screen-body">
+                            <div class="screen-body-item left">      
+                                    <h2>MI PERFIL</h2>
+                               
+                                
+                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST"> 
+                                    <div class="app-form">
+                                        <div class="app-form-group">
+                                          <img src="/images/users/<%= user.image %>" width="330px">
+                                        </div>
+                                        <div class="app-form">
+                                            <div class="app-form-group">
+                                             <h1><%= user.firstName %>  <%= user.lastName %></h1>
+                                            </div>
+                                                <div class="app-form-group">
+                                                 <h3><%= user.email %></h3>
+                                                </div>
+                                           
+                                                    <div class="app-form">
+                                                        <div class="app-form-group">
+                                                          <div class="app-form-group-tittle">Mis Datos</div>
+                                                          <input  class="app-form-group-tittle" type="text" placeholder="NOMBRE: <%= user.firstName %>">
+                                                          <p>Apellido: <%= user.lastName %></p>
+                                                          <p>Telefono: <%= user.phone %></p> 
+                                                          
+                                                        </div>
+                                                       
+                                                            <br>        
+                                                                   
+                                                                    <div class="app-form-group buttons">
+                                                                        
+                                                                        <button type="submit"  class="app-form-button">GUARDAR</button>
+                                                                        
+                                                                        
+                                                                        <a  class="app-form-button" href="../perfil"> CANCELAR </a>
+                                                                    </div>
+                                                                    <br>
+                                                                    
+                                </form>
+                                </div>
+                                </div>
+                                
+                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+        </main>
+        <footer>
+            <%- include('../partials/footer.ejs'); -%>
+        </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

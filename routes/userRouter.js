@@ -24,13 +24,6 @@ router.get('/perfil', authMiddleware, userController.perfil);
 router.get('/edit-perfil/:id', userController.editarPerfil);
 router.put('/edit-perfil/:id', uploadFile.single("image"), userController.actualizarPerfil);
 
-
-
-
-
-
-
-
 router.get('/recupero-pass', userController.recuperoPass);
 router.get('/recupero-validacion', userController.recuperoValidacion);
 

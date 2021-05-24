@@ -1,86 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/header-footer.css">
-    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
-    <title>Edicion Perfil</title>
+    <title>Editar Perfil</title>
 </head>
 
 <body>
     <%- include('../partials/header.ejs'); -%>
         </header>
         <main>
-            <div class="subtitulo-productos">
-                <h1>MI CUENTA</h1>
-            </div>
             <div class="background">
-                <div class="conteiner">
-                    <div class="screen">
-                        <div class="screen-body">
-                            <div class="screen-body-item left">      
-                                    <h2>MI PERFIL</h2>
-                               
-                                
-                                <form class="reservation" id="screen-body-item" action="/users/login" method="POST"> 
-                                    <div class="app-form">
-                                        <div class="app-form-group">
-                                          <img src="/images/users/<%= user.image %>" width="330px">
-                                        </div>
+                <div class="subtitulo-productos">
+                    <h1>EDITA TU CUENTA</h1>
+
+                    <div class="conteiner">
+                        <div class="screen">
+                            <div class="screen-body">
+                                <div class="screen-body-item left">
+                                    <h2>TUS DATOS</h2>
+                                    <div class="errores-container">
+                                    <div class="errores">
+                                        <ul></ul>
+                                    </div>
+                                    </div>
+                                    <form class="reservation" id="screen-body-item" action="/users/edit-perfil/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                                         <div class="app-form">
                                             <div class="app-form-group">
-                                             <h1><%= user.firstName %>  <%= user.lastName %></h1>
+                                                <input type="text" class="app-form-control" name="firstName" id="firstName" placeholder="NOMBRE" value="<%= user.firstName%>" />
                                             </div>
+                                            <div class="errores">
+                                                <% if (locals.errors && errors.firstName) { %>
+                                                    <%= errors.firstName.msg %>
+                                                        <% } %>
+                                            </div>
+
+                                            <div class="app-form">
                                                 <div class="app-form-group">
-                                                 <h3><%= user.email %></h3>
+                                                    <input type="text" class="app-form-control" id="lastName" name="lastName" placeholder="APELLIDO" value="<%= user.lastName%>" />
                                                 </div>
-                                           
-                                                    <div class="app-form">
-                                                        <div class="app-form-group">
-                                                          <div class="app-form-group-tittle">Mis Datos</div>
-                                                          <p>Nombre: <%= user.firstName %></p>
-                                                          <p>Apellido: <%= user.lastName %></p>
-                                                          <p>Telefono: <%= user.phone %></p> 
-                                                          
-                                                        </div>
-                                                       
-                                                            <br>        
-                                                                   
-                                                                    <div class="app-form-group buttons">
-                                                                        
-                                                                        <button type="submit"  class="app-form-button">GUARDAR</button>
-                                                                        
-                                                                        
-                                                                        <a  class="app-form-button" href="../perfil"> CANCELAR </a>
-                                                                    </div>
-                                                                    <br>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.lastName) { %>
+                                                        <%= errors.lastName.msg %>
+                                                            <% } %>
+                                                </div>
+                                                <div class="app-form-group">
+                                                    <input type="text" class="app-form-control" id="email" name="email" placeholder="EMAIL" value="<%= user.email%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.email) { %>
+                                                        <%= errors.email.msg %>
+                                                            <% } %>
+                                                </div>
+                                               
+                                                <div class="app-form-group">
+                                                    <input type="text" class="app-form-control" id="phone" name="phone" placeholder="TELÉFONO" value="<%= user.phone%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.phone) { %>
+                                                        <%= errors.phone.msg %>
+                                                            <% } %>
+                                                </div>
+
+                                                <div class="app-form-group">
+                                                    <label for="">IMAGEN PERFIL</label>
+                                                    <input type="file" class="app-form-control" id="image" name="image" id="image" placeholder="IMAGEN PERFIL" value="<%= user.image%>" />
+                                                </div>
+                                                <div class="errores">
+                                                    <% if (locals.errors && errors.image) { %>
+                                                        <%= errors.image.msg %>
+                                                            <% } %>
+                                                </div>
+
+                                            </div>
+                                            <div class="app-form-group buttons">
+                                                
+                                               
+                                            
+                                            <input class="app-form-button">
+                                                <button input type="submit " class="app-form-button ">ACTUALIZAR CUENTA</button>
+                                        </div>
+                                        <br>
                                                                     
                                 </form>
                                 </div>
                                 </div>
-                                
-                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-        </main>
+                                <script src="/js/loginValidation.js "></script>
+                                <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous "></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+ </main>
         <footer>
             <%- include('../partials/footer.ejs'); -%>
         </footer>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
+        <script src="/js/registerValidation.js "></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous "></script>
 </body>
 
 </html>

@@ -160,7 +160,7 @@ const userController = {
                     image: file? file.filename : users.image,
                 })
                     .then(() => {
-                        res.redirect("./users/edit-perfil")
+                        res.render("./users/perfil")
                     })
             })
 

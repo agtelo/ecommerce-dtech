@@ -288,4 +288,8 @@ body {
     .subtitulo-productos {
         width: 50%;
     }
+    .user-list {
+        margin-bottom: 450px;
+        margin-left: 700px;
+    }
 }
